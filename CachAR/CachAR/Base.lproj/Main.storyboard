@@ -38,8 +38,8 @@
                                     <segue destination="A3Z-eQ-Sey" kind="presentation" id="KhJ-Mt-GXZ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v0Z-Ui-ncX">
-                                <rect key="frame" x="8" y="36" width="359" height="60"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v0Z-Ui-ncX">
+                                <rect key="frame" x="8" y="36" width="359" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="ehB-Mz-eZy"/>
                                 </constraints>

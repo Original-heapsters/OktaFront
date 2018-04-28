@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		49946FCE20952E5600F537EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49946FCD20952E5600F537EC /* Assets.xcassets */; };
+		49946FD12095311900F537EC /* ARState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49946FD02095311900F537EC /* ARState.swift */; };
 		499AACE12095104F00813882 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499AACE02095104F00813882 /* AppDelegate.swift */; };
 		499AACE32095104F00813882 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 499AACE22095104F00813882 /* art.scnassets */; };
 		499AACE52095104F00813882 /* ARVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499AACE42095104F00813882 /* ARVIewController.swift */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		49946FCD20952E5600F537EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		49946FD02095311900F537EC /* ARState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARState.swift; sourceTree = "<group>"; };
 		499AACDD2095104F00813882 /* CachAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CachAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		499AACE02095104F00813882 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		499AACE22095104F00813882 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -82,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		49946FCF2095310800F537EC /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				49946FD02095311900F537EC /* ARState.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		499AACD42095104F00813882 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +115,7 @@
 		499AACDF2095104F00813882 /* CachAR */ = {
 			isa = PBXGroup;
 			children = (
+				49946FCF2095310800F537EC /* Enums */,
 				499AAD1620952D8A00813882 /* ViewControllers */,
 				499AAD13209526E300813882 /* UIHelpers */,
 				499AAD1020951B7800813882 /* DebugViews */,
@@ -295,6 +306,7 @@
 			files = (
 				499AACE52095104F00813882 /* ARVIewController.swift in Sources */,
 				499AACE12095104F00813882 /* AppDelegate.swift in Sources */,
+				49946FD12095311900F537EC /* ARState.swift in Sources */,
 				499AAD1220951B9400813882 /* VirtualPlane.swift in Sources */,
 				499AAD1820952DC000813882 /* SignInViewController.swift in Sources */,
 				499AAD15209526F600813882 /* UIExtensions.swift in Sources */,

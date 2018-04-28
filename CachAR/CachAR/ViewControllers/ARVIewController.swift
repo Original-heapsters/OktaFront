@@ -16,8 +16,25 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet weak var textViewStatus: UILabel!
     @IBOutlet weak var buttonSignIn: UIButton!
     
-    
-    var planes = [UUID: VirtualPlane]()
+    var planes = [UUID: VirtualPlane]() {
+        didSet {
+            if planes.count > 0 {
+                currentARStatus = .ready
+            } else {
+                if currentARStatus == .ready { currentARStatus = .initialized }
+            }
+        }
+    }
+    var currentARStatus = ARState.initialized {
+        didSet {
+            DispatchQueue.main.async { self.textViewStatus.text = self.currentARStatus.description }
+            if currentARStatus == .failed {
+                cleanupARSession()
+            }
+        }
+    }
+    var selectedPlane: VirtualPlane?
+    var userObjectNode: SCNNode!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,13 +46,16 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         
         // Show statistics such as fps and timing information
         sceneView.showsStatistics = true
-        sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints, ARSCNDebugOptions.showWorldOrigin]
+        sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints, ARSCNDebugOptions.showWorldOrigin, SCNDebugOptions.showConstraints]
         
         // Create a new scene
         let scene = SCNScene()
         
         // Set the scene to the view
         sceneView.scene = scene
+        
+        let testScene = SCNScene(named: "art.scnassets/ship.scn")!
+        self.userObjectNode = testScene.rootNode.childNode(withName: "shipMesh", recursively: true)!
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,6 +68,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
 
         // Run the view's session
         sceneView.session.run(configuration)
+        if planes.count > 0 { self.currentARStatus = .ready }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -55,6 +76,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         
         // Pause the view's session
         sceneView.session.pause()
+        self.currentARStatus = .temporarilyUnavailable
     }
     
     override func didReceiveMemoryWarning() {
@@ -92,13 +114,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     }
     
     func renderer(_ renderer: SCNSceneRenderer, didRenderScene scene: SCNScene, atTime time: TimeInterval) {
-        let x = sceneView.pointOfView?.position.x ?? 0
-        let y = sceneView.pointOfView?.position.y ?? 0
-        let z = sceneView.pointOfView?.position.z ?? 0
         
-        DispatchQueue.main.async {
-            self.textViewStatus.text = "CAMERA X: \(String(describing: x))\nCAMERA Y: \(String(describing: y))\nCAMERA Z: \(String(describing: z))"
-        }
     }
     
     func session(_ session: ARSession, didFailWithError error: Error) {
@@ -118,6 +134,48 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let touch = touches.first else {
+            print("Unable to identify touches on any plane. Ignoring interaction...")
+            return
+        }
+        if currentARStatus != .ready {
+            print("Unable to place objects when the planes are not ready...")
+            return
+        }
         
+        let touchPoint = touch.location(in: sceneView)
+        print("Touch happened at point: \(touchPoint)")
+        if let plane = virtualPlaneProperlySet(touchPoint: touchPoint) {
+            print("Plane touched: \(plane)")
+            addObjectToPlane(plane: plane, atPoint: touchPoint)
+        } else {
+            print("No plane was reached!")
+        }
+
+    }
+    
+    func virtualPlaneProperlySet(touchPoint: CGPoint) -> VirtualPlane? {
+        let hits = sceneView.hitTest(touchPoint, types: .existingPlaneUsingExtent)
+        if hits.count > 0, let firstHit = hits.first, let identifier = firstHit.anchor?.identifier, let plane = planes[identifier] {
+            self.selectedPlane = plane
+            return plane
+        }
+        return nil
+    }
+    
+    func addObjectToPlane(plane: VirtualPlane, atPoint point: CGPoint) {
+        let hits = sceneView.hitTest(point, types: .existingPlaneUsingExtent)
+        if hits.count > 0, let firstHit = hits.first {
+            if let userPlacedObject = userObjectNode?.clone() {
+                userPlacedObject.position = SCNVector3Make(firstHit.worldTransform.columns.3.x, firstHit.worldTransform.columns.3.y, firstHit.worldTransform.columns.3.z)
+                sceneView.scene.rootNode.addChildNode(userPlacedObject)
+            }
+        }
+    }
+    
+    func cleanupARSession() {
+        sceneView.scene.rootNode.enumerateChildNodes { (node, stop) -> Void in
+            node.removeFromParentNode()
+        }
     }
 }
