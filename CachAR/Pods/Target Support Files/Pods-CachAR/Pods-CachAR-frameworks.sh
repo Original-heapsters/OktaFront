@@ -144,11 +144,21 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/AppAuth/AppAuth.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/HydraAsync/Hydra.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/OktaAuth/OktaAuth.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/OktaJWT/OktaJWT.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Vinculum/Vinculum.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/AppAuth/AppAuth.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/HydraAsync/Hydra.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/OktaAuth/OktaAuth.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/OktaJWT/OktaJWT.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Vinculum/Vinculum.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

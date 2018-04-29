@@ -7,101 +7,481 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E153632A414101E0A66AE23569802B /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA5CA9C1A1A8A10FA0F34E068E281AB /* Result.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		01DF08114E3D5BF35E03C74935FE1236 /* Pods-CachAR-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AED8A73217BBE63CCCAFB2412B7FFD5 /* Pods-CachAR-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		079D990738735591330332B5F2551AE4 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7857033CB003F852F367D6BC6CA97425 /* NetworkReachabilityManager.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		14CECE238604E1D44104E5BCD14EB2BE /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332F6B9EA5D63A221428D82DFC754F83 /* SessionDelegate.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		164781197625A3149B3BDBCAA2AC8CC3 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F382C5721F36A8CF08DA36032E8FF2C1 /* Validation.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 901710181ECB814C322BEBBC0BC5182E /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		204944D67267632DD7CD4BEFB60AC389 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6E04C2B770D33E90A7E43AD9A6DDF5 /* Response.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		2B58B070F9D7324583D01EE906BC918C /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05B506A540FE042146EA8265DD35585 /* SessionManager.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		343B30C989188B77FB1149FED753A63C /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EE6D52AA2F0C3238B527C58255F520 /* ServerTrustPolicy.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		3F9B025A6D0CD4C28413DBA1FCA6C8A9 /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A6BCB8BFA44757C42826D92DE90E92 /* SwiftyJSON-dummy.m */; };
-		58812AABBC0A1E7AE019752424DF31A7 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42F49FBA20BC96954B56110A1FB0535 /* MultipartFormData.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		5E25BCD30BDE2E7A68D1A6FAF7253AD4 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5933A0580629CB79BDBD1D33483297F5 /* DispatchQueue+Alamofire.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		6540CC4D369A32F6DE54AFA8D5D6FAF9 /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0841CA7163214CF11939BFCB9E0C45F2 /* Alamofire-dummy.m */; };
-		73B9C996AED49ED7CF8EC2A6F1738059 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		77BFFF736B6CCDEF93B1544422EE092A /* Pods-CachAR-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA086303E665857D697C4E5DF8FF942 /* Pods-CachAR-dummy.m */; };
-		78F4229B4A746A38341474FEB9DADB25 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F03809326666A0674F21BBADB1BB09D /* ParameterEncoding.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		8F5C0849D2757FC5A7C81B81BA3813C3 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EFF0A773A9B68F8036680922E55A8F /* ResponseSerialization.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		981EFF1371FCE40F1907DA262743B93E /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09922B86810418CDE6DD69710D5A9C17 /* Notifications.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		AA4B071192D5C813AF557CCC83802C4D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		AD2C576F50E67B2417C1D17FBF5E32B2 /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6FA20699EAC0AB72A507BB66B191F8 /* AFError.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		AF0D4C83AFA41ABCC40035B41F709A87 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		C5FD57751548EFFA6567AFD2EB47CD56 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBEB670658597FB7864005ED913ECB6 /* Request.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		C704483E5D8CB06704980E1C1CCEE06E /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBFF681209D4E5030FF4116EFD41362 /* SwiftyJSON.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		D5686072DEC1A0E14F8C100FCC873F73 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003F0620667B1D1CE3A63A07911DA946 /* TaskDelegate.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		E198F398404F07805E5189165F3C1E64 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D182500FF4918391F97385DAE996449 /* Timeline.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		EBA0781A1E2822CF7DFD56ACD394A63E /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26FB4343C43368E1D119B6871123AF1 /* Alamofire.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		FF53C3A8411EB5A37CB33E08E04F1E1F /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 40940641FEC544E01CEA2CF3E3D8CEA5 /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00E153632A414101E0A66AE23569802B /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85FA731A12DCB4A200D41189093F0A2 /* Result.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		03AF597E645D4D8F5A0FE0495B14961D /* OIDResponseTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CD89DFEC92A6BBB4E71A3FC8A564E51 /* OIDResponseTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		057500477FE367BC10A4AB713923A157 /* Promise+Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14CD234B0E5E1BE35922BFD9D5771D2 /* Promise+Async.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		05EF1AC8B40041124F7951D24FAC1156 /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 971BC781576E25164DDD9C31F350713F /* SwiftyJSON-dummy.m */; };
+		06E0083459B594147CE1340795F9350A /* OktaJWT-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BAB89832AD861B1D70DE5300D1FA58C /* OktaJWT-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		079D990738735591330332B5F2551AE4 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7D2B39AEBF178BD60A83E6AD1711F4 /* NetworkReachabilityManager.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		089940F34BC9DCBC82803D0EE66FA031 /* OktaTokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D2769C09B5EDEB71EE1A4F357FB540 /* OktaTokenManager.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		09530C78534F21D0821F5E75E512A9D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0390FD0B53B6EF3ED577AE79E5F36D /* Foundation.framework */; };
+		0AA60E03816F83177E8BC368DA0447A6 /* OIDError.h in Headers */ = {isa = PBXBuildFile; fileRef = B44880EB0E015B6393AA485A785ABBB8 /* OIDError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B8E7558657CE580C826886DA7272FBC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0390FD0B53B6EF3ED577AE79E5F36D /* Foundation.framework */; };
+		0D29E1B603854C7F6685E0591108AD56 /* NSData+SHA.h in Headers */ = {isa = PBXBuildFile; fileRef = 40ED4053CD0D203992F6DC24784FE132 /* NSData+SHA.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D5E5D88A8BC711CB911753CBDEC843F /* TokenValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D19B4DB714720D7B9758E0F1D391259 /* TokenValidator.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0D8EEAB55C090872BB6FF7FD0AEEF3BD /* OIDScopeUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C9403D6036CEEFA63A6588F43F1061 /* OIDScopeUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		10C18EFED801A754013FFF6F27CC6D3B /* SignatureValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD9C97764F083933EFDDA275593511E /* SignatureValidator.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		114F2D23A0786B4E811F1986E0822DDF /* OktaAuth-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D46D3885DA64196484CC09A4B8C84CF /* OktaAuth-dummy.m */; };
+		11AAAC0A91A808215EC22BD28F491BA5 /* HydraAsync-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AA4D2B0512814086006FAD463C1012 /* HydraAsync-dummy.m */; };
+		11F838C142785DC6F6FB8D43D3306482 /* OIDAuthorizationRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = D7D7DA5242AA12282543029092F130F5 /* OIDAuthorizationRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		14CECE238604E1D44104E5BCD14EB2BE /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36679B8FFB5A125D9EF5EF31F1037C8 /* SessionDelegate.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		151CE1839D35ED469C50C77351BCA386 /* OIDTokenUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = B2D5BCAF754E0657D02B0693BE140855 /* OIDTokenUtilities.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		15EB2ED7789D29C3DB6D101875373D23 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF8FB12597BC02353C642DC5682CB24 /* Utils.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		164781197625A3149B3BDBCAA2AC8CC3 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B25F4B84C43A1F0AA12BDC7D3C769E /* Validation.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		173FF2D074A29C99697BA566328B0F89 /* OktaIntrospection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B90EBDADDFF1BA5D0EB871A7C8FBEBD /* OktaIntrospection.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		186CEB1BBDFDFFB26AD15679C7455E36 /* OIDDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = B29FA167929335110B82C0E7835F828F /* OIDDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		19D107BE8F12C80B112F55C5BA77E1A3 /* ClaimValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C5694AAD36448A5C4353B5183167EF /* ClaimValidator.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 81E092AD2A84A6AB2762E97497FF3D49 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D463890D7DEA7DECD155BDF8844F7B9 /* OktaLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECBAC6F3AC47378C3AA64CE0533DEB8 /* OktaLogin.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1E381A474E2BD1DFA65906AFF9B41C4C /* OIDAuthorizationUICoordinatorIOS.m in Sources */ = {isa = PBXBuildFile; fileRef = B17D1FBE2AD5F3031D9320FD383C8D19 /* OIDAuthorizationUICoordinatorIOS.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1FEDC30E67E4277A2D01117BD949BB95 /* AppAuth.h in Headers */ = {isa = PBXBuildFile; fileRef = 9053217B19AFEA9AFC6B877785456464 /* AppAuth.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		204944D67267632DD7CD4BEFB60AC389 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2237EBBBB52CD7A2D4E1EE46F23887C6 /* Response.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		22CF7F053B6BE15CA232704DF60969C9 /* NSData+HMAC.m in Sources */ = {isa = PBXBuildFile; fileRef = 86C00CDD6C33947967009A1C01A30944 /* NSData+HMAC.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2705FB5B7DB37F5232F212F3EA15FE10 /* OIDClientMetadataParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = F9BA1DC0CF0AB0A605BF65D209CF9B11 /* OIDClientMetadataParameters.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		27DDCC0432C38F429BB08C027912F159 /* Promise+Defer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8B7553D98BDC3CB88DA21A31EA383D /* Promise+Defer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		27E2130D5A9533184959F5EF88E68782 /* KeychainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A005988A4E0D9DFF1B235C148922E7 /* KeychainItem.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		29460145BC5A41E9005764D8D817F47D /* OIDAuthorizationService+IOS.h in Headers */ = {isa = PBXBuildFile; fileRef = DC0B21F2493D15143F9DFB475D7D8D62 /* OIDAuthorizationService+IOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B58B070F9D7324583D01EE906BC918C /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BA0F7392B40EB4C04698A4A47FDB99 /* SessionManager.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2BD31BB1E4CD2F8141B32E5E6F96B31E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0390FD0B53B6EF3ED577AE79E5F36D /* Foundation.framework */; };
+		2D90C19716A9C4D27E9F7880D1CF2E3D /* Vinculum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D638BE00485FE178597C9EF82EC5D931 /* Vinculum.framework */; };
+		2F08728B8EF910812025F41F36DEE0B8 /* OIDAuthState+IOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 9176FF9DCB69CD427BF3624D3A1A0915 /* OIDAuthState+IOS.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3111ACCA9D654876DB6D820DE4B0F5E9 /* OIDTokenResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 09060AAF21C5BB0F033D7611EF617CF1 /* OIDTokenResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		343B30C989188B77FB1149FED753A63C /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22945598DCCAB195CC442EF0AC84795F /* ServerTrustPolicy.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		39C2B9639EA318C009B35F79F7178EB6 /* OIDResponseTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF9D1EB7667C15B5B3143979F259CC4 /* OIDResponseTypes.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		405746A9A1DF3F8D47953E86BCC93DB2 /* OIDServiceConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7922A591132DD468B47A7CD705126F /* OIDServiceConfiguration.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		43F37C089D0C74E57ACB8C71243415E2 /* Hydra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5812DBE503DF91A45DFFFC7F175352D7 /* Hydra.framework */; };
+		44CC5D4E95FA27B1685771CC666AA526 /* OktaAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5457B867BDE2104BF825690E5C8463 /* OktaAuth.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		44D9968F3810FA2A9CC66FF59AE643FA /* OktaUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D3CD6768779E141E094A4FFAA830A3 /* OktaUtils.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		47FB9834CD72F5B4CEFA3E83DBDCB04D /* OktaAppAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDE83436C8226A5BA2540DD11A79755 /* OktaAppAuth.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		48AA7CC2E512F5E57F7F51EC6E5B80DA /* OIDAuthorizationService.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C2526B7AB8FD96864952B0C9EE85292 /* OIDAuthorizationService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49B12540921B1E748A00765069F0832B /* OIDErrorUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = BBCCAB0DE752179C29355DF91782B919 /* OIDErrorUtilities.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4E4913809C5D2CF52BBC6E642A94E97D /* TokenSigner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB06E54A6C2B483CDD4A1C7C591ED3A /* TokenSigner.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4E6EDFE1790F9C0E10543CD3131F72ED /* Promise+All.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0C4BE85ECD39E27170421B60013842 /* Promise+All.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		511A2D42B1EA2306BB08E60B18346778 /* Promise+Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A17FEBA596AD6AD3E79EF564E32D922 /* Promise+Then.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5184620CE45836B563AF1B100DC4C79D /* OIDAuthorizationUICoordinatorIOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 46A1997943311977F37695BEF9835B76 /* OIDAuthorizationUICoordinatorIOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		551B45EB190F3DFC56663BC21D34FC68 /* JWTVerificationTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0184A99BBF6A642A115EC3926D56CF4 /* JWTVerificationTypes.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5568CA110A2B0413C27F571BFB88039F /* OIDServiceDiscovery.h in Headers */ = {isa = PBXBuildFile; fileRef = 4433DB5D662CC3B55802CACDA102CFBB /* OIDServiceDiscovery.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		56101565E3C082EDF77B3C046E217C09 /* OIDErrorUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = FE0AF761F7CDA882C378AF31A75AEAFF /* OIDErrorUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		58460BB73A6F70C0C8BA402052E27038 /* OIDAuthStateChangeDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = EE7DD38883E48A9C8DFA2586BB446B1F /* OIDAuthStateChangeDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		58812AABBC0A1E7AE019752424DF31A7 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6610D6BF198252180EEAB683945C1A6 /* MultipartFormData.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5E25BCD30BDE2E7A68D1A6FAF7253AD4 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD156BAD3A0D99390C236CE5F6D164D /* DispatchQueue+Alamofire.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5F83C27D4BAAA49B48AD5241200E66B6 /* OIDRegistrationResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = F6FAEAC845F282F27C65DC5F33D764E9 /* OIDRegistrationResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		615C1296D414E37C4F0FB5895723520A /* SecKeyUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A884EE80B49828BFA5D46D8B5A084BCC /* SecKeyUtils.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		62B6454C84C51E5092BC0F5463D2DD64 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201683395F61D067BC7135561ACB3326 /* Keychain.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		64576C4BC2C4A4BF8114D6756FE7F679 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0390FD0B53B6EF3ED577AE79E5F36D /* Foundation.framework */; };
+		6466E8BFD104951C83652BB18D3DE7C3 /* Promise+Pass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042ABC0827E7DFB563454CB29A2E6201 /* Promise+Pass.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6540CC4D369A32F6DE54AFA8D5D6FAF9 /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF9B8C208E437B81E8072FF034815CA /* Alamofire-dummy.m */; };
+		6887716637CC0977E27C9DCE25B1C50E /* SignatureAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FC6B96B84717E7D687D4481AC020C6 /* SignatureAlgorithm.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6A7D1A25875A603A85B91848922DEFBC /* OktaApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40736793D120642AC0CD46A689C4EE82 /* OktaApi.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6A9547FCD10A3281CFFEC45A574F8A73 /* Vinculum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C195E75B088EED3DA5C24B0BF277A50C /* Vinculum.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6BC872E8980CAE6B231BCF0B934FBEEA /* Promise+Recover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DC183B1EADA706F09C5D32F18F358D /* Promise+Recover.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6BCF48E70B71DBFD05AE6B427ED72E06 /* OIDRegistrationRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = D86EA1CD002112B7A4185E0F93A3F7FF /* OIDRegistrationRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D42BB484E9B7C4DA9EF0DA55D2D4D54 /* OIDAuthState.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DAC30D4FF9C29793F9C755447A6475D /* OIDAuthState.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6EEE54FF1AAC1F9E8061A6008C7C7506 /* NSData+SHA.m in Sources */ = {isa = PBXBuildFile; fileRef = 024A59C6A85901C562447652EBA2B9B5 /* NSData+SHA.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6EF7FD084FAD45F6743A7DE29A0A08EF /* OIDGrantTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AF2616F32804997370A68CB989ED92B /* OIDGrantTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6F61F5B72051FE6A8B4FC6B608110FBB /* KeychainErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3952D36F05FC5F3B73B6F6814E7C3B /* KeychainErrors.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		70F2224A5670199954DE16C4EC45F234 /* OktaRevoke.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDE51A258B314A77DB71AEA813AB409 /* OktaRevoke.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		73B9C996AED49ED7CF8EC2A6F1738059 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0390FD0B53B6EF3ED577AE79E5F36D /* Foundation.framework */; };
+		758F781E5A5BCE72F53CF3A21C5B7FDF /* OIDScopes.m in Sources */ = {isa = PBXBuildFile; fileRef = 93FE4B0298E41009DA2185A00971C11E /* OIDScopes.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		75BC68EFCD687B06641D1968F28C45FF /* OIDScopes.h in Headers */ = {isa = PBXBuildFile; fileRef = 83EC233EA3E87E816AB3B760EEDEAA72 /* OIDScopes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		76081D989D2DFF19EBAA4CAF3469DB18 /* DispatchTimerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63DEF1FA30646C0ED8B9712E95B73E4 /* DispatchTimerWrapper.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		764ECE5FDDB506F70A581434D840F2B5 /* Promise+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3DD41BE02C7653DB392F337E5E443C /* Promise+State.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		78F4229B4A746A38341474FEB9DADB25 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2F0A519DBDC762C71C3493A9BC7542 /* ParameterEncoding.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7BB2CE764095FCCE9A3C8C5327E42B88 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04463B8C56E6138C74A2A2C635E3F4A4 /* SafariServices.framework */; };
+		7D46DA13C5EA9626A1C1AD8FA3F27526 /* OIDServiceDiscovery.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F73D71FCA82EE92636B54EBF9DDC780 /* OIDServiceDiscovery.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7F03A362A5397C9B3C049F8CD5ED7E69 /* Pods-CachAR-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AED8A73217BBE63CCCAFB2412B7FFD5 /* Pods-CachAR-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8152598FC4FA1263EFEB5C7BFE9BC659 /* OIDFieldMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = EBF28BFD18B5F5483F8DAC3AAB702E29 /* OIDFieldMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83B9C92B954E6C6C32F028E5E06D2E8D /* Promise+Zip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EE985183971499C6764BFDCAE26CB3 /* Promise+Zip.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		83BDB932B739AFDF2D19AF79429DA8CA /* OktaRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A809E5284648AB218B9080D792A69D3 /* OktaRefresh.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		84A9B3B6BA179D629A59E5BDAF187E80 /* OktaUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25EE055024FA5C0B78C6602E4A68242 /* OktaUserInfo.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8791F94F311427C36BCBFA6BA93E5B77 /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04120EA173EE7C4682800590DEE02B78 /* Promise.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8DCE233D870E14B1FE60155DEBBBD686 /* OIDAuthorizationResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 90246E8D7D3DB8369EEFDC48F15F2414 /* OIDAuthorizationResponse.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8F5C0849D2757FC5A7C81B81BA3813C3 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84265E2D9927C356129F9FDE5CEB380 /* ResponseSerialization.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		90BFB0192C6CD4C8D917493B16EA060C /* OIDTokenRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDDD9777C9D646D599A9997A822E5E4 /* OIDTokenRequest.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9237626402FADFAC6E0AC605A673EA24 /* Promise+Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E1B3322856093C252C9CA888D3C027 /* Promise+Observer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		951124CCEB66738B67E5660FD3F70341 /* OIDAuthorizationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B386A4771BFFDAF0379C67D7C45A01A /* OIDAuthorizationRequest.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		952FE82DA478C867E2B9AEB0CECDBD68 /* OIDServiceConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 75F129CC46D3411AFF6D7EE59857A1B8 /* OIDServiceConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		981EFF1371FCE40F1907DA262743B93E /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981E64860E167E3ABF458BD0D851CE78 /* Notifications.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9A2F76334825B34471CFD4CCAE60256C /* OIDScopeUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C268C615E6AA6F44E32BBB62AC41E6 /* OIDScopeUtilities.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9A3FE97C5A271BA98D53325DC603D35D /* OIDTokenUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E4EF329C4EBB965092FF58474F624D1 /* OIDTokenUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9AAAE293D768793C532BE4D434EF2E8B /* OIDAuthorizationResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F8D7C1599C626D0F2A51C4BB9285117 /* OIDAuthorizationResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B185A3BF5295D274BCCFDED59DF724B /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 596B9CCB9117AF05F0C5F8FD6D5B0F08 /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9CD6CC0CD14AD8878A86FDADF5303247 /* Vinculum-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A2B90B4088E237EB18AFCF9191D97F7 /* Vinculum-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9E695AD677A491C71FE458390AE96465 /* OIDTokenResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B3ADDEB6127283E5D384F6F2F7460E /* OIDTokenResponse.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A1EFB1A7E8FE6861198F8E565FDD1B65 /* OIDURLQueryComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = AD6B6AD73AA3428F2A1958D9910F46E5 /* OIDURLQueryComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A42CE5CDA2C21B24E228FE5448772CC7 /* HydraAsync-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A3BB01F316B8DEEE390DA7FE9155E81A /* HydraAsync-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A4606553FBBEEF06D03928F9CB9891B2 /* OIDGrantTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF45C076F52442821C5A693BEB624F /* OIDGrantTypes.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A5FA5294B1E09A55C6FF5016C2E3AA77 /* Commons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58144AEC37859BDA02C80AF26A95DF31 /* Commons.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A6CA4DE8CD571D2C338150C32C42D3A6 /* OktaAuth-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 503EC5AF0589D1C8235C40066A6DC2DF /* OktaAuth-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9B0CF387C490D9518E653868A0FD906 /* Promise+Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377F334F5A2E6E4274424F5AAB46C22B /* Promise+Map.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		AD2C576F50E67B2417C1D17FBF5E32B2 /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CF8E383CD2BB9757839766DE45B989 /* AFError.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		AF4C71B51F839A49C92FABD849FC7038 /* OIDAuthState.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2DBC17C56FE70E7C434F058F683142 /* OIDAuthState.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B09299A1263BCFC437D5D34A8E147579 /* OIDClientMetadataParameters.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E30CB8D4B551DFFB6A96AF8511FEAF1 /* OIDClientMetadataParameters.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B1199F7B73C00CB3E13D67F25A85E455 /* AppAuth-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6A17B38317F0029A8B865147847C6F /* AppAuth-dummy.m */; };
+		B197A2F991DB5DE9A8E3DD30742FE49C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0390FD0B53B6EF3ED577AE79E5F36D /* Foundation.framework */; };
+		B32C1A3A7F00B26EDEB721569AC09699 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2D3325B6AA38A71FF56F16A7045710 /* SwiftyJSON.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B5F02555EA84C21CFFA63EC83ACD0477 /* Vinculum-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B436053B826B7A9FA38075D2257679 /* Vinculum-dummy.m */; };
+		B699E84064D46465DBC2A239936D8654 /* AppAuth-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D7B68FF472F06F845BFD9F13306855E /* AppAuth-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B6B6BDF095F07ECFDC4863761A92DD6B /* OIDRegistrationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E04107428040F469BD6C8AA58AEF043C /* OIDRegistrationRequest.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		BAC73A53E3B47B509D6C9ACEDF5D2F0F /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8891D28D875522E82C57A8CB1CC1184C /* Context.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		BB9533B97F32ACBB2D418020CD7A7547 /* Promise+Cancel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E0A0C2C49D62D753002A7F1C34BBF8 /* Promise+Cancel.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		BC285F9406A1910E3BB7CB19A98A63A9 /* OktaJWT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5107742D8C0CA251DCDE109AAF1A85BB /* OktaJWT.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		BDC44377E3B9E7A236831BDB5A025EF9 /* HMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A78A09BC6DBDAF5F43255C81D3779EE /* HMAC.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		BF3E48B14E22D5A0FCD3CF1F2BAAC034 /* OIDRegistrationResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A216A2C4667FB70A633201B8130FC0 /* OIDRegistrationResponse.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C285B31CE534D517851BB5FA1BE0F12F /* Promise+Any.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB642D41493FA148EF01B3D2D8BC05C0 /* Promise+Any.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C2B5351547E1B777C4DF33C00EF9564E /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5021EDE3AFD0C9A9FAA265C0D3736633 /* Keychain.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C2C45CD51702C2F67B914F8E2EC40354 /* NSData+HMAC.h in Headers */ = {isa = PBXBuildFile; fileRef = E737D9CC5441AC32DC8059E9C78DD727 /* NSData+HMAC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C436A29FF0B462CE0A0DCCF6F6AF17CB /* Promise+Always.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1F9D64E79060373818A70A0CC147B5 /* Promise+Always.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C4D795F3CC3217DD0C535A4A738E6662 /* Promise+Reduce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340E23C31F1114927AE2EAF605111A8C /* Promise+Reduce.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C578CFC2D4799FB277596A6B362D2ECE /* Promise+Retry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCCA9D4C71B4604101AFD870F01B21F /* Promise+Retry.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C5FD57751548EFFA6567AFD2EB47CD56 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291B8CB4CCAB329451D1446C06F2B931 /* Request.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C618B626EF485F228BAE60B8F6C23843 /* Promise+Catch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046DA8B15E73A1540678BEA3BC4E2ECF /* Promise+Catch.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C7287C79124A90B04E1C0BA5161DB97E /* AppAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A5C7C350FE0E08AB93B4A69AF3A8A21 /* AppAuth.framework */; };
+		C7CF0735C660DA75568C0F97994B1F98 /* OIDFieldMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5F5FACF9D3E8CAC43B7F1AD54748D0 /* OIDFieldMapping.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		CAFF12665D2076791671B60186513ED0 /* OIDAuthorizationUICoordinator.h in Headers */ = {isa = PBXBuildFile; fileRef = 66EB8B2B189BE6FF1AE3BFD4034FEB94 /* OIDAuthorizationUICoordinator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0A20B003034A014B986EF058A34982C /* Promise+Timeout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E26338A842453E2B733028DF5AD1A40 /* Promise+Timeout.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D0D6E75657CA5192E70B381254504801 /* NSData+Base64URLEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A761650C8844FFAC720A4D91B3ABA95 /* NSData+Base64URLEncoding.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D14E4B54E0C89C281A90B67A59B74ACC /* Promise+Validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF0CC79CC78DB90C6CDE31FC58DFA50 /* Promise+Validate.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D1EF02A31EDE7C0430666858A91D2AC4 /* JWTVerificationErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12542F47161CB80C2936DE9DC6ABC0DA /* JWTVerificationErrors.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D406D6459F93BEA581894CEB179883B8 /* OktaError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487DFDF527D4FE55299CE503F01DC582 /* OktaError.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D5686072DEC1A0E14F8C100FCC873F73 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F98BC6BA765D6F9FC9C4E1DE32ED01 /* TaskDelegate.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D58EFE464419177E41930B9900586C77 /* OIDAuthStateErrorDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = A9001BF486005CDD4BBB473B717B0C23 /* OIDAuthStateErrorDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D9B9C33B127BE44742582E5B6D368F6A /* OIDError.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AEA994DAAB6BF63F1C52198A537F9B /* OIDError.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D9E91B66EC9677704AF05458E397FC1E /* OIDAuthorizationService+IOS.m in Sources */ = {isa = PBXBuildFile; fileRef = E57507E615509C6ED708868BAFECE355 /* OIDAuthorizationService+IOS.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		DC6D69632516FFA9DB42213004FB1D55 /* OIDAuthorizationService.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EE33CBE67392B582C519BBA3F36017 /* OIDAuthorizationService.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		DE6248F3FC31B24626695292099A2164 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0390FD0B53B6EF3ED577AE79E5F36D /* Foundation.framework */; };
+		E041E43B41F395AE94239137BACEED25 /* APIErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AABCDAFD9BDD0C6CB7DAEBCD9F695B2 /* APIErrors.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E198F398404F07805E5189165F3C1E64 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91EB6E37F47E08F911C2A92F00875D7 /* Timeline.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E29DB10B712BC0E55158785BC77AC2D4 /* OktaJWT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 875E827D73578CD9DB3519D05897EB25 /* OktaJWT.framework */; };
+		E5DFD2ED7F7B210F2602CCAB9BC4A335 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0390FD0B53B6EF3ED577AE79E5F36D /* Foundation.framework */; };
+		E649F0BFEB78EC2DE6AEE6C25A8694C8 /* RSASSA_PKCS1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5574941BA7C635774168F877D6D184E2 /* RSASSA_PKCS1.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E90661D55E9F02A47A485C5F7FCDD520 /* RequestsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09865F5294F7E78354AF1F205B997FE5 /* RequestsAPI.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		EBA0781A1E2822CF7DFD56ACD394A63E /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EDBF123F691C2AC59292FDB30614F /* Alamofire.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		EE53AF21A19C32F022429218757A5A44 /* JSONWebToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67921915CCD5C95AA51BBF804F578C0 /* JSONWebToken.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F136F96C41013094D798BB34A9C2973A /* Promise+Await.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE314B7D539AFBEB18D2AF2E0348A5C /* Promise+Await.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F1770B04F24398341A5119A3D53AD8B4 /* Pods-CachAR-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA086303E665857D697C4E5DF8FF942 /* Pods-CachAR-dummy.m */; };
+		F2E96A261B6915D02E7532843525B065 /* OIDTokenRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = CC49FEBAEF0B426E1AE786EAFB505A9E /* OIDTokenRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3B105DE161408CF4429BAB26DFEDDF2 /* OktaJWT-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CA826FD08CE35E991D1318AC0DE6C28B /* OktaJWT-dummy.m */; };
+		F7E0EC653DE2DFA3A382F501C57CCDBF /* JWTVerifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CF3BA88066A2E06B60903DA574F8DD /* JWTVerifier.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		FC17B910DF0FCFF2E32D097CDCAE5463 /* OIDURLQueryComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = EE08CB5D627B3EC2242715B159CE1BC1 /* OIDURLQueryComponent.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		FF7488D3468EE40797A951E1DC93EF6C /* OIDAuthState+IOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 61DD31126E268105A428CEAB71AED646 /* OIDAuthState+IOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		22A682123F4CB2ACF38E38A9DFF63442 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A90776C789A8C9C4D013F71C5365FCC0;
-			remoteInfo = SwiftyJSON;
-		};
-		9DD211A210EC42A52B444D075D78BE96 /* PBXContainerItemProxy */ = {
+		00C29F27558B1CB49D38355D3AD1768D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 88E9EC28B8B46C3631E6B242B50F4442;
 			remoteInfo = Alamofire;
 		};
+		11D0AB9DCA023F7D4AF5ABF9C94075D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0E4877F295A27C4363B1993AAAAD4511;
+			remoteInfo = OktaAuth;
+		};
+		254C205EB54D17F1119CC1763AD594AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E1DD322FDB1A554B5D087EFE9B3B62E5;
+			remoteInfo = HydraAsync;
+		};
+		509557D95C98B2A55AE8843900244323 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 30F6AB9282E94A32EB31DD97DCA5AFBE;
+			remoteInfo = OktaJWT;
+		};
+		7B9CCBF39A696D03EF668DEF62D3E235 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E1DD322FDB1A554B5D087EFE9B3B62E5;
+			remoteInfo = HydraAsync;
+		};
+		9513A16D8A8FDF6B2376F159BDF9D335 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 59C07786C629C1DC3F2A8AE822C48108;
+			remoteInfo = SwiftyJSON;
+		};
+		987D00B7AAA6B0ABE8B72E62C261950E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9DEAF891D94A7BA60D263F7571FF5965;
+			remoteInfo = Vinculum;
+		};
+		9BDBF15A0679A3D0C107C6704D35FD78 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 30F6AB9282E94A32EB31DD97DCA5AFBE;
+			remoteInfo = OktaJWT;
+		};
+		C6E29A95414BE1B8466FA3CA58459A31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 842F72DCDC6161BB37D6B901E9301ED8;
+			remoteInfo = AppAuth;
+		};
+		C775B3EB742B971BDC8FB61A8BE36BB5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9DEAF891D94A7BA60D263F7571FF5965;
+			remoteInfo = Vinculum;
+		};
+		DBA6B10AE04A628D6CE5386A7AD99258 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 842F72DCDC6161BB37D6B901E9301ED8;
+			remoteInfo = AppAuth;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		003F0620667B1D1CE3A63A07911DA946 /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
-		072FBC70F25CFB84B674D7B68AF6376B /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0841CA7163214CF11939BFCB9E0C45F2 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
-		09922B86810418CDE6DD69710D5A9C17 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
+		024A59C6A85901C562447652EBA2B9B5 /* NSData+SHA.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+SHA.m"; path = "OktaJWT/ThirdParty/JSONWebToken/NSData+SHA.m"; sourceTree = "<group>"; };
+		04120EA173EE7C4682800590DEE02B78 /* Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Promise.swift; path = Sources/Hydra/Promise.swift; sourceTree = "<group>"; };
+		042ABC0827E7DFB563454CB29A2E6201 /* Promise+Pass.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Promise+Pass.swift"; path = "Sources/Hydra/Promise+Pass.swift"; sourceTree = "<group>"; };
+		04463B8C56E6138C74A2A2C635E3F4A4 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/SafariServices.framework; sourceTree = DEVELOPER_DIR; };
+		044EDBF123F691C2AC59292FDB30614F /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		046DA8B15E73A1540678BEA3BC4E2ECF /* Promise+Catch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Promise+Catch.swift"; path = "Sources/Hydra/Promise+Catch.swift"; sourceTree = "<group>"; };
+		04AA4D2B0512814086006FAD463C1012 /* HydraAsync-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HydraAsync-dummy.m"; sourceTree = "<group>"; };
+		05CF8E383CD2BB9757839766DE45B989 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
+		07AEA994DAAB6BF63F1C52198A537F9B /* OIDError.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDError.m; path = Source/OIDError.m; sourceTree = "<group>"; };
+		09060AAF21C5BB0F033D7611EF617CF1 /* OIDTokenResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDTokenResponse.h; path = Source/OIDTokenResponse.h; sourceTree = "<group>"; };
+		09865F5294F7E78354AF1F205B997FE5 /* RequestsAPI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestsAPI.swift; path = OktaJWT/RequestsAPI.swift; sourceTree = "<group>"; };
+		0A17FEBA596AD6AD3E79EF564E32D922 /* Promise+Then.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Promise+Then.swift"; path = "Sources/Hydra/Promise+Then.swift"; sourceTree = "<group>"; };
 		0AED8A73217BBE63CCCAFB2412B7FFD5 /* Pods-CachAR-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CachAR-umbrella.h"; sourceTree = "<group>"; };
-		0C6E04C2B770D33E90A7E43AD9A6DDF5 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
+		0BF1DFC889F5C6253384C93C61D9419F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C7D2B39AEBF178BD60A83E6AD1711F4 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		0EB6E6BA680E742F5BE7D707596B88C4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12542F47161CB80C2936DE9DC6ABC0DA /* JWTVerificationErrors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JWTVerificationErrors.swift; path = OktaJWT/JWTVerificationErrors.swift; sourceTree = "<group>"; };
+		1667BA55B06E41FA7F2C4D2EDF33BD66 /* HydraAsync.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HydraAsync.modulemap; sourceTree = "<group>"; };
+		16DBA688FFC27B20A8301B52CD302C64 /* OktaAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = OktaAuth.framework; path = OktaAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A2B90B4088E237EB18AFCF9191D97F7 /* Vinculum-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Vinculum-umbrella.h"; sourceTree = "<group>"; };
+		1A2F0A519DBDC762C71C3493A9BC7542 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
+		1AF2616F32804997370A68CB989ED92B /* OIDGrantTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDGrantTypes.h; path = Source/OIDGrantTypes.h; sourceTree = "<group>"; };
+		1CD89DFEC92A6BBB4E71A3FC8A564E51 /* OIDResponseTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDResponseTypes.h; path = Source/OIDResponseTypes.h; sourceTree = "<group>"; };
+		1DF0CC79CC78DB90C6CDE31FC58DFA50 /* Promise+Validate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Promise+Validate.swift"; path = "Sources/Hydra/Promise+Validate.swift"; sourceTree = "<group>"; };
+		1F2D3325B6AA38A71FF56F16A7045710 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
+		1FFD124ACBF53A13B9B3CC5832483565 /* OktaJWT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = OktaJWT.framework; path = OktaJWT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		201683395F61D067BC7135561ACB3326 /* Keychain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Keychain.swift; path = Vinculum/Keychain.swift; sourceTree = "<group>"; };
+		2237EBBBB52CD7A2D4E1EE46F23887C6 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
+		22945598DCCAB195CC442EF0AC84795F /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
 		231A8578652830731397B9F6E10EB39A /* Pods-CachAR-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CachAR-acknowledgements.markdown"; sourceTree = "<group>"; };
-		26EFF0A773A9B68F8036680922E55A8F /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
-		2D182500FF4918391F97385DAE996449 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
-		332F6B9EA5D63A221428D82DFC754F83 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
+		291B8CB4CCAB329451D1446C06F2B931 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		2A761650C8844FFAC720A4D91B3ABA95 /* NSData+Base64URLEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSData+Base64URLEncoding.swift"; path = "OktaJWT/ThirdParty/JSONWebToken/NSData+Base64URLEncoding.swift"; sourceTree = "<group>"; };
+		2BAB89832AD861B1D70DE5300D1FA58C /* OktaJWT-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OktaJWT-umbrella.h"; sourceTree = "<group>"; };
+		2E26338A842453E2B733028DF5AD1A40 /* Promise+Timeout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Promise+Timeout.swift"; path = "Sources/Hydra/Promise+Timeout.swift"; sourceTree = "<group>"; };
+		30B3ADDEB6127283E5D384F6F2F7460E /* OIDTokenResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDTokenResponse.m; path = Source/OIDTokenResponse.m; sourceTree = "<group>"; };
+		33E1B3322856093C252C9CA888D3C027 /* Promise+Observer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Promise+Observer.swift"; path = "Sources/Hydra/Promise+Observer.swift"; sourceTree = "<group>"; };
+		340E23C31F1114927AE2EAF605111A8C /* Promise+Reduce.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Promise+Reduce.swift"; path = "Sources/Hydra/Promise+Reduce.swift"; sourceTree = "<group>"; };
+		36D768D28E8F9AC0A0C37851CAF53403 /* Vinculum.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Vinculum.modulemap; sourceTree = "<group>"; };
+		36F98BC6BA765D6F9FC9C4E1DE32ED01 /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
+		377F334F5A2E6E4274424F5AAB46C22B /* Promise+Map.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Promise+Map.swift"; path = "Sources/Hydra/Promise+Map.swift"; sourceTree = "<group>"; };
+		3A809E5284648AB218B9080D792A69D3 /* OktaRefresh.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OktaRefresh.swift; path = Okta/OktaRefresh.swift; sourceTree = "<group>"; };
+		3ABF45C076F52442821C5A693BEB624F /* OIDGrantTypes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDGrantTypes.m; path = Source/OIDGrantTypes.m; sourceTree = "<group>"; };
+		3BD156BAD3A0D99390C236CE5F6D164D /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
+		3DB923D6383EEC6D9D324FDB92769633 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EA086303E665857D697C4E5DF8FF942 /* Pods-CachAR-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CachAR-dummy.m"; sourceTree = "<group>"; };
-		40940641FEC544E01CEA2CF3E3D8CEA5 /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
+		3F5F5FACF9D3E8CAC43B7F1AD54748D0 /* OIDFieldMapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDFieldMapping.m; path = Source/OIDFieldMapping.m; sourceTree = "<group>"; };
+		40736793D120642AC0CD46A689C4EE82 /* OktaApi.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OktaApi.swift; path = Okta/OktaApi.swift; sourceTree = "<group>"; };
+		40ED4053CD0D203992F6DC24784FE132 /* NSData+SHA.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+SHA.h"; path = "OktaJWT/ThirdParty/JSONWebToken/NSData+SHA.h"; sourceTree = "<group>"; };
+		42B857595E1DA15C9FD096A08F0BB39A /* AppAuth.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AppAuth.xcconfig; sourceTree = "<group>"; };
 		42EC174ACBD9456E38EE7E0E2C84486C /* Pods-CachAR-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CachAR-acknowledgements.plist"; sourceTree = "<group>"; };
-		47A6BCB8BFA44757C42826D92DE90E92 /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
-		4F7DC1E21DB2CFEB43E506E64D5B61D6 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
-		557AFBCC38FD01234CE7EEAFFFF83850 /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
-		562CF504AEEDF6009597F045CAB1719E /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
-		5933A0580629CB79BDBD1D33483297F5 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
+		42FC6B96B84717E7D687D4481AC020C6 /* SignatureAlgorithm.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SignatureAlgorithm.swift; path = OktaJWT/ThirdParty/JSONWebToken/SignatureAlgorithm.swift; sourceTree = "<group>"; };
+		4433DB5D662CC3B55802CACDA102CFBB /* OIDServiceDiscovery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDServiceDiscovery.h; path = Source/OIDServiceDiscovery.h; sourceTree = "<group>"; };
+		46A1997943311977F37695BEF9835B76 /* OIDAuthorizationUICoordinatorIOS.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDAuthorizationUICoordinatorIOS.h; path = Source/iOS/OIDAuthorizationUICoordinatorIOS.h; sourceTree = "<group>"; };
+		46B25F4B84C43A1F0AA12BDC7D3C769E /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		46C268C615E6AA6F44E32BBB62AC41E6 /* OIDScopeUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDScopeUtilities.m; path = Source/OIDScopeUtilities.m; sourceTree = "<group>"; };
+		47B436053B826B7A9FA38075D2257679 /* Vinculum-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Vinculum-dummy.m"; sourceTree = "<group>"; };
+		487DFDF527D4FE55299CE503F01DC582 /* OktaError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OktaError.swift; path = Okta/OktaError.swift; sourceTree = "<group>"; };
+		4A6C7E28A30096FE63C186ADF68D3971 /* Pods_CachAR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CachAR.framework; path = "Pods-CachAR.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A78A09BC6DBDAF5F43255C81D3779EE /* HMAC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HMAC.swift; path = OktaJWT/ThirdParty/JSONWebToken/HMAC.swift; sourceTree = "<group>"; };
+		4D19B4DB714720D7B9758E0F1D391259 /* TokenValidator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TokenValidator.swift; path = OktaJWT/ThirdParty/JSONWebToken/TokenValidator.swift; sourceTree = "<group>"; };
+		4D3952D36F05FC5F3B73B6F6814E7C3B /* KeychainErrors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainErrors.swift; path = Vinculum/KeychainErrors.swift; sourceTree = "<group>"; };
+		4E4EF329C4EBB965092FF58474F624D1 /* OIDTokenUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDTokenUtilities.h; path = Source/OIDTokenUtilities.h; sourceTree = "<group>"; };
+		4ECBAC6F3AC47378C3AA64CE0533DEB8 /* OktaLogin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OktaLogin.swift; path = Okta/OktaLogin.swift; sourceTree = "<group>"; };
+		4F7E67D20BE9C0C3605C2A4FAAECFF92 /* HydraAsync-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HydraAsync-prefix.pch"; sourceTree = "<group>"; };
+		4FDDD9777C9D646D599A9997A822E5E4 /* OIDTokenRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDTokenRequest.m; path = Source/OIDTokenRequest.m; sourceTree = "<group>"; };
+		5021EDE3AFD0C9A9FAA265C0D3736633 /* Keychain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Keychain.swift; path = OktaJWT/Keychain.swift; sourceTree = "<group>"; };
+		503EC5AF0589D1C8235C40066A6DC2DF /* OktaAuth-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OktaAuth-umbrella.h"; sourceTree = "<group>"; };
+		5107742D8C0CA251DCDE109AAF1A85BB /* OktaJWT.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OktaJWT.swift; path = OktaJWT/OktaJWT.swift; sourceTree = "<group>"; };
+		54BA0F7392B40EB4C04698A4A47FDB99 /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
+		5574941BA7C635774168F877D6D184E2 /* RSASSA_PKCS1.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RSASSA_PKCS1.swift; path = OktaJWT/ThirdParty/JSONWebToken/RSASSA_PKCS1.swift; sourceTree = "<group>"; };
+		5812DBE503DF91A45DFFFC7F175352D7 /* Hydra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Hydra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		58144AEC37859BDA02C80AF26A95DF31 /* Commons.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Commons.swift; path = Sources/Hydra/Commons.swift; sourceTree = "<group>"; };
+		596B9CCB9117AF05F0C5F8FD6D5B0F08 /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
+		5AC1D7173D7789CABE9A691DEC08E690 /* OktaAuth.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = OktaAuth.modulemap; sourceTree = "<group>"; };
+		5B1F9D64E79060373818A70A0CC147B5 /* Promise+Always.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Promise+Always.swift"; path = "Sources/Hydra/Promise+Always.swift"; sourceTree = "<group>"; };
+		5C2526B7AB8FD96864952B0C9EE85292 /* OIDAuthorizationService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDAuthorizationService.h; path = Source/OIDAuthorizationService.h; sourceTree = "<group>"; };
+		5C6A17B38317F0029A8B865147847C6F /* AppAuth-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AppAuth-dummy.m"; sourceTree = "<group>"; };
+		5D7B68FF472F06F845BFD9F13306855E /* AppAuth-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AppAuth-umbrella.h"; sourceTree = "<group>"; };
+		61DD31126E268105A428CEAB71AED646 /* OIDAuthState+IOS.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "OIDAuthState+IOS.h"; path = "Source/iOS/OIDAuthState+IOS.h"; sourceTree = "<group>"; };
 		621B7EDBD2470284B506DDE1424A8C6B /* Pods-CachAR.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CachAR.modulemap"; sourceTree = "<group>"; };
-		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		66EB8B2B189BE6FF1AE3BFD4034FEB94 /* OIDAuthorizationUICoordinator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDAuthorizationUICoordinator.h; path = Source/OIDAuthorizationUICoordinator.h; sourceTree = "<group>"; };
+		694019DE236183F803E93F550C99F408 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6975D8FB48C301B474E44F91EC39B85F /* AppAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AppAuth.framework; path = AppAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		69912AFF5BC5CC9D3C24725D643B3C9F /* AppAuth.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AppAuth.modulemap; sourceTree = "<group>"; };
+		6A5C7C350FE0E08AB93B4A69AF3A8A21 /* AppAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A5E629ED2801D84EA20F204A9B187EC /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
 		6DC256591F09B1F10EAF6004D297A0E4 /* Pods-CachAR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CachAR.release.xcconfig"; sourceTree = "<group>"; };
-		6EC9F2B17E3F31671529D092B9450376 /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
-		73700E13B07592982F396FCAF905FBA6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7857033CB003F852F367D6BC6CA97425 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
-		816537A57D0662D80486E6CE09CBDF4F /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		6F8D7C1599C626D0F2A51C4BB9285117 /* OIDAuthorizationResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDAuthorizationResponse.h; path = Source/OIDAuthorizationResponse.h; sourceTree = "<group>"; };
+		744E59BD4B40F910F86B7148B476CB2D /* OktaJWT-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OktaJWT-prefix.pch"; sourceTree = "<group>"; };
+		75F129CC46D3411AFF6D7EE59857A1B8 /* OIDServiceConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDServiceConfiguration.h; path = Source/OIDServiceConfiguration.h; sourceTree = "<group>"; };
+		78A005988A4E0D9DFF1B235C148922E7 /* KeychainItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainItem.swift; path = Vinculum/KeychainItem.swift; sourceTree = "<group>"; };
+		79EE985183971499C6764BFDCAE26CB3 /* Promise+Zip.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Promise+Zip.swift"; path = "Sources/Hydra/Promise+Zip.swift"; sourceTree = "<group>"; };
+		7AABCDAFD9BDD0C6CB7DAEBCD9F695B2 /* APIErrors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = APIErrors.swift; path = OktaJWT/APIErrors.swift; sourceTree = "<group>"; };
+		7B90EBDADDFF1BA5D0EB871A7C8FBEBD /* OktaIntrospection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OktaIntrospection.swift; path = Okta/OktaIntrospection.swift; sourceTree = "<group>"; };
+		7CE314B7D539AFBEB18D2AF2E0348A5C /* Promise+Await.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Promise+Await.swift"; path = "Sources/Hydra/Promise+Await.swift"; sourceTree = "<group>"; };
+		7E8B7553D98BDC3CB88DA21A31EA383D /* Promise+Defer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Promise+Defer.swift"; path = "Sources/Hydra/Promise+Defer.swift"; sourceTree = "<group>"; };
+		7F73D71FCA82EE92636B54EBF9DDC780 /* OIDServiceDiscovery.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDServiceDiscovery.m; path = Source/OIDServiceDiscovery.m; sourceTree = "<group>"; };
+		81A216A2C4667FB70A633201B8130FC0 /* OIDRegistrationResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDRegistrationResponse.m; path = Source/OIDRegistrationResponse.m; sourceTree = "<group>"; };
+		81DC183B1EADA706F09C5D32F18F358D /* Promise+Recover.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Promise+Recover.swift"; path = "Sources/Hydra/Promise+Recover.swift"; sourceTree = "<group>"; };
+		81E092AD2A84A6AB2762E97497FF3D49 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		83EC233EA3E87E816AB3B760EEDEAA72 /* OIDScopes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDScopes.h; path = Source/OIDScopes.h; sourceTree = "<group>"; };
+		86C00CDD6C33947967009A1C01A30944 /* NSData+HMAC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+HMAC.m"; path = "OktaJWT/ThirdParty/JSONWebToken/NSData+HMAC.m"; sourceTree = "<group>"; };
+		875E827D73578CD9DB3519D05897EB25 /* OktaJWT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OktaJWT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8855C1D828DD0A70E9C6645B867B3B69 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8F03809326666A0674F21BBADB1BB09D /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
-		901710181ECB814C322BEBBC0BC5182E /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
-		90E0AB53C2750C4578D8368126E9DD25 /* Pods_CachAR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CachAR.framework; path = "Pods-CachAR.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8891D28D875522E82C57A8CB1CC1184C /* Context.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Context.swift; path = Sources/Hydra/Context.swift; sourceTree = "<group>"; };
+		89C9403D6036CEEFA63A6588F43F1061 /* OIDScopeUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDScopeUtilities.h; path = Source/OIDScopeUtilities.h; sourceTree = "<group>"; };
+		8DAC30D4FF9C29793F9C755447A6475D /* OIDAuthState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDAuthState.h; path = Source/OIDAuthState.h; sourceTree = "<group>"; };
+		8E30CB8D4B551DFFB6A96AF8511FEAF1 /* OIDClientMetadataParameters.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDClientMetadataParameters.h; path = Source/OIDClientMetadataParameters.h; sourceTree = "<group>"; };
+		90246E8D7D3DB8369EEFDC48F15F2414 /* OIDAuthorizationResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDAuthorizationResponse.m; path = Source/OIDAuthorizationResponse.m; sourceTree = "<group>"; };
+		9053217B19AFEA9AFC6B877785456464 /* AppAuth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AppAuth.h; path = Source/AppAuth.h; sourceTree = "<group>"; };
+		9176FF9DCB69CD427BF3624D3A1A0915 /* OIDAuthState+IOS.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "OIDAuthState+IOS.m"; path = "Source/iOS/OIDAuthState+IOS.m"; sourceTree = "<group>"; };
+		9315A44AE6288E26A01BA4B56DAFDAAC /* Vinculum-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Vinculum-prefix.pch"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93FE4B0298E41009DA2185A00971C11E /* OIDScopes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDScopes.m; path = Source/OIDScopes.m; sourceTree = "<group>"; };
+		971BC781576E25164DDD9C31F350713F /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
+		981E64860E167E3ABF458BD0D851CE78 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
+		9B386A4771BFFDAF0379C67D7C45A01A /* OIDAuthorizationRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDAuthorizationRequest.m; path = Source/OIDAuthorizationRequest.m; sourceTree = "<group>"; };
+		9D46D3885DA64196484CC09A4B8C84CF /* OktaAuth-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OktaAuth-dummy.m"; sourceTree = "<group>"; };
+		9D7922A591132DD468B47A7CD705126F /* OIDServiceConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDServiceConfiguration.m; path = Source/OIDServiceConfiguration.m; sourceTree = "<group>"; };
+		9DCCA9D4C71B4604101AFD870F01B21F /* Promise+Retry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Promise+Retry.swift"; path = "Sources/Hydra/Promise+Retry.swift"; sourceTree = "<group>"; };
+		9EF8FB12597BC02353C642DC5682CB24 /* Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = OktaJWT/Utils.swift; sourceTree = "<group>"; };
+		A3BB01F316B8DEEE390DA7FE9155E81A /* HydraAsync-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HydraAsync-umbrella.h"; sourceTree = "<group>"; };
+		A4B46EC3C5EE707FE7B8A243B068967F /* OktaJWT.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OktaJWT.xcconfig; sourceTree = "<group>"; };
 		A5B20C03B5CF855B09ED25A1AB888F8C /* Pods-CachAR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CachAR.debug.xcconfig"; sourceTree = "<group>"; };
-		AEBEB670658597FB7864005ED913ECB6 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		A884EE80B49828BFA5D46D8B5A084BCC /* SecKeyUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecKeyUtils.swift; path = OktaJWT/ThirdParty/JSONWebToken/SecKeyUtils.swift; sourceTree = "<group>"; };
+		A9001BF486005CDD4BBB473B717B0C23 /* OIDAuthStateErrorDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDAuthStateErrorDelegate.h; path = Source/OIDAuthStateErrorDelegate.h; sourceTree = "<group>"; };
+		AA91B7A1DC4166055BD6ACD5BEAF013C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB642D41493FA148EF01B3D2D8BC05C0 /* Promise+Any.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Promise+Any.swift"; path = "Sources/Hydra/Promise+Any.swift"; sourceTree = "<group>"; };
+		AD6B6AD73AA3428F2A1958D9910F46E5 /* OIDURLQueryComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDURLQueryComponent.h; path = Source/OIDURLQueryComponent.h; sourceTree = "<group>"; };
+		ADF9B8C208E437B81E8072FF034815CA /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
+		B12B157F62A2932F03EAFDB40D7C4425 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B17D1FBE2AD5F3031D9320FD383C8D19 /* OIDAuthorizationUICoordinatorIOS.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDAuthorizationUICoordinatorIOS.m; path = Source/iOS/OIDAuthorizationUICoordinatorIOS.m; sourceTree = "<group>"; };
+		B29FA167929335110B82C0E7835F828F /* OIDDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDDefines.h; path = Source/OIDDefines.h; sourceTree = "<group>"; };
+		B2D5BCAF754E0657D02B0693BE140855 /* OIDTokenUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDTokenUtilities.m; path = Source/OIDTokenUtilities.m; sourceTree = "<group>"; };
+		B44880EB0E015B6393AA485A785ABBB8 /* OIDError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDError.h; path = Source/OIDError.h; sourceTree = "<group>"; };
+		B63DEF1FA30646C0ED8B9712E95B73E4 /* DispatchTimerWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DispatchTimerWrapper.swift; path = Sources/Hydra/DispatchTimerWrapper.swift; sourceTree = "<group>"; };
+		BBCCAB0DE752179C29355DF91782B919 /* OIDErrorUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDErrorUtilities.m; path = Source/OIDErrorUtilities.m; sourceTree = "<group>"; };
+		BE0390FD0B53B6EF3ED577AE79E5F36D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		BF0C4BE85ECD39E27170421B60013842 /* Promise+All.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Promise+All.swift"; path = "Sources/Hydra/Promise+All.swift"; sourceTree = "<group>"; };
+		C195E75B088EED3DA5C24B0BF277A50C /* Vinculum.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Vinculum.swift; path = Vinculum/Vinculum.swift; sourceTree = "<group>"; };
+		C1D2769C09B5EDEB71EE1A4F357FB540 /* OktaTokenManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OktaTokenManager.swift; path = Okta/OktaTokenManager.swift; sourceTree = "<group>"; };
+		C1E0A0C2C49D62D753002A7F1C34BBF8 /* Promise+Cancel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Promise+Cancel.swift"; path = "Sources/Hydra/Promise+Cancel.swift"; sourceTree = "<group>"; };
+		C2622D4DD15E625EF0D6FD1CC5B7A9E2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		C36679B8FFB5A125D9EF5EF31F1037C8 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
+		C4674259CD6BF7BC987E9A19BB983D87 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		C490F71358A73A7EC5A5C06EF59B2D7A /* Hydra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Hydra.framework; path = HydraAsync.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C67921915CCD5C95AA51BBF804F578C0 /* JSONWebToken.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONWebToken.swift; path = OktaJWT/ThirdParty/JSONWebToken/JSONWebToken.swift; sourceTree = "<group>"; };
+		C89CFF497B824903D3918CB4ED6141B1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8EE33CBE67392B582C519BBA3F36017 /* OIDAuthorizationService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDAuthorizationService.m; path = Source/OIDAuthorizationService.m; sourceTree = "<group>"; };
+		CA826FD08CE35E991D1318AC0DE6C28B /* OktaJWT-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OktaJWT-dummy.m"; sourceTree = "<group>"; };
+		CB3DD41BE02C7653DB392F337E5E443C /* Promise+State.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Promise+State.swift"; path = "Sources/Hydra/Promise+State.swift"; sourceTree = "<group>"; };
+		CC49FEBAEF0B426E1AE786EAFB505A9E /* OIDTokenRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDTokenRequest.h; path = Source/OIDTokenRequest.h; sourceTree = "<group>"; };
+		CDDE83436C8226A5BA2540DD11A79755 /* OktaAppAuth.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OktaAppAuth.swift; path = Okta/OktaAppAuth.swift; sourceTree = "<group>"; };
 		CE1D2BF5555B332AED74AB77DD93A50E /* Pods-CachAR-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CachAR-frameworks.sh"; sourceTree = "<group>"; };
-		CE916262DA3B758CAD082788099FDE78 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CF6FA20699EAC0AB72A507BB66B191F8 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
-		CFBFF681209D4E5030FF4116EFD41362 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
+		D14CD234B0E5E1BE35922BFD9D5771D2 /* Promise+Async.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Promise+Async.swift"; path = "Sources/Hydra/Promise+Async.swift"; sourceTree = "<group>"; };
+		D1CF3BA88066A2E06B60903DA574F8DD /* JWTVerifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JWTVerifier.swift; path = OktaJWT/JWTVerifier.swift; sourceTree = "<group>"; };
+		D2D3CD6768779E141E094A4FFAA830A3 /* OktaUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OktaUtils.swift; path = Okta/OktaUtils.swift; sourceTree = "<group>"; };
+		D638BE00485FE178597C9EF82EC5D931 /* Vinculum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Vinculum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7D7DA5242AA12282543029092F130F5 /* OIDAuthorizationRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDAuthorizationRequest.h; path = Source/OIDAuthorizationRequest.h; sourceTree = "<group>"; };
+		D84265E2D9927C356129F9FDE5CEB380 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		D86EA1CD002112B7A4185E0F93A3F7FF /* OIDRegistrationRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDRegistrationRequest.h; path = Source/OIDRegistrationRequest.h; sourceTree = "<group>"; };
+		D91EB6E37F47E08F911C2A92F00875D7 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
 		D9DE10B7BEB9264D3D4FCD4829F02871 /* Pods-CachAR-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CachAR-resources.sh"; sourceTree = "<group>"; };
-		D9EE6D52AA2F0C3238B527C58255F520 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
-		DAA5CA9C1A1A8A10FA0F34E068E281AB /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
-		E1456F70DDC38E5610289D309053CAC2 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
-		E3E6E9EB9A1D483F534E60C6BB272675 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E42F49FBA20BC96954B56110A1FB0535 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
-		F05B506A540FE042146EA8265DD35585 /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
-		F26FB4343C43368E1D119B6871123AF1 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
-		F382C5721F36A8CF08DA36032E8FF2C1 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		DB1EC0903B32775B33EEEDCFE854EA7E /* OktaJWT.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = OktaJWT.modulemap; sourceTree = "<group>"; };
+		DC0B21F2493D15143F9DFB475D7D8D62 /* OIDAuthorizationService+IOS.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "OIDAuthorizationService+IOS.h"; path = "Source/iOS/OIDAuthorizationService+IOS.h"; sourceTree = "<group>"; };
+		DCB06E54A6C2B483CDD4A1C7C591ED3A /* TokenSigner.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TokenSigner.swift; path = OktaJWT/ThirdParty/JSONWebToken/TokenSigner.swift; sourceTree = "<group>"; };
+		DDF9D1EB7667C15B5B3143979F259CC4 /* OIDResponseTypes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDResponseTypes.m; path = Source/OIDResponseTypes.m; sourceTree = "<group>"; };
+		DE5457B867BDE2104BF825690E5C8463 /* OktaAuth.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OktaAuth.swift; path = Okta/OktaAuth.swift; sourceTree = "<group>"; };
+		E0184A99BBF6A642A115EC3926D56CF4 /* JWTVerificationTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JWTVerificationTypes.swift; path = OktaJWT/JWTVerificationTypes.swift; sourceTree = "<group>"; };
+		E04107428040F469BD6C8AA58AEF043C /* OIDRegistrationRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDRegistrationRequest.m; path = Source/OIDRegistrationRequest.m; sourceTree = "<group>"; };
+		E04A305278CA9BD37A4EF3717EB94B7F /* OktaAuth.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OktaAuth.xcconfig; sourceTree = "<group>"; };
+		E25EE055024FA5C0B78C6602E4A68242 /* OktaUserInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OktaUserInfo.swift; path = Okta/OktaUserInfo.swift; sourceTree = "<group>"; };
+		E4D870A22D802C432FCE0357586244B6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E57507E615509C6ED708868BAFECE355 /* OIDAuthorizationService+IOS.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "OIDAuthorizationService+IOS.m"; path = "Source/iOS/OIDAuthorizationService+IOS.m"; sourceTree = "<group>"; };
+		E6610D6BF198252180EEAB683945C1A6 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
+		E737D9CC5441AC32DC8059E9C78DD727 /* NSData+HMAC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+HMAC.h"; path = "OktaJWT/ThirdParty/JSONWebToken/NSData+HMAC.h"; sourceTree = "<group>"; };
+		E7C5694AAD36448A5C4353B5183167EF /* ClaimValidator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ClaimValidator.swift; path = OktaJWT/ThirdParty/JSONWebToken/ClaimValidator.swift; sourceTree = "<group>"; };
+		E7D4AA250504A74F6FF7A18E111FAD1B /* OktaAuth.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = OktaAuth.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		E85FA731A12DCB4A200D41189093F0A2 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
+		E984474C3007DC767370879C50E8E679 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA2DBC17C56FE70E7C434F058F683142 /* OIDAuthState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDAuthState.m; path = Source/OIDAuthState.m; sourceTree = "<group>"; };
+		EB91EBD4FAAFE0F2016122D231055750 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
+		EBF28BFD18B5F5483F8DAC3AAB702E29 /* OIDFieldMapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDFieldMapping.h; path = Source/OIDFieldMapping.h; sourceTree = "<group>"; };
+		EC931685DBEC1B3F08CFCA3045948C07 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		EE08CB5D627B3EC2242715B159CE1BC1 /* OIDURLQueryComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDURLQueryComponent.m; path = Source/OIDURLQueryComponent.m; sourceTree = "<group>"; };
+		EE7DD38883E48A9C8DFA2586BB446B1F /* OIDAuthStateChangeDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDAuthStateChangeDelegate.h; path = Source/OIDAuthStateChangeDelegate.h; sourceTree = "<group>"; };
+		EFD89579E33DC13318BFA83309A766E7 /* AppAuth-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AppAuth-prefix.pch"; sourceTree = "<group>"; };
+		F15AD0DA0CBC94D2E052C464E3890EFA /* HydraAsync.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HydraAsync.xcconfig; sourceTree = "<group>"; };
+		F37CF0DCF98B861541F8B96E65161670 /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
+		F6FAEAC845F282F27C65DC5F33D764E9 /* OIDRegistrationResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDRegistrationResponse.h; path = Source/OIDRegistrationResponse.h; sourceTree = "<group>"; };
+		F965E8B30F3A96E5CE967570DFF16823 /* Vinculum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Vinculum.framework; path = Vinculum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9BA1DC0CF0AB0A605BF65D209CF9B11 /* OIDClientMetadataParameters.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDClientMetadataParameters.m; path = Source/OIDClientMetadataParameters.m; sourceTree = "<group>"; };
+		FAD9C97764F083933EFDDA275593511E /* SignatureValidator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SignatureValidator.swift; path = OktaJWT/ThirdParty/JSONWebToken/SignatureValidator.swift; sourceTree = "<group>"; };
+		FCCC4FF60C7839FD838D9340562A671B /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
+		FDA61F91D7510B990E0D9D971AEF73D1 /* README 2.md */ = {isa = PBXFileReference; includeInIndex = 1; path = "README 2.md"; sourceTree = "<group>"; };
+		FE0AF761F7CDA882C378AF31A75AEAFF /* OIDErrorUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDErrorUtilities.h; path = Source/OIDErrorUtilities.h; sourceTree = "<group>"; };
+		FE5258455FC77808142363F620E106F3 /* OktaAuth-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OktaAuth-prefix.pch"; sourceTree = "<group>"; };
+		FE5CEDE7EC3C80FAB388A96B107D01A3 /* Vinculum.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Vinculum.xcconfig; sourceTree = "<group>"; };
+		FFDE51A258B314A77DB71AEA813AB409 /* OktaRevoke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OktaRevoke.swift; path = Okta/OktaRevoke.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4AEB41054723594DE5E9F848AC68EE13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5DFD2ED7F7B210F2602CCAB9BC4A335 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75E1B851CDBBAAC2CF2938E660D4A1C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE6248F3FC31B24626695292099A2164 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92A715085EFC061CB05D6B498175FBD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BD31BB1E4CD2F8141B32E5E6F96B31E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94E0CAE2AAF83B0228BC2F869321950E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09530C78534F21D0821F5E75E512A9D5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		99195E4207764744AEC07ECCBCD550EB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -110,31 +490,57 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A340462894C22D8FBE0C62CE67138450 /* Frameworks */ = {
+		ABFA3084B3B2A819FE91E0DF6FCFB2D7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA4B071192D5C813AF557CCC83802C4D /* Foundation.framework in Frameworks */,
+				0B8E7558657CE580C826886DA7272FBC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D384C6908B7FFF71C4DE9351063F9A1D /* Frameworks */ = {
+		D970F5038F8758164973C8CB7DFA1BF5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF0D4C83AFA41ABCC40035B41F709A87 /* Foundation.framework in Frameworks */,
+				B197A2F991DB5DE9A8E3DD30742FE49C /* Foundation.framework in Frameworks */,
+				7BB2CE764095FCCE9A3C8C5327E42B88 /* SafariServices.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8BEA2D6020AF8BC5E0FE7851160D99F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7287C79124A90B04E1C0BA5161DB97E /* AppAuth.framework in Frameworks */,
+				64576C4BC2C4A4BF8114D6756FE7F679 /* Foundation.framework in Frameworks */,
+				43F37C089D0C74E57ACB8C71243415E2 /* Hydra.framework in Frameworks */,
+				E29DB10B712BC0E55158785BC77AC2D4 /* OktaJWT.framework in Frameworks */,
+				2D90C19716A9C4D27E9F7880D1CF2E3D /* Vinculum.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		01A0EB929C1E810BFE04D950E6016D38 /* Products */ = {
+		10BCEFFF73FD73ED5662AB237F3BC965 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				072FBC70F25CFB84B674D7B68AF6376B /* Alamofire.framework */,
-				90E0AB53C2750C4578D8368126E9DD25 /* Pods_CachAR.framework */,
-				E3E6E9EB9A1D483F534E60C6BB272675 /* SwiftyJSON.framework */,
+				FDF2183773A21A9B48B833A8C3E81FF6 /* OktaAuth */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		2548FEF9B142489315CB8992FF305BE1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3DB923D6383EEC6D9D324FDB92769633 /* Alamofire.framework */,
+				6975D8FB48C301B474E44F91EC39B85F /* AppAuth.framework */,
+				C490F71358A73A7EC5A5C06EF59B2D7A /* Hydra.framework */,
+				16DBA688FFC27B20A8301B52CD302C64 /* OktaAuth.framework */,
+				1FFD124ACBF53A13B9B3CC5832483565 /* OktaJWT.framework */,
+				4A6C7E28A30096FE63C186ADF68D3971 /* Pods_CachAR.framework */,
+				B12B157F62A2932F03EAFDB40D7C4425 /* SwiftyJSON.framework */,
+				F965E8B30F3A96E5CE967570DFF16823 /* Vinculum.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -157,60 +563,212 @@
 			path = "Target Support Files/Pods-CachAR";
 			sourceTree = "<group>";
 		};
-		52CC3F1FEFCE662664006A9B9376FB3A /* Support Files */ = {
+		3A9E4E242E349E1AAC81DC3D123C7BCF /* Alamofire */ = {
 			isa = PBXGroup;
 			children = (
-				816537A57D0662D80486E6CE09CBDF4F /* Alamofire.modulemap */,
-				E1456F70DDC38E5610289D309053CAC2 /* Alamofire.xcconfig */,
-				0841CA7163214CF11939BFCB9E0C45F2 /* Alamofire-dummy.m */,
-				562CF504AEEDF6009597F045CAB1719E /* Alamofire-prefix.pch */,
-				901710181ECB814C322BEBBC0BC5182E /* Alamofire-umbrella.h */,
-				73700E13B07592982F396FCAF905FBA6 /* Info.plist */,
+				05CF8E383CD2BB9757839766DE45B989 /* AFError.swift */,
+				044EDBF123F691C2AC59292FDB30614F /* Alamofire.swift */,
+				3BD156BAD3A0D99390C236CE5F6D164D /* DispatchQueue+Alamofire.swift */,
+				E6610D6BF198252180EEAB683945C1A6 /* MultipartFormData.swift */,
+				0C7D2B39AEBF178BD60A83E6AD1711F4 /* NetworkReachabilityManager.swift */,
+				981E64860E167E3ABF458BD0D851CE78 /* Notifications.swift */,
+				1A2F0A519DBDC762C71C3493A9BC7542 /* ParameterEncoding.swift */,
+				291B8CB4CCAB329451D1446C06F2B931 /* Request.swift */,
+				2237EBBBB52CD7A2D4E1EE46F23887C6 /* Response.swift */,
+				D84265E2D9927C356129F9FDE5CEB380 /* ResponseSerialization.swift */,
+				E85FA731A12DCB4A200D41189093F0A2 /* Result.swift */,
+				22945598DCCAB195CC442EF0AC84795F /* ServerTrustPolicy.swift */,
+				C36679B8FFB5A125D9EF5EF31F1037C8 /* SessionDelegate.swift */,
+				54BA0F7392B40EB4C04698A4A47FDB99 /* SessionManager.swift */,
+				36F98BC6BA765D6F9FC9C4E1DE32ED01 /* TaskDelegate.swift */,
+				D91EB6E37F47E08F911C2A92F00875D7 /* Timeline.swift */,
+				46B25F4B84C43A1F0AA12BDC7D3C769E /* Validation.swift */,
+				D59824872A7F93569203D8EF67188E31 /* Support Files */,
+			);
+			name = Alamofire;
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		439C75A6574A14EF245FA229E5EDF28D /* SwiftyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				1F2D3325B6AA38A71FF56F16A7045710 /* SwiftyJSON.swift */,
+				77500B27B764D65A09A23A8F6BAC3311 /* Support Files */,
+			);
+			name = SwiftyJSON;
+			path = SwiftyJSON;
+			sourceTree = "<group>";
+		};
+		6073573B58AFACA6841AF5DB8CEA4704 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0EB6E6BA680E742F5BE7D707596B88C4 /* Info.plist */,
+				5AC1D7173D7789CABE9A691DEC08E690 /* OktaAuth.modulemap */,
+				E04A305278CA9BD37A4EF3717EB94B7F /* OktaAuth.xcconfig */,
+				9D46D3885DA64196484CC09A4B8C84CF /* OktaAuth-dummy.m */,
+				FE5258455FC77808142363F620E106F3 /* OktaAuth-prefix.pch */,
+				503EC5AF0589D1C8235C40066A6DC2DF /* OktaAuth-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/Alamofire";
+			path = "CachAR/Pods/Target Support Files/OktaAuth";
+			sourceTree = "<group>";
+		};
+		699C1C0F89B4262F671F8F258C247187 /* HydraAsync */ = {
+			isa = PBXGroup;
+			children = (
+				58144AEC37859BDA02C80AF26A95DF31 /* Commons.swift */,
+				8891D28D875522E82C57A8CB1CC1184C /* Context.swift */,
+				B63DEF1FA30646C0ED8B9712E95B73E4 /* DispatchTimerWrapper.swift */,
+				04120EA173EE7C4682800590DEE02B78 /* Promise.swift */,
+				BF0C4BE85ECD39E27170421B60013842 /* Promise+All.swift */,
+				5B1F9D64E79060373818A70A0CC147B5 /* Promise+Always.swift */,
+				AB642D41493FA148EF01B3D2D8BC05C0 /* Promise+Any.swift */,
+				D14CD234B0E5E1BE35922BFD9D5771D2 /* Promise+Async.swift */,
+				7CE314B7D539AFBEB18D2AF2E0348A5C /* Promise+Await.swift */,
+				C1E0A0C2C49D62D753002A7F1C34BBF8 /* Promise+Cancel.swift */,
+				046DA8B15E73A1540678BEA3BC4E2ECF /* Promise+Catch.swift */,
+				7E8B7553D98BDC3CB88DA21A31EA383D /* Promise+Defer.swift */,
+				377F334F5A2E6E4274424F5AAB46C22B /* Promise+Map.swift */,
+				33E1B3322856093C252C9CA888D3C027 /* Promise+Observer.swift */,
+				042ABC0827E7DFB563454CB29A2E6201 /* Promise+Pass.swift */,
+				81DC183B1EADA706F09C5D32F18F358D /* Promise+Recover.swift */,
+				340E23C31F1114927AE2EAF605111A8C /* Promise+Reduce.swift */,
+				9DCCA9D4C71B4604101AFD870F01B21F /* Promise+Retry.swift */,
+				CB3DD41BE02C7653DB392F337E5E443C /* Promise+State.swift */,
+				0A17FEBA596AD6AD3E79EF564E32D922 /* Promise+Then.swift */,
+				2E26338A842453E2B733028DF5AD1A40 /* Promise+Timeout.swift */,
+				1DF0CC79CC78DB90C6CDE31FC58DFA50 /* Promise+Validate.swift */,
+				79EE985183971499C6764BFDCAE26CB3 /* Promise+Zip.swift */,
+				E35633A80607F42A166EE62424146684 /* Support Files */,
+			);
+			name = HydraAsync;
+			path = HydraAsync;
+			sourceTree = "<group>";
+		};
+		77500B27B764D65A09A23A8F6BAC3311 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E4D870A22D802C432FCE0357586244B6 /* Info.plist */,
+				FCCC4FF60C7839FD838D9340562A671B /* SwiftyJSON.modulemap */,
+				6A5E629ED2801D84EA20F204A9B187EC /* SwiftyJSON.xcconfig */,
+				971BC781576E25164DDD9C31F350713F /* SwiftyJSON-dummy.m */,
+				F37CF0DCF98B861541F8B96E65161670 /* SwiftyJSON-prefix.pch */,
+				596B9CCB9117AF05F0C5F8FD6D5B0F08 /* SwiftyJSON-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyJSON";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				86D8AA6B1E9A5BBF1AE91BD6451D7A84 /* Pods */,
-				01A0EB929C1E810BFE04D950E6016D38 /* Products */,
+				10BCEFFF73FD73ED5662AB237F3BC965 /* Development Pods */,
+				95BB32A997F158C292A1CD065F6AC30C /* Frameworks */,
+				DBE007BE51BF819BEF96E22FF8EC5F2F /* Pods */,
+				2548FEF9B142489315CB8992FF305BE1 /* Products */,
 				C91B9E96AA6A2616671A0E95C4CD6BD7 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		86D8AA6B1E9A5BBF1AE91BD6451D7A84 /* Pods */ = {
+		8CA729F53CAFB94E3599D184C42D94F1 /* AppAuth */ = {
 			isa = PBXGroup;
 			children = (
-				EB9D3294C408A3132839B3B5B37A96BC /* Alamofire */,
-				C9BFD22DAF08BC7D056B72F0924E9AFE /* SwiftyJSON */,
+				9053217B19AFEA9AFC6B877785456464 /* AppAuth.h */,
+				D7D7DA5242AA12282543029092F130F5 /* OIDAuthorizationRequest.h */,
+				9B386A4771BFFDAF0379C67D7C45A01A /* OIDAuthorizationRequest.m */,
+				6F8D7C1599C626D0F2A51C4BB9285117 /* OIDAuthorizationResponse.h */,
+				90246E8D7D3DB8369EEFDC48F15F2414 /* OIDAuthorizationResponse.m */,
+				5C2526B7AB8FD96864952B0C9EE85292 /* OIDAuthorizationService.h */,
+				C8EE33CBE67392B582C519BBA3F36017 /* OIDAuthorizationService.m */,
+				DC0B21F2493D15143F9DFB475D7D8D62 /* OIDAuthorizationService+IOS.h */,
+				E57507E615509C6ED708868BAFECE355 /* OIDAuthorizationService+IOS.m */,
+				66EB8B2B189BE6FF1AE3BFD4034FEB94 /* OIDAuthorizationUICoordinator.h */,
+				46A1997943311977F37695BEF9835B76 /* OIDAuthorizationUICoordinatorIOS.h */,
+				B17D1FBE2AD5F3031D9320FD383C8D19 /* OIDAuthorizationUICoordinatorIOS.m */,
+				8DAC30D4FF9C29793F9C755447A6475D /* OIDAuthState.h */,
+				EA2DBC17C56FE70E7C434F058F683142 /* OIDAuthState.m */,
+				61DD31126E268105A428CEAB71AED646 /* OIDAuthState+IOS.h */,
+				9176FF9DCB69CD427BF3624D3A1A0915 /* OIDAuthState+IOS.m */,
+				EE7DD38883E48A9C8DFA2586BB446B1F /* OIDAuthStateChangeDelegate.h */,
+				A9001BF486005CDD4BBB473B717B0C23 /* OIDAuthStateErrorDelegate.h */,
+				8E30CB8D4B551DFFB6A96AF8511FEAF1 /* OIDClientMetadataParameters.h */,
+				F9BA1DC0CF0AB0A605BF65D209CF9B11 /* OIDClientMetadataParameters.m */,
+				B29FA167929335110B82C0E7835F828F /* OIDDefines.h */,
+				B44880EB0E015B6393AA485A785ABBB8 /* OIDError.h */,
+				07AEA994DAAB6BF63F1C52198A537F9B /* OIDError.m */,
+				FE0AF761F7CDA882C378AF31A75AEAFF /* OIDErrorUtilities.h */,
+				BBCCAB0DE752179C29355DF91782B919 /* OIDErrorUtilities.m */,
+				EBF28BFD18B5F5483F8DAC3AAB702E29 /* OIDFieldMapping.h */,
+				3F5F5FACF9D3E8CAC43B7F1AD54748D0 /* OIDFieldMapping.m */,
+				1AF2616F32804997370A68CB989ED92B /* OIDGrantTypes.h */,
+				3ABF45C076F52442821C5A693BEB624F /* OIDGrantTypes.m */,
+				D86EA1CD002112B7A4185E0F93A3F7FF /* OIDRegistrationRequest.h */,
+				E04107428040F469BD6C8AA58AEF043C /* OIDRegistrationRequest.m */,
+				F6FAEAC845F282F27C65DC5F33D764E9 /* OIDRegistrationResponse.h */,
+				81A216A2C4667FB70A633201B8130FC0 /* OIDRegistrationResponse.m */,
+				1CD89DFEC92A6BBB4E71A3FC8A564E51 /* OIDResponseTypes.h */,
+				DDF9D1EB7667C15B5B3143979F259CC4 /* OIDResponseTypes.m */,
+				83EC233EA3E87E816AB3B760EEDEAA72 /* OIDScopes.h */,
+				93FE4B0298E41009DA2185A00971C11E /* OIDScopes.m */,
+				89C9403D6036CEEFA63A6588F43F1061 /* OIDScopeUtilities.h */,
+				46C268C615E6AA6F44E32BBB62AC41E6 /* OIDScopeUtilities.m */,
+				75F129CC46D3411AFF6D7EE59857A1B8 /* OIDServiceConfiguration.h */,
+				9D7922A591132DD468B47A7CD705126F /* OIDServiceConfiguration.m */,
+				4433DB5D662CC3B55802CACDA102CFBB /* OIDServiceDiscovery.h */,
+				7F73D71FCA82EE92636B54EBF9DDC780 /* OIDServiceDiscovery.m */,
+				CC49FEBAEF0B426E1AE786EAFB505A9E /* OIDTokenRequest.h */,
+				4FDDD9777C9D646D599A9997A822E5E4 /* OIDTokenRequest.m */,
+				09060AAF21C5BB0F033D7611EF617CF1 /* OIDTokenResponse.h */,
+				30B3ADDEB6127283E5D384F6F2F7460E /* OIDTokenResponse.m */,
+				4E4EF329C4EBB965092FF58474F624D1 /* OIDTokenUtilities.h */,
+				B2D5BCAF754E0657D02B0693BE140855 /* OIDTokenUtilities.m */,
+				AD6B6AD73AA3428F2A1958D9910F46E5 /* OIDURLQueryComponent.h */,
+				EE08CB5D627B3EC2242715B159CE1BC1 /* OIDURLQueryComponent.m */,
+				C464A6C316D13DEE479EFB02D1EFAB9D /* Support Files */,
 			);
-			name = Pods;
+			name = AppAuth;
+			path = AppAuth;
 			sourceTree = "<group>";
 		};
-		872358948F17223FC246D5650867D2C7 /* Support Files */ = {
+		95BB32A997F158C292A1CD065F6AC30C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CE916262DA3B758CAD082788099FDE78 /* Info.plist */,
-				4F7DC1E21DB2CFEB43E506E64D5B61D6 /* SwiftyJSON.modulemap */,
-				6EC9F2B17E3F31671529D092B9450376 /* SwiftyJSON.xcconfig */,
-				47A6BCB8BFA44757C42826D92DE90E92 /* SwiftyJSON-dummy.m */,
-				557AFBCC38FD01234CE7EEAFFFF83850 /* SwiftyJSON-prefix.pch */,
-				40940641FEC544E01CEA2CF3E3D8CEA5 /* SwiftyJSON-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SwiftyJSON";
-			sourceTree = "<group>";
-		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+				6A5C7C350FE0E08AB93B4A69AF3A8A21 /* AppAuth.framework */,
+				5812DBE503DF91A45DFFFC7F175352D7 /* Hydra.framework */,
+				875E827D73578CD9DB3519D05897EB25 /* OktaJWT.framework */,
+				D638BE00485FE178597C9EF82EC5D931 /* Vinculum.framework */,
+				D18FAC6060313163B1CE0C04F709ECFD /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		971D31421A2713ECD088ABC5B0D5B078 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0BF1DFC889F5C6253384C93C61D9419F /* Info.plist */,
+				36D768D28E8F9AC0A0C37851CAF53403 /* Vinculum.modulemap */,
+				FE5CEDE7EC3C80FAB388A96B107D01A3 /* Vinculum.xcconfig */,
+				47B436053B826B7A9FA38075D2257679 /* Vinculum-dummy.m */,
+				9315A44AE6288E26A01BA4B56DAFDAAC /* Vinculum-prefix.pch */,
+				1A2B90B4088E237EB18AFCF9191D97F7 /* Vinculum-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Vinculum";
+			sourceTree = "<group>";
+		};
+		C464A6C316D13DEE479EFB02D1EFAB9D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				69912AFF5BC5CC9D3C24725D643B3C9F /* AppAuth.modulemap */,
+				42B857595E1DA15C9FD096A08F0BB39A /* AppAuth.xcconfig */,
+				5C6A17B38317F0029A8B865147847C6F /* AppAuth-dummy.m */,
+				EFD89579E33DC13318BFA83309A766E7 /* AppAuth-prefix.pch */,
+				5D7B68FF472F06F845BFD9F13306855E /* AppAuth-umbrella.h */,
+				694019DE236183F803E93F550C99F408 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/AppAuth";
 			sourceTree = "<group>";
 		};
 		C91B9E96AA6A2616671A0E95C4CD6BD7 /* Targets Support Files */ = {
@@ -221,53 +779,182 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		C9BFD22DAF08BC7D056B72F0924E9AFE /* SwiftyJSON */ = {
+		CED9A47E947B75E72641B2FE0AF393D4 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				CFBFF681209D4E5030FF4116EFD41362 /* SwiftyJSON.swift */,
-				872358948F17223FC246D5650867D2C7 /* Support Files */,
+				C89CFF497B824903D3918CB4ED6141B1 /* Info.plist */,
+				DB1EC0903B32775B33EEEDCFE854EA7E /* OktaJWT.modulemap */,
+				A4B46EC3C5EE707FE7B8A243B068967F /* OktaJWT.xcconfig */,
+				CA826FD08CE35E991D1318AC0DE6C28B /* OktaJWT-dummy.m */,
+				744E59BD4B40F910F86B7148B476CB2D /* OktaJWT-prefix.pch */,
+				2BAB89832AD861B1D70DE5300D1FA58C /* OktaJWT-umbrella.h */,
 			);
-			name = SwiftyJSON;
-			path = SwiftyJSON;
+			name = "Support Files";
+			path = "../Target Support Files/OktaJWT";
 			sourceTree = "<group>";
 		};
-		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+		D18FAC6060313163B1CE0C04F709ECFD /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+				BE0390FD0B53B6EF3ED577AE79E5F36D /* Foundation.framework */,
+				04463B8C56E6138C74A2A2C635E3F4A4 /* SafariServices.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		EB9D3294C408A3132839B3B5B37A96BC /* Alamofire */ = {
+		D59824872A7F93569203D8EF67188E31 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				CF6FA20699EAC0AB72A507BB66B191F8 /* AFError.swift */,
-				F26FB4343C43368E1D119B6871123AF1 /* Alamofire.swift */,
-				5933A0580629CB79BDBD1D33483297F5 /* DispatchQueue+Alamofire.swift */,
-				E42F49FBA20BC96954B56110A1FB0535 /* MultipartFormData.swift */,
-				7857033CB003F852F367D6BC6CA97425 /* NetworkReachabilityManager.swift */,
-				09922B86810418CDE6DD69710D5A9C17 /* Notifications.swift */,
-				8F03809326666A0674F21BBADB1BB09D /* ParameterEncoding.swift */,
-				AEBEB670658597FB7864005ED913ECB6 /* Request.swift */,
-				0C6E04C2B770D33E90A7E43AD9A6DDF5 /* Response.swift */,
-				26EFF0A773A9B68F8036680922E55A8F /* ResponseSerialization.swift */,
-				DAA5CA9C1A1A8A10FA0F34E068E281AB /* Result.swift */,
-				D9EE6D52AA2F0C3238B527C58255F520 /* ServerTrustPolicy.swift */,
-				332F6B9EA5D63A221428D82DFC754F83 /* SessionDelegate.swift */,
-				F05B506A540FE042146EA8265DD35585 /* SessionManager.swift */,
-				003F0620667B1D1CE3A63A07911DA946 /* TaskDelegate.swift */,
-				2D182500FF4918391F97385DAE996449 /* Timeline.swift */,
-				F382C5721F36A8CF08DA36032E8FF2C1 /* Validation.swift */,
-				52CC3F1FEFCE662664006A9B9376FB3A /* Support Files */,
+				C4674259CD6BF7BC987E9A19BB983D87 /* Alamofire.modulemap */,
+				EB91EBD4FAAFE0F2016122D231055750 /* Alamofire.xcconfig */,
+				ADF9B8C208E437B81E8072FF034815CA /* Alamofire-dummy.m */,
+				EC931685DBEC1B3F08CFCA3045948C07 /* Alamofire-prefix.pch */,
+				81E092AD2A84A6AB2762E97497FF3D49 /* Alamofire-umbrella.h */,
+				AA91B7A1DC4166055BD6ACD5BEAF013C /* Info.plist */,
 			);
-			name = Alamofire;
-			path = Alamofire;
+			name = "Support Files";
+			path = "../Target Support Files/Alamofire";
+			sourceTree = "<group>";
+		};
+		DBE007BE51BF819BEF96E22FF8EC5F2F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3A9E4E242E349E1AAC81DC3D123C7BCF /* Alamofire */,
+				8CA729F53CAFB94E3599D184C42D94F1 /* AppAuth */,
+				699C1C0F89B4262F671F8F258C247187 /* HydraAsync */,
+				DDC65BE921271DA364CC9C7ECE485D2A /* OktaJWT */,
+				439C75A6574A14EF245FA229E5EDF28D /* SwiftyJSON */,
+				F368171ED30A65332FD25FAC1BF2935F /* Vinculum */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DDC65BE921271DA364CC9C7ECE485D2A /* OktaJWT */ = {
+			isa = PBXGroup;
+			children = (
+				7AABCDAFD9BDD0C6CB7DAEBCD9F695B2 /* APIErrors.swift */,
+				E7C5694AAD36448A5C4353B5183167EF /* ClaimValidator.swift */,
+				4A78A09BC6DBDAF5F43255C81D3779EE /* HMAC.swift */,
+				C67921915CCD5C95AA51BBF804F578C0 /* JSONWebToken.swift */,
+				12542F47161CB80C2936DE9DC6ABC0DA /* JWTVerificationErrors.swift */,
+				E0184A99BBF6A642A115EC3926D56CF4 /* JWTVerificationTypes.swift */,
+				D1CF3BA88066A2E06B60903DA574F8DD /* JWTVerifier.swift */,
+				5021EDE3AFD0C9A9FAA265C0D3736633 /* Keychain.swift */,
+				2A761650C8844FFAC720A4D91B3ABA95 /* NSData+Base64URLEncoding.swift */,
+				E737D9CC5441AC32DC8059E9C78DD727 /* NSData+HMAC.h */,
+				86C00CDD6C33947967009A1C01A30944 /* NSData+HMAC.m */,
+				40ED4053CD0D203992F6DC24784FE132 /* NSData+SHA.h */,
+				024A59C6A85901C562447652EBA2B9B5 /* NSData+SHA.m */,
+				5107742D8C0CA251DCDE109AAF1A85BB /* OktaJWT.swift */,
+				09865F5294F7E78354AF1F205B997FE5 /* RequestsAPI.swift */,
+				5574941BA7C635774168F877D6D184E2 /* RSASSA_PKCS1.swift */,
+				A884EE80B49828BFA5D46D8B5A084BCC /* SecKeyUtils.swift */,
+				42FC6B96B84717E7D687D4481AC020C6 /* SignatureAlgorithm.swift */,
+				FAD9C97764F083933EFDDA275593511E /* SignatureValidator.swift */,
+				DCB06E54A6C2B483CDD4A1C7C591ED3A /* TokenSigner.swift */,
+				4D19B4DB714720D7B9758E0F1D391259 /* TokenValidator.swift */,
+				9EF8FB12597BC02353C642DC5682CB24 /* Utils.swift */,
+				CED9A47E947B75E72641B2FE0AF393D4 /* Support Files */,
+			);
+			name = OktaJWT;
+			path = OktaJWT;
+			sourceTree = "<group>";
+		};
+		E35633A80607F42A166EE62424146684 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1667BA55B06E41FA7F2C4D2EDF33BD66 /* HydraAsync.modulemap */,
+				F15AD0DA0CBC94D2E052C464E3890EFA /* HydraAsync.xcconfig */,
+				04AA4D2B0512814086006FAD463C1012 /* HydraAsync-dummy.m */,
+				4F7E67D20BE9C0C3605C2A4FAAECFF92 /* HydraAsync-prefix.pch */,
+				A3BB01F316B8DEEE390DA7FE9155E81A /* HydraAsync-umbrella.h */,
+				E984474C3007DC767370879C50E8E679 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/HydraAsync";
+			sourceTree = "<group>";
+		};
+		F368171ED30A65332FD25FAC1BF2935F /* Vinculum */ = {
+			isa = PBXGroup;
+			children = (
+				201683395F61D067BC7135561ACB3326 /* Keychain.swift */,
+				4D3952D36F05FC5F3B73B6F6814E7C3B /* KeychainErrors.swift */,
+				78A005988A4E0D9DFF1B235C148922E7 /* KeychainItem.swift */,
+				C195E75B088EED3DA5C24B0BF277A50C /* Vinculum.swift */,
+				971D31421A2713ECD088ABC5B0D5B078 /* Support Files */,
+			);
+			name = Vinculum;
+			path = Vinculum;
+			sourceTree = "<group>";
+		};
+		FDF2183773A21A9B48B833A8C3E81FF6 /* OktaAuth */ = {
+			isa = PBXGroup;
+			children = (
+				40736793D120642AC0CD46A689C4EE82 /* OktaApi.swift */,
+				CDDE83436C8226A5BA2540DD11A79755 /* OktaAppAuth.swift */,
+				DE5457B867BDE2104BF825690E5C8463 /* OktaAuth.swift */,
+				487DFDF527D4FE55299CE503F01DC582 /* OktaError.swift */,
+				7B90EBDADDFF1BA5D0EB871A7C8FBEBD /* OktaIntrospection.swift */,
+				4ECBAC6F3AC47378C3AA64CE0533DEB8 /* OktaLogin.swift */,
+				3A809E5284648AB218B9080D792A69D3 /* OktaRefresh.swift */,
+				FFDE51A258B314A77DB71AEA813AB409 /* OktaRevoke.swift */,
+				C1D2769C09B5EDEB71EE1A4F357FB540 /* OktaTokenManager.swift */,
+				E25EE055024FA5C0B78C6602E4A68242 /* OktaUserInfo.swift */,
+				D2D3CD6768779E141E094A4FFAA830A3 /* OktaUtils.swift */,
+				FE44D71ABB8C3A9F11052AF3F8F3AE34 /* Pod */,
+				6073573B58AFACA6841AF5DB8CEA4704 /* Support Files */,
+			);
+			name = OktaAuth;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		FE44D71ABB8C3A9F11052AF3F8F3AE34 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				C2622D4DD15E625EF0D6FD1CC5B7A9E2 /* LICENSE */,
+				E7D4AA250504A74F6FF7A18E111FAD1B /* OktaAuth.podspec */,
+				FDA61F91D7510B990E0D9D971AEF73D1 /* README 2.md */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		37ABA1B60E5D538EAB555B2823963E0F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CD6CC0CD14AD8878A86FDADF5303247 /* Vinculum-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5147EA73CDDF9EC9A079B81DB85029D0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B185A3BF5295D274BCCFDED59DF724B /* SwiftyJSON-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5457BE8BDD18BE17E6A98E608A872ADB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F03A362A5397C9B3C049F8CD5ED7E69 /* Pods-CachAR-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54E383F8D243F04BE4A35200762CB1E2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2C45CD51702C2F67B914F8E2EC40354 /* NSData+HMAC.h in Headers */,
+				0D29E1B603854C7F6685E0591108AD56 /* NSData+SHA.h in Headers */,
+				06E0083459B594147CE1340795F9350A /* OktaJWT-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B4002B6E97835FDCCAA5963EFE09A3E0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -276,25 +963,133 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F06B9921EB55D06B453A2E977975B8B4 /* Headers */ = {
+		D105348B1533AF433E01969FEBD3C828 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01DF08114E3D5BF35E03C74935FE1236 /* Pods-CachAR-umbrella.h in Headers */,
+				A42CE5CDA2C21B24E228FE5448772CC7 /* HydraAsync-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FE8504038004DC7DFEFD9E0DDCC48BE9 /* Headers */ = {
+		D7FD2020E6AFF7876A188B17FB391CA9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF53C3A8411EB5A37CB33E08E04F1E1F /* SwiftyJSON-umbrella.h in Headers */,
+				A6CA4DE8CD571D2C338150C32C42D3A6 /* OktaAuth-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD796741E41F687FE113D6ADBB506930 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B699E84064D46465DBC2A239936D8654 /* AppAuth-umbrella.h in Headers */,
+				1FEDC30E67E4277A2D01117BD949BB95 /* AppAuth.h in Headers */,
+				11F838C142785DC6F6FB8D43D3306482 /* OIDAuthorizationRequest.h in Headers */,
+				9AAAE293D768793C532BE4D434EF2E8B /* OIDAuthorizationResponse.h in Headers */,
+				29460145BC5A41E9005764D8D817F47D /* OIDAuthorizationService+IOS.h in Headers */,
+				48AA7CC2E512F5E57F7F51EC6E5B80DA /* OIDAuthorizationService.h in Headers */,
+				CAFF12665D2076791671B60186513ED0 /* OIDAuthorizationUICoordinator.h in Headers */,
+				5184620CE45836B563AF1B100DC4C79D /* OIDAuthorizationUICoordinatorIOS.h in Headers */,
+				FF7488D3468EE40797A951E1DC93EF6C /* OIDAuthState+IOS.h in Headers */,
+				6D42BB484E9B7C4DA9EF0DA55D2D4D54 /* OIDAuthState.h in Headers */,
+				58460BB73A6F70C0C8BA402052E27038 /* OIDAuthStateChangeDelegate.h in Headers */,
+				D58EFE464419177E41930B9900586C77 /* OIDAuthStateErrorDelegate.h in Headers */,
+				B09299A1263BCFC437D5D34A8E147579 /* OIDClientMetadataParameters.h in Headers */,
+				186CEB1BBDFDFFB26AD15679C7455E36 /* OIDDefines.h in Headers */,
+				0AA60E03816F83177E8BC368DA0447A6 /* OIDError.h in Headers */,
+				56101565E3C082EDF77B3C046E217C09 /* OIDErrorUtilities.h in Headers */,
+				8152598FC4FA1263EFEB5C7BFE9BC659 /* OIDFieldMapping.h in Headers */,
+				6EF7FD084FAD45F6743A7DE29A0A08EF /* OIDGrantTypes.h in Headers */,
+				6BCF48E70B71DBFD05AE6B427ED72E06 /* OIDRegistrationRequest.h in Headers */,
+				5F83C27D4BAAA49B48AD5241200E66B6 /* OIDRegistrationResponse.h in Headers */,
+				03AF597E645D4D8F5A0FE0495B14961D /* OIDResponseTypes.h in Headers */,
+				75BC68EFCD687B06641D1968F28C45FF /* OIDScopes.h in Headers */,
+				0D8EEAB55C090872BB6FF7FD0AEEF3BD /* OIDScopeUtilities.h in Headers */,
+				952FE82DA478C867E2B9AEB0CECDBD68 /* OIDServiceConfiguration.h in Headers */,
+				5568CA110A2B0413C27F571BFB88039F /* OIDServiceDiscovery.h in Headers */,
+				F2E96A261B6915D02E7532843525B065 /* OIDTokenRequest.h in Headers */,
+				3111ACCA9D654876DB6D820DE4B0F5E9 /* OIDTokenResponse.h in Headers */,
+				9A3FE97C5A271BA98D53325DC603D35D /* OIDTokenUtilities.h in Headers */,
+				A1EFB1A7E8FE6861198F8E565FDD1B65 /* OIDURLQueryComponent.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		0E4877F295A27C4363B1993AAAAD4511 /* OktaAuth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66B3DB2DCBD256A16FA39569A6982E7E /* Build configuration list for PBXNativeTarget "OktaAuth" */;
+			buildPhases = (
+				041F8A95E4A3BA6EE162604DFA452BF2 /* Sources */,
+				E8BEA2D6020AF8BC5E0FE7851160D99F /* Frameworks */,
+				D7FD2020E6AFF7876A188B17FB391CA9 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E5684B4CA31049799A50AC718A794644 /* PBXTargetDependency */,
+				ED709A854BD3815E0295F910A729663D /* PBXTargetDependency */,
+				27E7769EE03F3AD6368D133A38EF91DE /* PBXTargetDependency */,
+				20E7FBD25451C067774736C765B733E6 /* PBXTargetDependency */,
+			);
+			name = OktaAuth;
+			productName = OktaAuth;
+			productReference = 16DBA688FFC27B20A8301B52CD302C64 /* OktaAuth.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		30F6AB9282E94A32EB31DD97DCA5AFBE /* OktaJWT */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 120DAB39489DC5D4D08F3D53A2C335A6 /* Build configuration list for PBXNativeTarget "OktaJWT" */;
+			buildPhases = (
+				2817D147CC6052982C1F452FA49B32E8 /* Sources */,
+				94E0CAE2AAF83B0228BC2F869321950E /* Frameworks */,
+				54E383F8D243F04BE4A35200762CB1E2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OktaJWT;
+			productName = OktaJWT;
+			productReference = 1FFD124ACBF53A13B9B3CC5832483565 /* OktaJWT.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		59C07786C629C1DC3F2A8AE822C48108 /* SwiftyJSON */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13AE0644ED9F161975AB74206A54BC8E /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
+			buildPhases = (
+				09D94D4D41C34BB93CDE4914EAB4D557 /* Sources */,
+				92A715085EFC061CB05D6B498175FBD3 /* Frameworks */,
+				5147EA73CDDF9EC9A079B81DB85029D0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftyJSON;
+			productName = SwiftyJSON;
+			productReference = B12B157F62A2932F03EAFDB40D7C4425 /* SwiftyJSON.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		842F72DCDC6161BB37D6B901E9301ED8 /* AppAuth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2B13FA7D4B69452AF1CCC18E35335D0 /* Build configuration list for PBXNativeTarget "AppAuth" */;
+			buildPhases = (
+				0373E4E6EC5EACA9CDBA0765D8AECEDE /* Sources */,
+				D970F5038F8758164973C8CB7DFA1BF5 /* Frameworks */,
+				DD796741E41F687FE113D6ADBB506930 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AppAuth;
+			productName = AppAuth;
+			productReference = 6975D8FB48C301B474E44F91EC39B85F /* AppAuth.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 419E5D95491847CD79841B971A8A3277 /* Build configuration list for PBXNativeTarget "Alamofire" */;
@@ -309,43 +1104,65 @@
 			);
 			name = Alamofire;
 			productName = Alamofire;
-			productReference = 072FBC70F25CFB84B674D7B68AF6376B /* Alamofire.framework */;
+			productReference = 3DB923D6383EEC6D9D324FDB92769633 /* Alamofire.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		A90776C789A8C9C4D013F71C5365FCC0 /* SwiftyJSON */ = {
+		9DEAF891D94A7BA60D263F7571FF5965 /* Vinculum */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7A48415D33D91BD9D41BB316FCFFEAF1 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
+			buildConfigurationList = FB36EA1D35AA7B4501AC6FF736839735 /* Build configuration list for PBXNativeTarget "Vinculum" */;
 			buildPhases = (
-				1760AB68672E2BF778535514E51A7342 /* Sources */,
-				D384C6908B7FFF71C4DE9351063F9A1D /* Frameworks */,
-				FE8504038004DC7DFEFD9E0DDCC48BE9 /* Headers */,
+				5C2C753CED2317B2EE6E6A9E2B1C5D2B /* Sources */,
+				4AEB41054723594DE5E9F848AC68EE13 /* Frameworks */,
+				37ABA1B60E5D538EAB555B2823963E0F /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = SwiftyJSON;
-			productName = SwiftyJSON;
-			productReference = E3E6E9EB9A1D483F534E60C6BB272675 /* SwiftyJSON.framework */;
+			name = Vinculum;
+			productName = Vinculum;
+			productReference = F965E8B30F3A96E5CE967570DFF16823 /* Vinculum.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		C64C5E325680837BABEF5E7280A14E1A /* Pods-CachAR */ = {
+		B6FA0393A835D52F95E09C8F63A299EC /* Pods-CachAR */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B64380E34E07B5828B0D494843984578 /* Build configuration list for PBXNativeTarget "Pods-CachAR" */;
+			buildConfigurationList = 99012FA4A7C5D5C993EC0D2E1AC44A0D /* Build configuration list for PBXNativeTarget "Pods-CachAR" */;
 			buildPhases = (
-				6C374AA05A0C7EB1D6EDD80E596A7F09 /* Sources */,
-				A340462894C22D8FBE0C62CE67138450 /* Frameworks */,
-				F06B9921EB55D06B453A2E977975B8B4 /* Headers */,
+				20C144BC4C06C562866014BC03F32AC7 /* Sources */,
+				75E1B851CDBBAAC2CF2938E660D4A1C8 /* Frameworks */,
+				5457BE8BDD18BE17E6A98E608A872ADB /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E0ECA4F41F5DBEB9691BCCB5CE456E18 /* PBXTargetDependency */,
-				6BE36F30176C9A129512EF405046B367 /* PBXTargetDependency */,
+				ECCCB411E32946DB49CD55789C94AEFB /* PBXTargetDependency */,
+				DB547349E37982532F5C6F3C6AD525DA /* PBXTargetDependency */,
+				B57BA62F427148C1815FA33EA554C1CF /* PBXTargetDependency */,
+				E1F16D1FF1E75193F41C88F81A35DF03 /* PBXTargetDependency */,
+				730E454CE6AE381CC4CEFA97CAA7FAF8 /* PBXTargetDependency */,
+				EA4B232B8BA0BB078E6EC6EC21462833 /* PBXTargetDependency */,
+				5B83E9A8AF9014B08863D83BC983C643 /* PBXTargetDependency */,
 			);
 			name = "Pods-CachAR";
 			productName = "Pods-CachAR";
-			productReference = 90E0AB53C2750C4578D8368126E9DD25 /* Pods_CachAR.framework */;
+			productReference = 4A6C7E28A30096FE63C186ADF68D3971 /* Pods_CachAR.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E1DD322FDB1A554B5D087EFE9B3B62E5 /* HydraAsync */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8EB3E742772D126CA4D8D6C04E4049F1 /* Build configuration list for PBXNativeTarget "HydraAsync" */;
+			buildPhases = (
+				6F507B5FFD14951BAD40CBCFE31218A7 /* Sources */,
+				ABFA3084B3B2A819FE91E0DF6FCFB2D7 /* Frameworks */,
+				D105348B1533AF433E01969FEBD3C828 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HydraAsync;
+			productName = HydraAsync;
+			productReference = C490F71358A73A7EC5A5C06EF59B2D7A /* Hydra.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -365,24 +1182,115 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 01A0EB929C1E810BFE04D950E6016D38 /* Products */;
+			productRefGroup = 2548FEF9B142489315CB8992FF305BE1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */,
-				C64C5E325680837BABEF5E7280A14E1A /* Pods-CachAR */,
-				A90776C789A8C9C4D013F71C5365FCC0 /* SwiftyJSON */,
+				842F72DCDC6161BB37D6B901E9301ED8 /* AppAuth */,
+				E1DD322FDB1A554B5D087EFE9B3B62E5 /* HydraAsync */,
+				0E4877F295A27C4363B1993AAAAD4511 /* OktaAuth */,
+				30F6AB9282E94A32EB31DD97DCA5AFBE /* OktaJWT */,
+				B6FA0393A835D52F95E09C8F63A299EC /* Pods-CachAR */,
+				59C07786C629C1DC3F2A8AE822C48108 /* SwiftyJSON */,
+				9DEAF891D94A7BA60D263F7571FF5965 /* Vinculum */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1760AB68672E2BF778535514E51A7342 /* Sources */ = {
+		0373E4E6EC5EACA9CDBA0765D8AECEDE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F9B025A6D0CD4C28413DBA1FCA6C8A9 /* SwiftyJSON-dummy.m in Sources */,
-				C704483E5D8CB06704980E1C1CCEE06E /* SwiftyJSON.swift in Sources */,
+				B1199F7B73C00CB3E13D67F25A85E455 /* AppAuth-dummy.m in Sources */,
+				951124CCEB66738B67E5660FD3F70341 /* OIDAuthorizationRequest.m in Sources */,
+				8DCE233D870E14B1FE60155DEBBBD686 /* OIDAuthorizationResponse.m in Sources */,
+				D9E91B66EC9677704AF05458E397FC1E /* OIDAuthorizationService+IOS.m in Sources */,
+				DC6D69632516FFA9DB42213004FB1D55 /* OIDAuthorizationService.m in Sources */,
+				1E381A474E2BD1DFA65906AFF9B41C4C /* OIDAuthorizationUICoordinatorIOS.m in Sources */,
+				2F08728B8EF910812025F41F36DEE0B8 /* OIDAuthState+IOS.m in Sources */,
+				AF4C71B51F839A49C92FABD849FC7038 /* OIDAuthState.m in Sources */,
+				2705FB5B7DB37F5232F212F3EA15FE10 /* OIDClientMetadataParameters.m in Sources */,
+				D9B9C33B127BE44742582E5B6D368F6A /* OIDError.m in Sources */,
+				49B12540921B1E748A00765069F0832B /* OIDErrorUtilities.m in Sources */,
+				C7CF0735C660DA75568C0F97994B1F98 /* OIDFieldMapping.m in Sources */,
+				A4606553FBBEEF06D03928F9CB9891B2 /* OIDGrantTypes.m in Sources */,
+				B6B6BDF095F07ECFDC4863761A92DD6B /* OIDRegistrationRequest.m in Sources */,
+				BF3E48B14E22D5A0FCD3CF1F2BAAC034 /* OIDRegistrationResponse.m in Sources */,
+				39C2B9639EA318C009B35F79F7178EB6 /* OIDResponseTypes.m in Sources */,
+				758F781E5A5BCE72F53CF3A21C5B7FDF /* OIDScopes.m in Sources */,
+				9A2F76334825B34471CFD4CCAE60256C /* OIDScopeUtilities.m in Sources */,
+				405746A9A1DF3F8D47953E86BCC93DB2 /* OIDServiceConfiguration.m in Sources */,
+				7D46DA13C5EA9626A1C1AD8FA3F27526 /* OIDServiceDiscovery.m in Sources */,
+				90BFB0192C6CD4C8D917493B16EA060C /* OIDTokenRequest.m in Sources */,
+				9E695AD677A491C71FE458390AE96465 /* OIDTokenResponse.m in Sources */,
+				151CE1839D35ED469C50C77351BCA386 /* OIDTokenUtilities.m in Sources */,
+				FC17B910DF0FCFF2E32D097CDCAE5463 /* OIDURLQueryComponent.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		041F8A95E4A3BA6EE162604DFA452BF2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A7D1A25875A603A85B91848922DEFBC /* OktaApi.swift in Sources */,
+				47FB9834CD72F5B4CEFA3E83DBDCB04D /* OktaAppAuth.swift in Sources */,
+				114F2D23A0786B4E811F1986E0822DDF /* OktaAuth-dummy.m in Sources */,
+				44CC5D4E95FA27B1685771CC666AA526 /* OktaAuth.swift in Sources */,
+				D406D6459F93BEA581894CEB179883B8 /* OktaError.swift in Sources */,
+				173FF2D074A29C99697BA566328B0F89 /* OktaIntrospection.swift in Sources */,
+				1D463890D7DEA7DECD155BDF8844F7B9 /* OktaLogin.swift in Sources */,
+				83BDB932B739AFDF2D19AF79429DA8CA /* OktaRefresh.swift in Sources */,
+				70F2224A5670199954DE16C4EC45F234 /* OktaRevoke.swift in Sources */,
+				089940F34BC9DCBC82803D0EE66FA031 /* OktaTokenManager.swift in Sources */,
+				84A9B3B6BA179D629A59E5BDAF187E80 /* OktaUserInfo.swift in Sources */,
+				44D9968F3810FA2A9CC66FF59AE643FA /* OktaUtils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09D94D4D41C34BB93CDE4914EAB4D557 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05EF1AC8B40041124F7951D24FAC1156 /* SwiftyJSON-dummy.m in Sources */,
+				B32C1A3A7F00B26EDEB721569AC09699 /* SwiftyJSON.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20C144BC4C06C562866014BC03F32AC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1770B04F24398341A5119A3D53AD8B4 /* Pods-CachAR-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2817D147CC6052982C1F452FA49B32E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E041E43B41F395AE94239137BACEED25 /* APIErrors.swift in Sources */,
+				19D107BE8F12C80B112F55C5BA77E1A3 /* ClaimValidator.swift in Sources */,
+				BDC44377E3B9E7A236831BDB5A025EF9 /* HMAC.swift in Sources */,
+				EE53AF21A19C32F022429218757A5A44 /* JSONWebToken.swift in Sources */,
+				D1EF02A31EDE7C0430666858A91D2AC4 /* JWTVerificationErrors.swift in Sources */,
+				551B45EB190F3DFC56663BC21D34FC68 /* JWTVerificationTypes.swift in Sources */,
+				F7E0EC653DE2DFA3A382F501C57CCDBF /* JWTVerifier.swift in Sources */,
+				C2B5351547E1B777C4DF33C00EF9564E /* Keychain.swift in Sources */,
+				D0D6E75657CA5192E70B381254504801 /* NSData+Base64URLEncoding.swift in Sources */,
+				22CF7F053B6BE15CA232704DF60969C9 /* NSData+HMAC.m in Sources */,
+				6EEE54FF1AAC1F9E8061A6008C7C7506 /* NSData+SHA.m in Sources */,
+				F3B105DE161408CF4429BAB26DFEDDF2 /* OktaJWT-dummy.m in Sources */,
+				BC285F9406A1910E3BB7CB19A98A63A9 /* OktaJWT.swift in Sources */,
+				E90661D55E9F02A47A485C5F7FCDD520 /* RequestsAPI.swift in Sources */,
+				E649F0BFEB78EC2DE6AEE6C25A8694C8 /* RSASSA_PKCS1.swift in Sources */,
+				615C1296D414E37C4F0FB5895723520A /* SecKeyUtils.swift in Sources */,
+				6887716637CC0977E27C9DCE25B1C50E /* SignatureAlgorithm.swift in Sources */,
+				10C18EFED801A754013FFF6F27CC6D3B /* SignatureValidator.swift in Sources */,
+				4E4913809C5D2CF52BBC6E642A94E97D /* TokenSigner.swift in Sources */,
+				0D5E5D88A8BC711CB911753CBDEC843F /* TokenValidator.swift in Sources */,
+				15EB2ED7789D29C3DB6D101875373D23 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,33 +1319,156 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6C374AA05A0C7EB1D6EDD80E596A7F09 /* Sources */ = {
+		5C2C753CED2317B2EE6E6A9E2B1C5D2B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77BFFF736B6CCDEF93B1544422EE092A /* Pods-CachAR-dummy.m in Sources */,
+				62B6454C84C51E5092BC0F5463D2DD64 /* Keychain.swift in Sources */,
+				6F61F5B72051FE6A8B4FC6B608110FBB /* KeychainErrors.swift in Sources */,
+				27E2130D5A9533184959F5EF88E68782 /* KeychainItem.swift in Sources */,
+				B5F02555EA84C21CFFA63EC83ACD0477 /* Vinculum-dummy.m in Sources */,
+				6A9547FCD10A3281CFFEC45A574F8A73 /* Vinculum.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F507B5FFD14951BAD40CBCFE31218A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5FA5294B1E09A55C6FF5016C2E3AA77 /* Commons.swift in Sources */,
+				BAC73A53E3B47B509D6C9ACEDF5D2F0F /* Context.swift in Sources */,
+				76081D989D2DFF19EBAA4CAF3469DB18 /* DispatchTimerWrapper.swift in Sources */,
+				11AAAC0A91A808215EC22BD28F491BA5 /* HydraAsync-dummy.m in Sources */,
+				4E6EDFE1790F9C0E10543CD3131F72ED /* Promise+All.swift in Sources */,
+				C436A29FF0B462CE0A0DCCF6F6AF17CB /* Promise+Always.swift in Sources */,
+				C285B31CE534D517851BB5FA1BE0F12F /* Promise+Any.swift in Sources */,
+				057500477FE367BC10A4AB713923A157 /* Promise+Async.swift in Sources */,
+				F136F96C41013094D798BB34A9C2973A /* Promise+Await.swift in Sources */,
+				BB9533B97F32ACBB2D418020CD7A7547 /* Promise+Cancel.swift in Sources */,
+				C618B626EF485F228BAE60B8F6C23843 /* Promise+Catch.swift in Sources */,
+				27DDCC0432C38F429BB08C027912F159 /* Promise+Defer.swift in Sources */,
+				A9B0CF387C490D9518E653868A0FD906 /* Promise+Map.swift in Sources */,
+				9237626402FADFAC6E0AC605A673EA24 /* Promise+Observer.swift in Sources */,
+				6466E8BFD104951C83652BB18D3DE7C3 /* Promise+Pass.swift in Sources */,
+				6BC872E8980CAE6B231BCF0B934FBEEA /* Promise+Recover.swift in Sources */,
+				C4D795F3CC3217DD0C535A4A738E6662 /* Promise+Reduce.swift in Sources */,
+				C578CFC2D4799FB277596A6B362D2ECE /* Promise+Retry.swift in Sources */,
+				764ECE5FDDB506F70A581434D840F2B5 /* Promise+State.swift in Sources */,
+				511A2D42B1EA2306BB08E60B18346778 /* Promise+Then.swift in Sources */,
+				D0A20B003034A014B986EF058A34982C /* Promise+Timeout.swift in Sources */,
+				D14E4B54E0C89C281A90B67A59B74ACC /* Promise+Validate.swift in Sources */,
+				83B9C92B954E6C6C32F028E5E06D2E8D /* Promise+Zip.swift in Sources */,
+				8791F94F311427C36BCBFA6BA93E5B77 /* Promise.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		6BE36F30176C9A129512EF405046B367 /* PBXTargetDependency */ = {
+		20E7FBD25451C067774736C765B733E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Vinculum;
+			target = 9DEAF891D94A7BA60D263F7571FF5965 /* Vinculum */;
+			targetProxy = C775B3EB742B971BDC8FB61A8BE36BB5 /* PBXContainerItemProxy */;
+		};
+		27E7769EE03F3AD6368D133A38EF91DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OktaJWT;
+			target = 30F6AB9282E94A32EB31DD97DCA5AFBE /* OktaJWT */;
+			targetProxy = 509557D95C98B2A55AE8843900244323 /* PBXContainerItemProxy */;
+		};
+		5B83E9A8AF9014B08863D83BC983C643 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Vinculum;
+			target = 9DEAF891D94A7BA60D263F7571FF5965 /* Vinculum */;
+			targetProxy = 987D00B7AAA6B0ABE8B72E62C261950E /* PBXContainerItemProxy */;
+		};
+		730E454CE6AE381CC4CEFA97CAA7FAF8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OktaJWT;
+			target = 30F6AB9282E94A32EB31DD97DCA5AFBE /* OktaJWT */;
+			targetProxy = 9BDBF15A0679A3D0C107C6704D35FD78 /* PBXContainerItemProxy */;
+		};
+		B57BA62F427148C1815FA33EA554C1CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HydraAsync;
+			target = E1DD322FDB1A554B5D087EFE9B3B62E5 /* HydraAsync */;
+			targetProxy = 7B9CCBF39A696D03EF668DEF62D3E235 /* PBXContainerItemProxy */;
+		};
+		DB547349E37982532F5C6F3C6AD525DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AppAuth;
+			target = 842F72DCDC6161BB37D6B901E9301ED8 /* AppAuth */;
+			targetProxy = DBA6B10AE04A628D6CE5386A7AD99258 /* PBXContainerItemProxy */;
+		};
+		E1F16D1FF1E75193F41C88F81A35DF03 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OktaAuth;
+			target = 0E4877F295A27C4363B1993AAAAD4511 /* OktaAuth */;
+			targetProxy = 11D0AB9DCA023F7D4AF5ABF9C94075D5 /* PBXContainerItemProxy */;
+		};
+		E5684B4CA31049799A50AC718A794644 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AppAuth;
+			target = 842F72DCDC6161BB37D6B901E9301ED8 /* AppAuth */;
+			targetProxy = C6E29A95414BE1B8466FA3CA58459A31 /* PBXContainerItemProxy */;
+		};
+		EA4B232B8BA0BB078E6EC6EC21462833 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftyJSON;
-			target = A90776C789A8C9C4D013F71C5365FCC0 /* SwiftyJSON */;
-			targetProxy = 22A682123F4CB2ACF38E38A9DFF63442 /* PBXContainerItemProxy */;
+			target = 59C07786C629C1DC3F2A8AE822C48108 /* SwiftyJSON */;
+			targetProxy = 9513A16D8A8FDF6B2376F159BDF9D335 /* PBXContainerItemProxy */;
 		};
-		E0ECA4F41F5DBEB9691BCCB5CE456E18 /* PBXTargetDependency */ = {
+		ECCCB411E32946DB49CD55789C94AEFB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Alamofire;
 			target = 88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */;
-			targetProxy = 9DD211A210EC42A52B444D075D78BE96 /* PBXContainerItemProxy */;
+			targetProxy = 00C29F27558B1CB49D38355D3AD1768D /* PBXContainerItemProxy */;
+		};
+		ED709A854BD3815E0295F910A729663D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HydraAsync;
+			target = E1DD322FDB1A554B5D087EFE9B3B62E5 /* HydraAsync */;
+			targetProxy = 254C205EB54D17F1119CC1763AD594AD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		6D15C09E184A2174A8161143C1AD1EF8 /* Debug */ = {
+		2E8AE76886E460F5346B82B9AAFC485F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4B46EC3C5EE707FE7B8A243B068967F /* OktaJWT.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_CODE_COVERAGE = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/OktaJWT/OktaJWT-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/OktaJWT/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/OktaJWT/OktaJWT.modulemap";
+				PRODUCT_MODULE_NAME = OktaJWT;
+				PRODUCT_NAME = OktaJWT;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		561FFCF3E29397FFAB7E938119E06C42 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A5B20C03B5CF855B09ED25A1AB888F8C /* Pods-CachAR.debug.xcconfig */;
 			buildSettings = {
@@ -472,6 +1503,173 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		5A79B73A3B24A35873367A270AEFB2A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4B46EC3C5EE707FE7B8A243B068967F /* OktaJWT.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/OktaJWT/OktaJWT-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/OktaJWT/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/OktaJWT/OktaJWT.modulemap";
+				PRODUCT_MODULE_NAME = OktaJWT;
+				PRODUCT_NAME = OktaJWT;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6530703D57FDBCF0EF29A523F07B074E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E04A305278CA9BD37A4EF3717EB94B7F /* OktaAuth.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_CODE_COVERAGE = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/OktaAuth/OktaAuth-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/OktaAuth/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/OktaAuth/OktaAuth.modulemap";
+				PRODUCT_MODULE_NAME = OktaAuth;
+				PRODUCT_NAME = OktaAuth;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7EFB2683732E851177DB1BDD620F3156 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE5CEDE7EC3C80FAB388A96B107D01A3 /* Vinculum.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_CODE_COVERAGE = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Vinculum/Vinculum-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Vinculum/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Vinculum/Vinculum.modulemap";
+				PRODUCT_MODULE_NAME = Vinculum;
+				PRODUCT_NAME = Vinculum;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		84C9A39C3E0045E4ACB7CA91691F9FA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42B857595E1DA15C9FD096A08F0BB39A /* AppAuth.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_CODE_COVERAGE = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/AppAuth/AppAuth-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AppAuth/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/AppAuth/AppAuth.modulemap";
+				PRODUCT_MODULE_NAME = AppAuth;
+				PRODUCT_NAME = AppAuth;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		85ACC4AE21BC01664848627052641ED1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F15AD0DA0CBC94D2E052C464E3890EFA /* HydraAsync.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_CODE_COVERAGE = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HydraAsync/HydraAsync-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HydraAsync/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HydraAsync/HydraAsync.modulemap";
+				PRODUCT_MODULE_NAME = Hydra;
+				PRODUCT_NAME = Hydra;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		9DAE5233986C01ADB6E67169C53A3FD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -536,38 +1734,6 @@
 			};
 			name = Debug;
 		};
-		A47F2CBF77A8B53180E1097F427B5AF2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6EC9F2B17E3F31671529D092B9450376 /* SwiftyJSON.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
-				PRODUCT_MODULE_NAME = SwiftyJSON;
-				PRODUCT_NAME = SwiftyJSON;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		A5C979321EF3E652A57783AD90B270C4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -627,11 +1793,41 @@
 			};
 			name = Release;
 		};
-		C064194134EFCEB86F3913FA20CF8599 /* Release */ = {
+		AA88A15EE5E7BC7A5B1BFAC9BE914B5B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6EC9F2B17E3F31671529D092B9450376 /* SwiftyJSON.xcconfig */;
+			baseConfigurationReference = 42B857595E1DA15C9FD096A08F0BB39A /* AppAuth.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_CODE_COVERAGE = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/AppAuth/AppAuth-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AppAuth/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/AppAuth/AppAuth.modulemap";
+				PRODUCT_MODULE_NAME = AppAuth;
+				PRODUCT_NAME = AppAuth;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B764851D24822E8A10AA7A1BF809E94D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A5E629ED2801D84EA20F204A9B187EC /* SwiftyJSON.xcconfig */;
+			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -644,44 +1840,11 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
 				PRODUCT_MODULE_NAME = SwiftyJSON;
 				PRODUCT_NAME = SwiftyJSON;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		EA0ADC75B20BB62958101306980460E6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E1456F70DDC38E5610289D309053CAC2 /* Alamofire.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
-				PRODUCT_MODULE_NAME = Alamofire;
-				PRODUCT_NAME = Alamofire;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -693,11 +1856,10 @@
 			};
 			name = Debug;
 		};
-		EB3D5F517EE6918C9D2FFE40C2431CB6 /* Release */ = {
+		BE10EDE1D0844454CF6F9F5C8F5C3821 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E1456F70DDC38E5610289D309053CAC2 /* Alamofire.xcconfig */;
+			baseConfigurationReference = E04A305278CA9BD37A4EF3717EB94B7F /* OktaAuth.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_CODE_COVERAGE = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -707,27 +1869,26 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/OktaAuth/OktaAuth-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/OktaAuth/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
-				PRODUCT_MODULE_NAME = Alamofire;
-				PRODUCT_NAME = Alamofire;
+				MODULEMAP_FILE = "Target Support Files/OktaAuth/OktaAuth.modulemap";
+				PRODUCT_MODULE_NAME = OktaAuth;
+				PRODUCT_NAME = OktaAuth;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		F54273113CB9B20E2136A6F0725CA410 /* Release */ = {
+		C383A88D70C9B0080B3BFABBA46F7FE6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6DC256591F09B1F10EAF6004D297A0E4 /* Pods-CachAR.release.xcconfig */;
 			buildSettings = {
@@ -764,9 +1925,191 @@
 			};
 			name = Release;
 		};
+		E8E892B5FD29F3E17FEFF2FC2491DCB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE5CEDE7EC3C80FAB388A96B107D01A3 /* Vinculum.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Vinculum/Vinculum-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Vinculum/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Vinculum/Vinculum.modulemap";
+				PRODUCT_MODULE_NAME = Vinculum;
+				PRODUCT_NAME = Vinculum;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EA0ADC75B20BB62958101306980460E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB91EBD4FAAFE0F2016122D231055750 /* Alamofire.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EB3D5F517EE6918C9D2FFE40C2431CB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB91EBD4FAAFE0F2016122D231055750 /* Alamofire.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_CODE_COVERAGE = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F1E45FFCB64D2523ED1FCA66FE8BDE09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F15AD0DA0CBC94D2E052C464E3890EFA /* HydraAsync.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HydraAsync/HydraAsync-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HydraAsync/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HydraAsync/HydraAsync.modulemap";
+				PRODUCT_MODULE_NAME = Hydra;
+				PRODUCT_NAME = Hydra;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FF9A1A37D15FF15AC11F0E13F9D73C67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A5E629ED2801D84EA20F204A9B187EC /* SwiftyJSON.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_CODE_COVERAGE = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyJSON;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		120DAB39489DC5D4D08F3D53A2C335A6 /* Build configuration list for PBXNativeTarget "OktaJWT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A79B73A3B24A35873367A270AEFB2A3 /* Debug */,
+				2E8AE76886E460F5346B82B9AAFC485F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13AE0644ED9F161975AB74206A54BC8E /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B764851D24822E8A10AA7A1BF809E94D /* Debug */,
+				FF9A1A37D15FF15AC11F0E13F9D73C67 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -785,20 +2128,47 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7A48415D33D91BD9D41BB316FCFFEAF1 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
+		66B3DB2DCBD256A16FA39569A6982E7E /* Build configuration list for PBXNativeTarget "OktaAuth" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A47F2CBF77A8B53180E1097F427B5AF2 /* Debug */,
-				C064194134EFCEB86F3913FA20CF8599 /* Release */,
+				BE10EDE1D0844454CF6F9F5C8F5C3821 /* Debug */,
+				6530703D57FDBCF0EF29A523F07B074E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B64380E34E07B5828B0D494843984578 /* Build configuration list for PBXNativeTarget "Pods-CachAR" */ = {
+		8EB3E742772D126CA4D8D6C04E4049F1 /* Build configuration list for PBXNativeTarget "HydraAsync" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6D15C09E184A2174A8161143C1AD1EF8 /* Debug */,
-				F54273113CB9B20E2136A6F0725CA410 /* Release */,
+				F1E45FFCB64D2523ED1FCA66FE8BDE09 /* Debug */,
+				85ACC4AE21BC01664848627052641ED1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99012FA4A7C5D5C993EC0D2E1AC44A0D /* Build configuration list for PBXNativeTarget "Pods-CachAR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				561FFCF3E29397FFAB7E938119E06C42 /* Debug */,
+				C383A88D70C9B0080B3BFABBA46F7FE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2B13FA7D4B69452AF1CCC18E35335D0 /* Build configuration list for PBXNativeTarget "AppAuth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA88A15EE5E7BC7A5B1BFAC9BE914B5B /* Debug */,
+				84C9A39C3E0045E4ACB7CA91691F9FA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB36EA1D35AA7B4501AC6FF736839735 /* Build configuration list for PBXNativeTarget "Vinculum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8E892B5FD29F3E17FEFF2FC2491DCB3 /* Debug */,
+				7EFB2683732E851177DB1BDD620F3156 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
