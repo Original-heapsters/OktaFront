@@ -19,6 +19,13 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
     @IBOutlet weak var buttonSignIn: UIButton!
     let locationManager = CLLocationManager()
 
+    var selectedPlane: VirtualPlane?
+    var trackingState: ARCamera.TrackingState!
+    var mainObjectScene: SCNScene!
+    var mainObjectNode: SCNNode!
+
+    var centerScreenPosition: CGPoint!
+
     @IBAction func startRedirect(_ sender: Any) {
         OktaAuth
             .login()
@@ -44,28 +51,39 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
             }
         }
     }
-    var currentARStatus = ARState.initialized {
+
+    var currentARStatus: ARState! {
         didSet {
-            DispatchQueue.main.async { self.textViewStatus.text = self.currentARStatus.description }
+            DispatchQueue.main.async {
+                self.textViewStatus.text = self.currentARStatus.description
+            }
             if currentARStatus == .failed {
                 cleanupARSession()
             }
         }
     }
-    var selectedPlane: VirtualPlane?
-    var userObjectNode: SCNNode!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         textViewStatus.numberOfLines = 0
+        currentARStatus = .initializing
+
+        let screenSize = UIScreen.main.bounds.size
+        centerScreenPosition = CGPoint(x: screenSize.width / 2, y: screenSize.height / 2)
 
         // Set the view's delegate
         sceneView.delegate = self
 
         // Show statistics such as fps and timing information
         sceneView.showsStatistics = true
-        sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints, ARSCNDebugOptions.showWorldOrigin, SCNDebugOptions.showConstraints]
+        sceneView.debugOptions = [
+            ARSCNDebugOptions.showFeaturePoints
+//            ARSCNDebugOptions.showWorldOrigin,
+//            SCNDebugOptions.showConstraints
+        ]
+        sceneView.autoenablesDefaultLighting = true
+        sceneView.automaticallyUpdatesLighting = true
 
         // Create a new scene
         let scene = SCNScene()
@@ -73,8 +91,18 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
         // Set the scene to the view
         sceneView.scene = scene
 
-        let testScene = SCNScene(named: "art.scnassets/ship.scn")!
-        self.userObjectNode = testScene.rootNode.childNode(withName: "shipMesh", recursively: true)!
+        mainObjectScene = SCNScene(named: "art.scnassets/ship.scn")
+        mainObjectNode = mainObjectScene.rootNode.childNode(withName: "shipMesh", recursively: true)
+        sceneView.scene.rootNode.addChildNode(mainObjectNode)
+
+        // This will add an object to the camera node and will stick there
+//        sceneView.pointOfView?.addChildNode(mainObjectScene.rootNode)
+
+        // This starts an infinite rotation animation on a node
+        let action = SCNAction.rotateBy(x: 0, y: CGFloat(2 * Double.pi), z: 0, duration: 10)
+        let repAction = SCNAction.repeatForever(action)
+        mainObjectNode?.runAction(repAction, forKey: "myrotate")
+
         // Ask for Authorisation from the User.
         self.locationManager.requestAlwaysAuthorization()
 
@@ -93,7 +121,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
 
         // Create a session configuration
         let configuration = ARWorldTrackingConfiguration()
-        configuration.planeDetection = [.horizontal, .vertical]
+        configuration.planeDetection = [.horizontal]
         configuration.isLightEstimationEnabled = true
 
         // Run the view's session
@@ -125,15 +153,29 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
     // Override to create and configure nodes for anchors added to the view's session.
     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
         let node = SCNNode()
-
         return node
+    }
+
+    func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
+        let hits = sceneView.hitTest(centerScreenPosition, types: ARHitTestResult.ResultType.estimatedHorizontalPlane)
+        if hits.count > 0, let firstHit = hits.first {
+            if currentARStatus == .ready {
+                mainObjectNode.position = SCNVector3Make(
+                    firstHit.worldTransform.columns.3.x,
+                    firstHit.worldTransform.columns.3.y,
+                    firstHit.worldTransform.columns.3.z
+                )
+            }
+        }
     }
 
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         if let arPlaneAnchor = anchor as? ARPlaneAnchor {
             let plane = VirtualPlane(anchor: arPlaneAnchor)
             self.planes[arPlaneAnchor.identifier] = plane
-            node.addChildNode(plane)
+
+            // This adds the debug anchor node plane to the scene for visualization
+//            node.addChildNode(plane)
         }
     }
 
@@ -155,13 +197,16 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
 
     func session(_ session: ARSession, didFailWithError error: Error) {
         // Present an error message to the user
+        currentARStatus = .failed
+    }
 
+    func session(_ session: ARSession, cameraDidChangeTrackingState camera: ARCamera) {
+        trackingState = camera.trackingState
     }
 
     func sessionWasInterrupted(_ session: ARSession) {
         // Inform the user that the session has been interrupted, for example, by presenting an overlay
         print("Session interupted!")
-
     }
 
     func sessionInterruptionEnded(_ session: ARSession) {
@@ -171,46 +216,36 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else {
-            print("Unable to identify touches on any plane. Ignoring interaction...")
+            print("Can't identify touch. Ignoring")
             return
         }
+
         if currentARStatus != .ready {
-            print("Unable to place objects when the planes are not ready...")
+            print("AR is not ready yet...")
             return
         }
 
+        self.placeObject()
+
+        //This will place an object where you touch
+        /*
         let touchPoint = touch.location(in: sceneView)
-        print("Touch happened at point: \(touchPoint)")
-        if let plane = virtualPlaneProperlySet(touchPoint: touchPoint) {
-            print("Plane touched: \(plane)")
-            addObjectToPlane(plane: plane, atPoint: touchPoint)
-        } else {
-            print("No plane was reached!")
-        }
-
-    }
-
-    func virtualPlaneProperlySet(touchPoint: CGPoint) -> VirtualPlane? {
-        let hits = sceneView.hitTest(touchPoint, types: .existingPlaneUsingExtent)
-        if hits.count > 0, let firstHit = hits.first, let identifier = firstHit.anchor?.identifier, let plane = planes[identifier] {
-            self.selectedPlane = plane
-            return plane
-        }
-        return nil
-    }
-
-    func addObjectToPlane(plane: VirtualPlane, atPoint point: CGPoint) {
-        let hits = sceneView.hitTest(point, types: .existingPlaneUsingExtent)
+        let hits = sceneView.hitTest(touchPoint, types: ARHitTestResult.ResultType.estimatedHorizontalPlane)
         if hits.count > 0, let firstHit = hits.first {
-            if let userPlacedObject = userObjectNode?.clone() {
-                userPlacedObject.position = SCNVector3Make(firstHit.worldTransform.columns.3.x, firstHit.worldTransform.columns.3.y, firstHit.worldTransform.columns.3.z)
-                sceneView.scene.rootNode.addChildNode(userPlacedObject)
+            if let newObjectNode = mainObjectNode?.clone() {
+                newObjectNode.position = SCNVector3Make(firstHit.worldTransform.columns.3.x, firstHit.worldTransform.columns.3.y, firstHit.worldTransform.columns.3.z)
+                sceneView.scene.rootNode.addChildNode(newObjectNode)
             }
         }
+        */
+    }
+
+    func placeObject() {
+        currentARStatus = .objectPlaced
     }
 
     func cleanupARSession() {
-        sceneView.scene.rootNode.enumerateChildNodes { (node, stop) -> Void in
+        sceneView.scene.rootNode.enumerateChildNodes { (node, _) -> Void in
             node.removeFromParentNode()
         }
     }
