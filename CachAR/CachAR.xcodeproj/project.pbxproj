@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07069115596C88B315F5BB6E /* Pods_CachAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D31273189FDAF146086E41A1 /* Pods_CachAR.framework */; };
 		49946FCE20952E5600F537EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49946FCD20952E5600F537EC /* Assets.xcassets */; };
 		49946FD12095311900F537EC /* ARState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49946FD02095311900F537EC /* ARState.swift */; };
 		499AACE12095104F00813882 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499AACE02095104F00813882 /* AppDelegate.swift */; };
@@ -19,6 +20,11 @@
 		499AAD1220951B9400813882 /* VirtualPlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499AAD1120951B9400813882 /* VirtualPlane.swift */; };
 		499AAD15209526F600813882 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499AAD14209526F600813882 /* UIExtensions.swift */; };
 		499AAD1820952DC000813882 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499AAD1720952DC000813882 /* SignInViewController.swift */; };
+		7F14C45F209556FD00E16B62 /* backendSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7F14C45E209556FD00E16B62 /* backendSettings.plist */; };
+		7F14C4622095587600E16B62 /* CacheBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F14C4612095587600E16B62 /* CacheBack.swift */; };
+		7F14C4652095590600E16B62 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F14C4642095590600E16B62 /* User.swift */; };
+		7F14C4672095591300E16B62 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F14C4662095591300E16B62 /* Asset.swift */; };
+		7F14C4692095591A00E16B62 /* Mark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F14C4682095591A00E16B62 /* Mark.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		123A309578CC170BE7EF6A0B /* Pods-CachAR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CachAR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CachAR/Pods-CachAR.debug.xcconfig"; sourceTree = "<group>"; };
 		49946FCD20952E5600F537EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49946FD02095311900F537EC /* ARState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARState.swift; sourceTree = "<group>"; };
 		499AACDD2095104F00813882 /* CachAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CachAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,6 +64,13 @@
 		499AAD1120951B9400813882 /* VirtualPlane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualPlane.swift; sourceTree = "<group>"; };
 		499AAD14209526F600813882 /* UIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
 		499AAD1720952DC000813882 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		6D566343FFCBA62520BEF09D /* Pods-CachAR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CachAR.release.xcconfig"; path = "Pods/Target Support Files/Pods-CachAR/Pods-CachAR.release.xcconfig"; sourceTree = "<group>"; };
+		7F14C45E209556FD00E16B62 /* backendSettings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = backendSettings.plist; sourceTree = "<group>"; };
+		7F14C4612095587600E16B62 /* CacheBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheBack.swift; sourceTree = "<group>"; };
+		7F14C4642095590600E16B62 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7F14C4662095591300E16B62 /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
+		7F14C4682095591A00E16B62 /* Mark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mark.swift; sourceTree = "<group>"; };
+		D31273189FDAF146086E41A1 /* Pods_CachAR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CachAR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07069115596C88B315F5BB6E /* Pods_CachAR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +99,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01FFA27D976368A18FDC3E21 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				123A309578CC170BE7EF6A0B /* Pods-CachAR.debug.xcconfig */,
+				6D566343FFCBA62520BEF09D /* Pods-CachAR.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		49946FCF2095310800F537EC /* Enums */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +123,8 @@
 				499AACF62095105000813882 /* CachARTests */,
 				499AAD012095105000813882 /* CachARUITests */,
 				499AACDE2095104F00813882 /* Products */,
+				01FFA27D976368A18FDC3E21 /* Pods */,
+				9E72C7033C02410E1FFDF975 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,6 +141,7 @@
 		499AACDF2095104F00813882 /* CachAR */ = {
 			isa = PBXGroup;
 			children = (
+				7F14C460209557B700E16B62 /* BackendInterface */,
 				49946FCF2095310800F537EC /* Enums */,
 				499AAD1620952D8A00813882 /* ViewControllers */,
 				499AAD13209526E300813882 /* UIHelpers */,
@@ -125,6 +152,7 @@
 				499AACE22095104F00813882 /* art.scnassets */,
 				49946FCD20952E5600F537EC /* Assets.xcassets */,
 				499AACEE2095105000813882 /* Info.plist */,
+				7F14C45E209556FD00E16B62 /* backendSettings.plist */,
 			);
 			path = CachAR;
 			sourceTree = "<group>";
@@ -172,6 +200,33 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		7F14C460209557B700E16B62 /* BackendInterface */ = {
+			isa = PBXGroup;
+			children = (
+				7F14C463209558F900E16B62 /* Models */,
+				7F14C4612095587600E16B62 /* CacheBack.swift */,
+			);
+			path = BackendInterface;
+			sourceTree = "<group>";
+		};
+		7F14C463209558F900E16B62 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7F14C4642095590600E16B62 /* User.swift */,
+				7F14C4662095591300E16B62 /* Asset.swift */,
+				7F14C4682095591A00E16B62 /* Mark.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9E72C7033C02410E1FFDF975 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D31273189FDAF146086E41A1 /* Pods_CachAR.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -179,9 +234,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 499AAD072095105000813882 /* Build configuration list for PBXNativeTarget "CachAR" */;
 			buildPhases = (
+				CBC028E317AA9BAA33FDFB95 /* [CP] Check Pods Manifest.lock */,
 				499AACD92095104F00813882 /* Sources */,
 				499AACDA2095104F00813882 /* Frameworks */,
 				499AACDB2095104F00813882 /* Resources */,
+				3CA9E20512DE1B5D0F8305D7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -277,6 +334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				499AACE32095104F00813882 /* art.scnassets in Resources */,
+				7F14C45F209556FD00E16B62 /* backendSettings.plist in Resources */,
 				499AACED2095105000813882 /* LaunchScreen.storyboard in Resources */,
 				49946FCE20952E5600F537EC /* Assets.xcassets in Resources */,
 				499AACE82095104F00813882 /* Main.storyboard in Resources */,
@@ -299,14 +357,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3CA9E20512DE1B5D0F8305D7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CachAR/Pods-CachAR-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CachAR/Pods-CachAR-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBC028E317AA9BAA33FDFB95 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CachAR-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		499AACD92095104F00813882 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F14C4672095591300E16B62 /* Asset.swift in Sources */,
 				499AACE52095104F00813882 /* ARVIewController.swift in Sources */,
 				499AACE12095104F00813882 /* AppDelegate.swift in Sources */,
+				7F14C4622095587600E16B62 /* CacheBack.swift in Sources */,
+				7F14C4692095591A00E16B62 /* Mark.swift in Sources */,
 				49946FD12095311900F537EC /* ARState.swift in Sources */,
+				7F14C4652095590600E16B62 /* User.swift in Sources */,
 				499AAD1220951B9400813882 /* VirtualPlane.swift in Sources */,
 				499AAD1820952DC000813882 /* SignInViewController.swift in Sources */,
 				499AAD15209526F600813882 /* UIExtensions.swift in Sources */,
@@ -480,15 +583,13 @@
 		};
 		499AAD082095105000813882 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 123A309578CC170BE7EF6A0B /* Pods-CachAR.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YHADA5TU9B;
 				INFOPLIST_FILE = CachAR/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kiwi.CachAR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -498,15 +599,13 @@
 		};
 		499AAD092095105000813882 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D566343FFCBA62520BEF09D /* Pods-CachAR.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YHADA5TU9B;
 				INFOPLIST_FILE = CachAR/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kiwi.CachAR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -522,11 +621,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YHADA5TU9B;
 				INFOPLIST_FILE = CachARTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kiwi.CachARTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -543,11 +638,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YHADA5TU9B;
 				INFOPLIST_FILE = CachARTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kiwi.CachARTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -563,11 +654,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YHADA5TU9B;
 				INFOPLIST_FILE = CachARUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kiwi.CachARUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -583,11 +670,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YHADA5TU9B;
 				INFOPLIST_FILE = CachARUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kiwi.CachARUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

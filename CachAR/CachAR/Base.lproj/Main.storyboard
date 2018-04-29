@@ -91,10 +91,61 @@
                                     <action selector="closeButtonClicked:" destination="A3Z-eQ-Sey" eventType="touchUpInside" id="QCj-d2-Q4o"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="253" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8h1-K2-hh2" userLabel="Post User">
+                                <rect key="frame" x="0.0" y="68" width="375" height="30"/>
+                                <state key="normal" title="Post User"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qTE-SV-d0T" userLabel="Get User">
+                                <rect key="frame" x="0.0" y="106" width="375" height="30"/>
+                                <state key="normal" title="Get User"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54a-f9-kfK" userLabel="Place Asset">
+                                <rect key="frame" x="-0.5" y="144" width="375" height="30"/>
+                                <state key="normal" title="Place Asset"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3UL-dF-ZLH" userLabel="Get Nearby">
+                                <rect key="frame" x="-0.5" y="182" width="375" height="30"/>
+                                <state key="normal" title="Get Nearby"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="253" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TG6-42-eHO" userLabel="Find Asset">
+                                <rect key="frame" x="-0.5" y="220" width="375" height="30"/>
+                                <state key="normal" title="Find Asset"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nNb-Xf-3ch" userLabel="Mark Asset">
+                                <rect key="frame" x="0.0" y="258" width="375" height="30"/>
+                                <state key="normal" title="Mark Asset"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGK-Te-Un0">
+                                <rect key="frame" x="-0.5" y="296" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="8h1-K2-hh2" firstAttribute="width" secondItem="tpa-At-I2U" secondAttribute="width" id="2lI-T6-bMT"/>
+                            <constraint firstItem="dGK-Te-Un0" firstAttribute="width" secondItem="tpa-At-I2U" secondAttribute="width" id="4oH-Jo-PpW"/>
+                            <constraint firstItem="8h1-K2-hh2" firstAttribute="top" secondItem="yfe-in-Ycj" secondAttribute="bottom" constant="8" id="60G-nF-Vpf"/>
+                            <constraint firstItem="qTE-SV-d0T" firstAttribute="width" secondItem="tpa-At-I2U" secondAttribute="width" id="8X3-3b-MpM"/>
+                            <constraint firstItem="TG6-42-eHO" firstAttribute="centerX" secondItem="OfT-CO-SRa" secondAttribute="centerX" id="G2j-Vn-buO"/>
+                            <constraint firstItem="qTE-SV-d0T" firstAttribute="top" secondItem="8h1-K2-hh2" secondAttribute="bottom" constant="8" id="Nxf-Xw-kCK"/>
+                            <constraint firstItem="nNb-Xf-3ch" firstAttribute="width" secondItem="tpa-At-I2U" secondAttribute="width" id="QUy-gz-nbQ"/>
+                            <constraint firstItem="dGK-Te-Un0" firstAttribute="centerX" secondItem="OfT-CO-SRa" secondAttribute="centerX" id="Us9-Sa-bxi"/>
+                            <constraint firstItem="54a-f9-kfK" firstAttribute="top" secondItem="qTE-SV-d0T" secondAttribute="bottom" constant="8" id="Vkn-WJ-XHX"/>
+                            <constraint firstItem="dGK-Te-Un0" firstAttribute="top" secondItem="nNb-Xf-3ch" secondAttribute="bottom" constant="8" id="WCT-iy-Sbg"/>
+                            <constraint firstItem="54a-f9-kfK" firstAttribute="centerX" secondItem="OfT-CO-SRa" secondAttribute="centerX" id="WGz-Sq-YdN"/>
                             <constraint firstItem="yfe-in-Ycj" firstAttribute="top" secondItem="OfT-CO-SRa" secondAttribute="top" constant="8" id="ZVJ-ae-Nh9"/>
+                            <constraint firstItem="nNb-Xf-3ch" firstAttribute="top" secondItem="TG6-42-eHO" secondAttribute="bottom" constant="8" id="b9N-XG-crK"/>
+                            <constraint firstItem="3UL-dF-ZLH" firstAttribute="centerX" secondItem="OfT-CO-SRa" secondAttribute="centerX" id="b9j-fU-YcI"/>
+                            <constraint firstItem="3UL-dF-ZLH" firstAttribute="width" secondItem="tpa-At-I2U" secondAttribute="width" id="enl-Vy-OQe"/>
+                            <constraint firstItem="TG6-42-eHO" firstAttribute="top" secondItem="3UL-dF-ZLH" secondAttribute="bottom" constant="8" id="fTU-M2-lbm"/>
+                            <constraint firstItem="3UL-dF-ZLH" firstAttribute="top" secondItem="54a-f9-kfK" secondAttribute="bottom" constant="8" id="gIy-N8-vpN"/>
+                            <constraint firstItem="54a-f9-kfK" firstAttribute="width" secondItem="tpa-At-I2U" secondAttribute="width" id="kv0-7g-l1v"/>
+                            <constraint firstItem="8h1-K2-hh2" firstAttribute="centerX" secondItem="OfT-CO-SRa" secondAttribute="centerX" id="mTF-rK-IUp"/>
+                            <constraint firstItem="qTE-SV-d0T" firstAttribute="centerX" secondItem="OfT-CO-SRa" secondAttribute="centerX" id="qUb-xo-TbG"/>
+                            <constraint firstItem="TG6-42-eHO" firstAttribute="width" secondItem="tpa-At-I2U" secondAttribute="width" id="qlJ-kG-2iG"/>
+                            <constraint firstItem="nNb-Xf-3ch" firstAttribute="centerX" secondItem="OfT-CO-SRa" secondAttribute="centerX" id="wc1-vS-eMw"/>
                             <constraint firstItem="yfe-in-Ycj" firstAttribute="leading" secondItem="OfT-CO-SRa" secondAttribute="leading" constant="16" id="y19-kr-Nf8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OfT-CO-SRa"/>
