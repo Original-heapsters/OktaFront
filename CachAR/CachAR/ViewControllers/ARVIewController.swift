@@ -10,12 +10,14 @@ import UIKit
 import SceneKit
 import ARKit
 import OktaAuth
+import CoreLocation
 
-class ARViewController: UIViewController, ARSCNViewDelegate {
+class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDelegate {
 
     @IBOutlet weak var sceneView: ARSCNView!
     @IBOutlet weak var textViewStatus: UILabel!
     @IBOutlet weak var buttonSignIn: UIButton!
+    let locationManager = CLLocationManager()
 
     var selectedPlane: VirtualPlane?
     var trackingState: ARCamera.TrackingState!
@@ -35,6 +37,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
                     // tokenResponse.accessToken
                     // tokenResponse.idToken
                     // tokenResponse.refreshToken
+                    print("HEYYYYYY thats pretty good")
                 }
         }
     }
@@ -92,13 +95,26 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         mainObjectNode = mainObjectScene.rootNode.childNode(withName: "shipMesh", recursively: true)
         sceneView.scene.rootNode.addChildNode(mainObjectNode)
 
+        // Ask for Authorisation from the User.
+        self.locati        // Ask for Authorisation from the User.
+        self.locationManager.requestAlwaysAuthorization()
+
         // This will add an object to the camera node and will stick there
 //        sceneView.pointOfView?.addChildNode(mainObjectScene.rootNode)
 
         // This starts an infinite rotation animation on a node
-        let action = SCNAction.rotateBy(x: 0, y: CGFloat(2 * Double.pi), z: 0, duration: 10)
+        let action = SCNAction.rotateBy(x: 0, y: CGFl
+oat(2 * Double.pi), z: 0, duration: 10)
         let repAction = SCNAction.repeatForever(action)
         mainObjectNode?.runAction(repAction, forKey: "myrotate")
+        // For use in foreground
+        self.locationManager.requestWhenInUseAuthorization()
+
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -125,6 +141,12 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Release any cached data, images, etc that aren't in use.
+    }
+
+    // MARK: - Location Delgate
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+        print("locations = \(locValue.latitude) \(locValue.longitude)")
     }
 
     // MARK: - ARSCNViewDelegate
