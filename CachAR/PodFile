@@ -7,6 +7,8 @@ def cachar_pods
   pod 'Alamofire', '~> 4.6'
   pod 'SwiftyJSON'
   pod 'OktaAuth', '~> 0.1'
+  source 'https://github.com/CocoaPods/Specs.git'
+  pod 'Zip', '~> 1.1'
 end
 
 
