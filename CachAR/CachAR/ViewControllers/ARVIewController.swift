@@ -91,8 +91,8 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
         // Set the scene to the view
         sceneView.scene = scene
 
-        mainObjectScene = SCNScene(named: "art.scnassets/ship.scn")
-        mainObjectNode = mainObjectScene.rootNode.childNode(withName: "shipMesh", recursively: true)
+        mainObjectScene = SCNScene(named: "art.scnassets/companion_cube.scn")
+        mainObjectNode = mainObjectScene.rootNode.childNode(withName: "parent", recursively: true)
         sceneView.scene.rootNode.addChildNode(mainObjectNode)
 
         // This will add an object to the camera node and will stick there
@@ -145,7 +145,9 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
     // MARK: - Location Delgate
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
-        print("locations = \(locValue.latitude) \(locValue.longitude)")
+        let verticalAcc = manager.location?.verticalAccuracy ?? 0.0
+        let horizontalAcc = manager.location?.horizontalAccuracy ?? 0.0
+        print("locations = \(locValue.latitude) \(locValue.longitude) accuracy: \(verticalAcc)m - \(horizontalAcc)m")
     }
 
     // MARK: - ARSCNViewDelegate
@@ -242,6 +244,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
 
     func placeObject() {
         currentARStatus = .objectPlaced
+        print("Position of media: \(mainObjectNode.position)")
     }
 
     func cleanupARSession() {
