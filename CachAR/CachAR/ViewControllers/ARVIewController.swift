@@ -38,7 +38,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
     @IBAction func getUser(_ sender: Any) {
         self.cacheBack.checkLogin {
 
-            OktaAuth.userinfo() {
+            OktaAuth.userinfo {
                 response, error in
 
                 if error != nil { print("Error: \(error!)") }
@@ -56,7 +56,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
     @IBAction func placeAsset(_ sender: Any) {
         self.cacheBack.checkLogin {
 
-            OktaAuth.userinfo() {
+            OktaAuth.userinfo {
                 response, error in
 
                 if error != nil { print("Error: \(error!)") }
@@ -131,7 +131,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
     @IBAction func postUser(_ sender: Any) {
         self.cacheBack.checkLogin {
 
-            OktaAuth.userinfo() {
+            OktaAuth.userinfo {
                 response, error in
 
                 if error != nil { print("Error: \(error!)") }
@@ -334,12 +334,26 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
             return
         }
 
-        if currentARStatus != .ready {
-            print("AR is not ready yet...")
-            return
-        }
+        switch currentARStatus {
+        case .initializing, .initialized, .temporarilyUnavailable, .failed:
+            print("AR unable to react...")
 
-        self.objectPlaced()
+        case .ready:
+            self.objectPlaced()
+
+        case .objectPlaced:
+            let viewTouchLocation: CGPoint = touch.location(in: sceneView)
+            guard let result = sceneView.hitTest(viewTouchLocation, options: nil).first else {
+                return
+            }
+
+            if (mainObjectNode?.contains(result.node))! {
+                self.objectClicked(object: mainObjectNode)
+            }
+
+        default:
+            break
+        }
 
         //This will place an object where you touch
         /*
@@ -362,6 +376,10 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
 
     // MARK : User Events
 
+    func objectClicked(object: SCNNode) {
+        
+    }
+    
     func objectPlaced() {
         currentARStatus = .objectPlaced
 
@@ -373,16 +391,33 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
 
         let xDifferenceMeters = Double(objectPosition.x - cameraPosition.x)
         let zDifferenceMeters = Double(objectPosition.z - cameraPosition.z)
+        print("Distance between x:   \(xDifferenceMeters)m")
+        print("Distance between y:   \(zDifferenceMeters)m")
+
+        let distanceBetweenCameraAndObject = MathHelpers.CGPointDistance(from: CGPoint(x: CGFloat(objectPosition.x), y: CGFloat(objectPosition.z)), to: CGPoint(x: CGFloat(cameraPosition.x), y: CGFloat(cameraPosition.z)))
+        print("Distance between:     \(distanceBetweenCameraAndObject)m")
+
         let objectGeolocation = Geolocation(geolocation: userLocation)
         objectGeolocation.applyOffset(x: xDifferenceMeters, y: zDifferenceMeters)
 
-        placeObjectInWorld(location: objectGeolocation)
+        print("**** END OF GRABBING INITIAL COORDS ****")
+
+        placeObjectInWorld(objectLocation: objectGeolocation)
     }
 
-    func placeObjectInWorld(location: Geolocation) {
+    func placeObjectInWorld(objectLocation: Geolocation) {
+        print("**** START OF SETTING SERVER COORDS ****")
         let cameraPosition = getCameraPosition()
-        let objectPosition = mainObjectNode.position
 
+        let distance = MathHelpers.distance(lat1: userLocation.latitude, lon1: userLocation.longitude, lat2: objectLocation.latitude, lon2: objectLocation.longitude)
+        print("Acquired distance:    \(distance)m")
+
+        let differenceInLat = (userLocation.latitude - objectLocation.latitude) * 111000 * -1
+        let differenceInLong = (userLocation.longitude - objectLocation.longitude) * 111321 * -1
+        print("New X:                \(differenceInLat)m")
+        print("New Y:                \(differenceInLong)m")
+
+        mainObjectNode.position = SCNVector3.init(x: Float(differenceInLat), y: mainObjectNode.position.y, z: Float(differenceInLong))
     }
 
     func getCameraPosition() -> SCNVector3 {

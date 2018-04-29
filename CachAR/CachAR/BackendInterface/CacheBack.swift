@@ -75,8 +75,8 @@ class CacheBack {
         let parameters = [
             "userId": userId,
             "username": userId,
-            "firstName":firstName,
-            "lastName":lastName,
+            "firstName": firstName,
+            "lastName": lastName,
             "radius": radiusSettings
         ]
 
@@ -133,9 +133,9 @@ class CacheBack {
 
         let parameters = [
             "userId": userId,
-            "lat":"100",
-            "lon":"20",
-            "assetType":"model"
+            "lat": "100",
+            "lon": "20",
+            "assetType": "model"
         ]
 
         let headers: HTTPHeaders = [
