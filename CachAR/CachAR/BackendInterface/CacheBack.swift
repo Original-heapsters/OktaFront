@@ -9,28 +9,28 @@
 import Foundation
 
 class CacheBack {
-    
-    func postUser(){
-        
+
+    func postUser() {
+
     }
-    
-    func getUser(){
-        
+
+    func getUser() {
+
     }
-    
-    func placeAsset(){
-        
+
+    func placeAsset() {
+
     }
-    
-    func getNearbyAssets(){
-        
+
+    func getNearbyAssets() {
+
     }
-    
-    func getAsset(){
-        
+
+    func getAsset() {
+
     }
-    
-    func markAsset(){
-        
+
+    func markAsset() {
+
     }
 }

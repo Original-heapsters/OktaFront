@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class SignInViewController: UIViewController {
-    
+
     @IBAction func closeButtonClicked(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
