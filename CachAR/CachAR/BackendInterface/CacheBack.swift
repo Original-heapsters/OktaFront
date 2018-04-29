@@ -116,7 +116,10 @@ class CacheBack {
         let requestString = baseUrl + endPoint
 
         let parameters = [
-            "userId": userId
+            "userId": userId,
+            "lat":"100",
+            "lon":"20",
+            "assetType":"model"
         ]
 
         let headers: HTTPHeaders = [
@@ -125,37 +128,35 @@ class CacheBack {
         ]
         var modelData: Data? = nil
         do {
-            let zipPath = try Zip.quickZipFiles([assetId], fileName: "archive")
+            let zipPath = try Zip.quickZipFiles([assetId], fileName: "asset")
 
             modelData = try Data(contentsOf: zipPath)
         } catch {
 
         }
+        Alamofire.upload(multipartFormData: { multipartFormData in
 
-        Alamofire.upload(multipartFormData: { (multipartFormData) in
-            for (key, value) in parameters {
-                multipartFormData.append("\(value)".data(using: String.Encoding.utf8)!, withName: key as String)
-            }
-
-            if let data = modelData {
-                multipartFormData.append(data, withName: "asset", fileName: "archive.zip", mimeType: "application/zip")
-            }
-
-        }, usingThreshold: UInt64.init(), to: requestString, method: .post, headers: headers) { (result) in
-            switch result {
+            multipartFormData.append(userId.data(using: String.Encoding.utf8, allowLossyConversion: false)!, withName: "userId")
+            multipartFormData.append("100".data(using: String.Encoding.utf8, allowLossyConversion: false)!, withName: "lat")
+            multipartFormData.append("50".data(using: String.Encoding.utf8, allowLossyConversion: false)!, withName: "lon")
+            multipartFormData.append("image".data(using: String.Encoding.utf8, allowLossyConversion: false)!, withName: "assetType")
+            multipartFormData.append(modelData!, withName: "asset", fileName: "asset.zip", mimeType: "application/zip")
+        }, usingThreshold: UInt64.init(), to: requestString, method: .post, headers: nil) { encodingResult in
+            switch encodingResult {
             case .success(let upload, _, _):
                 upload.responseJSON { response in
-                    print("Succesfully uploaded")
+                    print(response)
                     if let err = response.error {
-                        print("REPSONSE:\(response)")
-                        return
+                        print(err)
                     }
-                    print("REPSONSE:\(response.value)")
+                    print(response.value)
+
                 }
-            case .failure(let error):
-                print("Error in upload: \(error.localizedDescription)")
+            case .failure(let encodingError):
+                print(encodingError)
             }
         }
+
     }
 
     func getNearbyAssets() {
