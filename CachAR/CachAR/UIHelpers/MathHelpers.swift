@@ -33,7 +33,7 @@ class MathHelpers {
         dist = acos(dist)
         dist = rad2deg(rad: dist)
         dist *= 60 * 1.1515
-        dist *= 0.001609344
+        dist *= 1609.344
 
         return dist
     }
