@@ -159,8 +159,23 @@ class CacheBack {
 
     }
 
-    func getNearbyAssets() {
+    func getNearbyAssets(_ radius: String, _ latlong: String) {
+        guard self.settings != nil else {
+            return
+        }
+        let baseUrl = self.settings!["baseUrl"] as! String
+        let endPoint = self.settings!["nearbyEndpoint"] as! String
+        let requestString = baseUrl + endPoint + "/" + radius + "/" + latlong
 
+        Alamofire.request(requestString, method: .get, parameters: nil, encoding: URLEncoding(destination: .queryString)).responseJSON { response in
+            switch response.result {
+            case .success:
+                print("RESPONSE \(response.value)")
+
+            case .failure(let error):
+                print("RESPONSE \(error)")
+            }
+        }
     }
 
     func getAsset() {

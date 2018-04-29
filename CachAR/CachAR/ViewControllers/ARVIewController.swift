@@ -67,6 +67,16 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
             }
         }
     }
+    @IBAction func getNearby(_ sender: Any) {
+        self.cacheBack.checkLogin {
+            let radius = "20"
+            let latlon = "37.785834,-122.406417"
+            self.cacheBack.getNearbyAssets(radius, latlon)
+        }
+    }
+    @IBAction func foundAsset(_ sender: Any) {
+    }
+    
     func triggerLogin() {
         OktaAuth
             .login()
