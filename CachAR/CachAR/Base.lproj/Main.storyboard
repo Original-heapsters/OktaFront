@@ -38,6 +38,49 @@
                                     <action selector="startRedirect:" destination="BV1-FR-VrT" eventType="touchUpInside" id="rq2-9y-Wrk"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWk-ZP-EDN" userLabel="PostUser">
+                                <rect key="frame" x="8" y="104" width="67" height="30"/>
+                                <color key="backgroundColor" name="whitish"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="miM-2S-E3Z"/>
+                                </constraints>
+                                <state key="normal" title="Post User"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="postUser:" destination="BV1-FR-VrT" eventType="touchUpInside" id="ZRc-4L-n6s"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Po8-dL-edy" userLabel="GetUser">
+                                <rect key="frame" x="8" y="142" width="61" height="30"/>
+                                <color key="backgroundColor" name="whitish"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="uoI-IV-5t3"/>
+                                </constraints>
+                                <state key="normal" title="Get User"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="getUser:" destination="BV1-FR-VrT" eventType="touchUpInside" id="MD4-EB-hSy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XkG-kz-elR" userLabel="PlaceAsset">
+                                <rect key="frame" x="8" y="180" width="40" height="30"/>
+                                <color key="backgroundColor" name="whitish"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="r4I-i7-wfE"/>
+                                </constraints>
+                                <state key="normal" title="Place"/>
+                                <connections>
+                                    <action selector="placeAsset:" destination="BV1-FR-VrT" eventType="touchUpInside" id="XJd-qk-xDK"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v0Z-Ui-ncX">
                                 <rect key="frame" x="8" y="36" width="359" height="32"/>
                                 <constraints>
@@ -50,15 +93,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="XkG-kz-elR" firstAttribute="leading" secondItem="987-Bf-Pjp" secondAttribute="leading" constant="8" id="4Fc-Fz-eoA"/>
                             <constraint firstItem="987-Bf-Pjp" firstAttribute="bottom" secondItem="Vgb-rN-VTx" secondAttribute="bottom" constant="32" id="Ax2-hX-R2q"/>
+                            <constraint firstItem="cWk-ZP-EDN" firstAttribute="leading" secondItem="987-Bf-Pjp" secondAttribute="leading" constant="8" id="BNV-AQ-kbn"/>
                             <constraint firstItem="Vgb-rN-VTx" firstAttribute="centerX" secondItem="v0Z-Ui-ncX" secondAttribute="centerX" id="Bnk-XK-0oK"/>
                             <constraint firstItem="v0Z-Ui-ncX" firstAttribute="top" secondItem="987-Bf-Pjp" secondAttribute="top" constant="16" id="Cqo-ih-j10"/>
                             <constraint firstItem="987-Bf-Pjp" firstAttribute="trailing" secondItem="ZdP-Cy-ODw" secondAttribute="trailing" id="FmZ-3Z-kIB"/>
+                            <constraint firstItem="Po8-dL-edy" firstAttribute="leading" secondItem="987-Bf-Pjp" secondAttribute="leading" constant="8" id="JEY-J3-wxg"/>
                             <constraint firstItem="987-Bf-Pjp" firstAttribute="bottom" secondItem="ZdP-Cy-ODw" secondAttribute="bottom" id="W9J-1v-q2a"/>
+                            <constraint firstItem="Po8-dL-edy" firstAttribute="top" secondItem="cWk-ZP-EDN" secondAttribute="bottom" constant="8" id="XIh-hY-vRw"/>
                             <constraint firstItem="ZdP-Cy-ODw" firstAttribute="top" secondItem="987-Bf-Pjp" secondAttribute="top" id="Xp2-up-krD"/>
                             <constraint firstItem="v0Z-Ui-ncX" firstAttribute="leading" secondItem="987-Bf-Pjp" secondAttribute="leading" constant="8" id="aWn-gf-olK"/>
                             <constraint firstItem="987-Bf-Pjp" firstAttribute="trailing" secondItem="v0Z-Ui-ncX" secondAttribute="trailing" constant="8" id="cwh-pv-86X"/>
+                            <constraint firstItem="cWk-ZP-EDN" firstAttribute="top" secondItem="v0Z-Ui-ncX" secondAttribute="bottom" constant="8" id="fbh-Cx-djT"/>
                             <constraint firstItem="ZdP-Cy-ODw" firstAttribute="leading" secondItem="987-Bf-Pjp" secondAttribute="leading" id="ge9-cS-ihN"/>
+                            <constraint firstItem="XkG-kz-elR" firstAttribute="top" secondItem="Po8-dL-edy" secondAttribute="bottom" constant="8" id="xC2-aZ-cwa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="987-Bf-Pjp"/>
                     </view>
