@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import ARKit
 
 extension UIView {
     @IBInspectable var cornerRadius: CGFloat {
@@ -18,5 +19,11 @@ extension UIView {
             layer.cornerRadius = newValue
             layer.masksToBounds = newValue > 0
         }
+    }
+}
+
+extension matrix_float4x4 {
+    func position() -> SCNVector3 {
+        return SCNVector3(columns.3.x, columns.3.y, columns.3.z)
     }
 }

@@ -9,6 +9,7 @@
 import Foundation
 
 enum ARState: String, CustomStringConvertible {
+    case initializing = "initializing"
     case initialized = "initialized"
     case ready = "ready"
     case temporarilyUnavailable = "temporarily unavailable"
@@ -16,10 +17,12 @@ enum ARState: String, CustomStringConvertible {
 
     var description: String {
         switch self {
+        case .initializing:
+            return "🙏 AR starting up!"
         case .initialized:
-            return "👀 Look for a plane to place your object"
+            return "😍 AR ready!"
         case .ready:
-            return "🔥 Click any plane to place your object"
+            return "🔥 Media can be placed!"
         case .temporarilyUnavailable:
             return "😱 Calibrating. Please wait"
         case .failed:
