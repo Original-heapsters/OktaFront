@@ -10,12 +10,14 @@ import UIKit
 import SceneKit
 import ARKit
 import OktaAuth
+import CoreLocation
 
-class ARViewController: UIViewController, ARSCNViewDelegate {
+class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDelegate {
 
     @IBOutlet weak var sceneView: ARSCNView!
     @IBOutlet weak var textViewStatus: UILabel!
     @IBOutlet weak var buttonSignIn: UIButton!
+    let locationManager = CLLocationManager()
 
     @IBAction func startRedirect(_ sender: Any) {
         OktaAuth
@@ -28,6 +30,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
                     // tokenResponse.accessToken
                     // tokenResponse.idToken
                     // tokenResponse.refreshToken
+                    print("HEYYYYYY thats pretty good")
                 }
         }
     }
@@ -72,6 +75,17 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
 
         let testScene = SCNScene(named: "art.scnassets/ship.scn")!
         self.userObjectNode = testScene.rootNode.childNode(withName: "shipMesh", recursively: true)!
+        // Ask for Authorisation from the User.
+        self.locationManager.requestAlwaysAuthorization()
+
+        // For use in foreground
+        self.locationManager.requestWhenInUseAuthorization()
+
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -98,6 +112,12 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Release any cached data, images, etc that aren't in use.
+    }
+
+    // MARK: - Location Delgate
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+        print("locations = \(locValue.latitude) \(locValue.longitude)")
     }
 
     // MARK: - ARSCNViewDelegate
