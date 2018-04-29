@@ -288,12 +288,26 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
             return
         }
 
-        if currentARStatus != .ready {
-            print("AR is not ready yet...")
-            return
-        }
+        switch currentARStatus {
+        case .initializing, .initialized, .temporarilyUnavailable, .failed:
+            print("AR unable to react...")
 
-        self.objectPlaced()
+        case .ready:
+            self.objectPlaced()
+
+        case .objectPlaced:
+            let viewTouchLocation: CGPoint = touch.location(in: sceneView)
+            guard let result = sceneView.hitTest(viewTouchLocation, options: nil).first else {
+                return
+            }
+
+            if (mainObjectNode?.contains(result.node))! {
+                self.objectClicked(object: mainObjectNode)
+            }
+
+        default:
+            break
+        }
 
         //This will place an object where you touch
         /*
@@ -316,6 +330,10 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
 
     // MARK : User Events
 
+    func objectClicked(object: SCNNode) {
+        
+    }
+    
     func objectPlaced() {
         currentARStatus = .objectPlaced
 
