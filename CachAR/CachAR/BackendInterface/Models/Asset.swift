@@ -21,7 +21,7 @@ class Asset {
 
     init(jsonRep: [String: Any]) {
         let js = JSON(jsonRep)
-        self.id = js["id"].stringValue
+        self.id = js["assetId"].stringValue
         self.owner = js["owner"].stringValue
         self.link = js["link"].stringValue
         if self.link != "" {

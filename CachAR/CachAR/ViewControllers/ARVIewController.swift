@@ -28,6 +28,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
     var mainObjectScene: SCNScene!
     var mainObjectNode: SCNNode!
     var currentUser: User?
+    var currentAsset: Asset?
 
     var centerScreenPosition: CGPoint!
 
@@ -45,8 +46,12 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
 
                 if let userinfo = response {
                     let info = JSON(userinfo)
-                    let userId = info["email"].stringValue
 
+                    let fullName = info["name"].stringValue
+                    var fullNameArr = fullName.components(separatedBy: " ")
+                    let firstName = fullNameArr[0]
+                    let lastName = fullNameArr[1]
+                    let userId = firstName + "-" + lastName
                     self.cacheBack.getUser(userId)
                 }
             }
@@ -63,23 +68,28 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
 
                 if let userinfo = response {
                     let info = JSON(userinfo)
-                    let userId = info["email"].stringValue
+
+                    let fullName = info["name"].stringValue
+                    var fullNameArr = fullName.components(separatedBy: " ")
+                    let firstName = fullNameArr[0]
+                    let lastName = fullNameArr[1]
+                    let userId = firstName + "-" + lastName
                     let assetURL = URL.init(fileURLWithPath: Bundle.main.path(forResource: "companion_cube", ofType: "scn", inDirectory: "art.scnassets", forLocalization: nil)!)
-                    self.cacheBack.placeAsset(userId, assetURL)
+                    self.cacheBack.placeAsset(userId, assetURL, String(self.userLocation.latitude), String(self.userLocation.longitude))
                 }
             }
         }
     }
     @IBAction func getNearby(_ sender: Any) {
         self.cacheBack.checkLogin {
-            let radius = "20"
-            let latlon = "37.785834,-122.406417"
+            let radius = self.currentUser?.radiusSettings ?? "20"
+            let latlon = "\(self.userLocation.latitude),\(self.userLocation.longitude)"
             self.cacheBack.getNearbyAssets(radius, latlon)
         }
     }
     @IBAction func foundAsset(_ sender: Any) {
         self.cacheBack.checkLogin {
-            let assetId = "asdgtrhgg3t54g4"
+            let assetId = self.currentAsset?.id ?? ""
             self.cacheBack.getAsset(assetId)
         }
     }
@@ -92,8 +102,13 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
 
                 if let userinfo = response {
                     let info = JSON(userinfo)
-                    let userId = info["email"].stringValue
-                    let assetId = "asdgtrhgg3t54g4"
+
+                    let fullName = info["name"].stringValue
+                    var fullNameArr = fullName.components(separatedBy: " ")
+                    let firstName = fullNameArr[0]
+                    let lastName = fullNameArr[1]
+                    let userId = firstName + "-" + lastName
+                    let assetId = self.currentAsset?.id ?? ""
                     self.cacheBack.markAsset(assetId, userId)
                 }
             }
@@ -102,15 +117,15 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
     }
 
     func nearbyListFetched(list: [Asset]) {
-        
+
     }
-    
+
     func currentUserUpdated(user: User) {
         self.currentUser = user
     }
 
     func currentAssetUpdated(asset: Asset) {
-
+        self.currentAsset = asset
     }
 
     func triggerLogin() {
@@ -138,11 +153,12 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
 
                 if let userinfo = response {
                     let info = JSON(userinfo)
-                    let userId = info["email"].stringValue
+
                     let fullName = info["name"].stringValue
                     var fullNameArr = fullName.components(separatedBy: " ")
                     let firstName = fullNameArr[0]
                     let lastName = fullNameArr[1]
+                    let userId = firstName + "-" + lastName
                     self.cacheBack.postUser(userId, firstName, lastName)
                 }
             }
@@ -377,9 +393,9 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
     // MARK : User Events
 
     func objectClicked(object: SCNNode) {
-        
+
     }
-    
+
     func objectPlaced() {
         currentARStatus = .objectPlaced
 
