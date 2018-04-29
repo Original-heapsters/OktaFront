@@ -9,6 +9,7 @@
 import UIKit
 import SceneKit
 import ARKit
+import OktaAuth
 
 class ARViewController: UIViewController, ARSCNViewDelegate {
 
@@ -23,6 +24,21 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
 
     var centerScreenPosition: CGPoint!
     var userPlacedObject: Bool = false
+
+    @IBAction func startRedirect(_ sender: Any) {
+        OktaAuth
+            .login()
+            .start(self) { response, error in
+                if error != nil { print(error!) }
+
+                // Success
+                if let tokenResponse = response {
+                    // tokenResponse.accessToken
+                    // tokenResponse.idToken
+                    // tokenResponse.refreshToken
+                }
+        }
+    }
 
     var planes = [UUID: VirtualPlane]() {
         didSet {
