@@ -9,10 +9,17 @@
 import Foundation
 import Alamofire
 import OktaAuth
+import SwiftyJSON
 import Zip
 
 protocol oktaDelegate {
     func triggerLogin()
+}
+
+protocol backendDelegate {
+    func currentUserUpdated(user: User)
+    func currentAssetUpdated(asset: Asset)
+    func nearbyListFetched(list: [Asset])
 }
 
 class CacheBack {
@@ -21,6 +28,7 @@ class CacheBack {
     var userLName: String?
     var settings: NSDictionary?
     var delegate: oktaDelegate?
+    var backDelegate: backendDelegate?
     func setup() {
         if let path = Bundle.main.path(forResource: "backendSettings", ofType: "plist") {
             if let dictRoot = NSDictionary(contentsOfFile: path) {
@@ -75,7 +83,12 @@ class CacheBack {
         Alamofire.request(requestString, method: .post, parameters: parameters, encoding: URLEncoding(destination: .queryString)).responseJSON { response in
             switch response.result {
             case .success:
-                print("RESPONSE \(response.value)")
+                let jsonRep = JSON(response.value)
+                if let data = jsonRep["data"].dictionaryObject {
+                    let usr = User.init(jsonRep: data)
+                    self.backDelegate?.currentUserUpdated(user: usr)
+                }
+                print(response.value)
 
             case .failure(let error):
                 print("RESPONSE \(error)")
@@ -98,8 +111,12 @@ class CacheBack {
         Alamofire.request(requestString, method: .get, parameters: parameters, encoding: URLEncoding(destination: .queryString)).responseJSON { response in
             switch response.result {
             case .success:
-                print("RESPONSE \(response.value)")
-
+                let jsonRep = JSON(response.value)
+                if let data = jsonRep["data"].dictionaryObject {
+                    let usr = User.init(jsonRep: data)
+                    self.backDelegate?.currentUserUpdated(user: usr)
+                }
+                 print(response.value)
             case .failure(let error):
                 print("RESPONSE \(error)")
             }
@@ -107,7 +124,7 @@ class CacheBack {
 
     }
 
-    func placeAsset(_ userId: String, _ assetId: URL) {
+    func placeAsset(_ userId: String, _ assetId: URL, _ lat: String, _ lon: String) {
         guard self.settings != nil else {
             return
         }
@@ -119,7 +136,7 @@ class CacheBack {
             "userId": userId,
             "lat": "100",
             "lon": "20",
-            "assetType": "model"
+            "assetType": "3d"
         ]
 
         let headers: HTTPHeaders = [
@@ -137,9 +154,9 @@ class CacheBack {
         Alamofire.upload(multipartFormData: { multipartFormData in
 
             multipartFormData.append(userId.data(using: String.Encoding.utf8, allowLossyConversion: false)!, withName: "userId")
-            multipartFormData.append("100".data(using: String.Encoding.utf8, allowLossyConversion: false)!, withName: "lat")
-            multipartFormData.append("50".data(using: String.Encoding.utf8, allowLossyConversion: false)!, withName: "lon")
-            multipartFormData.append("image".data(using: String.Encoding.utf8, allowLossyConversion: false)!, withName: "assetType")
+            multipartFormData.append(lat.data(using: String.Encoding.utf8, allowLossyConversion: false)!, withName: "lat")
+            multipartFormData.append(lon.data(using: String.Encoding.utf8, allowLossyConversion: false)!, withName: "lon")
+            multipartFormData.append("3d".data(using: String.Encoding.utf8, allowLossyConversion: false)!, withName: "assetType")
             multipartFormData.append(modelData!, withName: "asset", fileName: "asset.zip", mimeType: "application/zip")
         }, usingThreshold: UInt64.init(), to: requestString, method: .post, headers: nil) { encodingResult in
             switch encodingResult {
@@ -149,7 +166,11 @@ class CacheBack {
                     if let err = response.error {
                         print(err)
                     }
-                    print(response.value)
+                    let jsonRep = JSON(response.value)
+                    if let data = jsonRep["data"].dictionaryObject {
+                        let initAsset = Asset.init(jsonRep: data)
+                        self.backDelegate?.currentAssetUpdated(asset: initAsset)
+                    }
 
                 }
             case .failure(let encodingError):
@@ -188,6 +209,8 @@ class CacheBack {
         Alamofire.request(requestString, method: .get, parameters: nil, encoding: URLEncoding(destination: .queryString)).responseJSON { response in
             switch response.result {
             case .success:
+                let jsonRep = JSON(response.value)
+                let asset = Asset.init(jsonRep: jsonRep["data"].dictionaryObject!)
                 print("RESPONSE \(response.value)")
 
             case .failure(let error):
@@ -222,10 +245,10 @@ class CacheBack {
 
     }
 
-    static func downloadAsset(_ link: String, completionHandler: @escaping (URL) -> Void) {
+    static func downloadAsset(_ id: String, _ link: String, completionHandler: @escaping (URL) -> Void) {
         let destination: DownloadRequest.DownloadFileDestination = { _, _ in
             var documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-            documentsURL.appendPathComponent("tmp.scn")
+            documentsURL.appendPathComponent("\(id).zip")
             return (documentsURL, [.removePreviousFile])
         }
 

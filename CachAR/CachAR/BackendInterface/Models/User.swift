@@ -18,7 +18,7 @@ class User {
 
     init(jsonRep: [String: Any]) {
         let js = JSON(jsonRep)
-        self.userId = js["userId"].stringValue
+        self.userId = js["id"].stringValue
         self.firstName = js["firstName"].stringValue
         self.lastName = js["lastName"].stringValue
         self.radiusSettings = js["radiusSettings"].stringValue
