@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 class Mark {
 
@@ -14,7 +15,10 @@ class Mark {
     var user: String!
     var note: String!
 
-    init() {
-
+    init(jsonRep: [String: Any]) {
+        let js = JSON(jsonRep)
+        self.idMark = js["idMark"].stringValue
+        self.user = js["user"].stringValue
+        self.note = js["note"].stringValue
     }
 }

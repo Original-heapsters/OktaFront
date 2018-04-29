@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 class Asset {
 
@@ -15,8 +16,19 @@ class Asset {
     var link: String!
     var type: String!
     var location: String!
+    var diskURL: URL?
 
-    init() {
-
+    init(jsonRep: [String: Any]) {
+        let js = JSON(jsonRep)
+        self.id = js["id"].stringValue
+        self.owner = js["owner"].stringValue
+        self.link = js["link"].stringValue
+        if self.link != "" {
+            CacheBack.downloadAsset(self.link, completionHandler: { destUrl in
+                self.diskURL = destUrl
+            })
+        }
+        self.type = js["type"].stringValue
+        self.location = js["latlon"].stringValue
     }
 }

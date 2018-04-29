@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 class User {
 
@@ -15,7 +16,11 @@ class User {
     var lastName: String!
     var radiusSettings: String!
 
-    init() {
-
+    init(jsonRep: [String: Any]) {
+        let js = JSON(jsonRep)
+        self.userId = js["userId"].stringValue
+        self.firstName = js["firstName"].stringValue
+        self.lastName = js["lastName"].stringValue
+        self.radiusSettings = js["radiusSettings"].stringValue
     }
 }
