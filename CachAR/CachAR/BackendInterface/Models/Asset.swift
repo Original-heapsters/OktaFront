@@ -17,6 +17,7 @@ class Asset {
     var link: String!
     var type: String!
     var location: String!
+    var marks: [Mark] = [Mark]()
     var diskURL: URL?
 
     init(jsonRep: [String: Any]) {
@@ -37,5 +38,13 @@ class Asset {
         }
         self.type = js["type"].stringValue
         self.location = js["latlon"].stringValue
+        if let items = js["markedList"].array {
+            for mark in items {
+                var marker = Mark()
+                marker.note = mark["note"].stringValue
+                marker.user = mark["userId"].stringValue
+                self.marks.append(marker)
+            }
+        }
     }
 }
