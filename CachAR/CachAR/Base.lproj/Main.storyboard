@@ -138,15 +138,22 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="466-xr-gnO" customClass="AssetMarker" customModule="CachAR" customModuleProvider="target">
+                                <rect key="frame" x="16" y="44" width="343" height="291"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="466-xr-gnO" secondAttribute="bottom" constant="332" id="0fe-gt-SyB"/>
                             <constraint firstItem="XkG-kz-elR" firstAttribute="leading" secondItem="987-Bf-Pjp" secondAttribute="leading" constant="8" id="4Fc-Fz-eoA"/>
                             <constraint firstItem="987-Bf-Pjp" firstAttribute="bottom" secondItem="Vgb-rN-VTx" secondAttribute="bottom" constant="32" id="Ax2-hX-R2q"/>
                             <constraint firstItem="cWk-ZP-EDN" firstAttribute="leading" secondItem="987-Bf-Pjp" secondAttribute="leading" constant="8" id="BNV-AQ-kbn"/>
                             <constraint firstItem="Vgb-rN-VTx" firstAttribute="centerX" secondItem="v0Z-Ui-ncX" secondAttribute="centerX" id="Bnk-XK-0oK"/>
                             <constraint firstItem="JQs-o6-C2U" firstAttribute="leading" secondItem="987-Bf-Pjp" secondAttribute="leading" constant="8" id="COB-Ss-uTu"/>
                             <constraint firstItem="v0Z-Ui-ncX" firstAttribute="top" secondItem="987-Bf-Pjp" secondAttribute="top" constant="16" id="Cqo-ih-j10"/>
+                            <constraint firstItem="987-Bf-Pjp" firstAttribute="trailing" secondItem="466-xr-gnO" secondAttribute="trailing" constant="16" id="Dhp-aX-Ybp"/>
+                            <constraint firstItem="466-xr-gnO" firstAttribute="top" secondItem="987-Bf-Pjp" secondAttribute="top" constant="24" id="Ear-6r-AUO"/>
                             <constraint firstItem="ZlS-N3-P1t" firstAttribute="leading" secondItem="987-Bf-Pjp" secondAttribute="leading" constant="8" id="F0R-wC-69e"/>
                             <constraint firstItem="987-Bf-Pjp" firstAttribute="trailing" secondItem="ZdP-Cy-ODw" secondAttribute="trailing" id="FmZ-3Z-kIB"/>
                             <constraint firstItem="Po8-dL-edy" firstAttribute="leading" secondItem="987-Bf-Pjp" secondAttribute="leading" constant="8" id="JEY-J3-wxg"/>
@@ -160,12 +167,14 @@
                             <constraint firstItem="cWk-ZP-EDN" firstAttribute="top" secondItem="v0Z-Ui-ncX" secondAttribute="bottom" constant="8" id="fbh-Cx-djT"/>
                             <constraint firstItem="ZdP-Cy-ODw" firstAttribute="leading" secondItem="987-Bf-Pjp" secondAttribute="leading" id="ge9-cS-ihN"/>
                             <constraint firstItem="JQs-o6-C2U" firstAttribute="top" secondItem="ZlS-N3-P1t" secondAttribute="bottom" constant="8" id="mqz-5F-brB"/>
+                            <constraint firstItem="466-xr-gnO" firstAttribute="leading" secondItem="987-Bf-Pjp" secondAttribute="leading" constant="16" id="w7e-Ct-CW9"/>
                             <constraint firstItem="XkG-kz-elR" firstAttribute="top" secondItem="Po8-dL-edy" secondAttribute="bottom" constant="8" id="xC2-aZ-cwa"/>
                             <constraint firstItem="FQx-c5-E7h" firstAttribute="leading" secondItem="987-Bf-Pjp" secondAttribute="leading" constant="8" id="xaw-Mf-GcZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="987-Bf-Pjp"/>
                     </view>
                     <connections>
+                        <outlet property="assetMarker" destination="466-xr-gnO" id="8rF-Yw-YYS"/>
                         <outlet property="buttonSignIn" destination="Vgb-rN-VTx" id="YF2-62-SHB"/>
                         <outlet property="sceneView" destination="ZdP-Cy-ODw" id="15w-hY-16Y"/>
                         <outlet property="textViewStatus" destination="v0Z-Ui-ncX" id="NZC-Ia-zCq"/>
@@ -173,7 +182,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="337" y="34"/>
+            <point key="canvasLocation" x="336.80000000000001" y="33.733133433283363"/>
         </scene>
     </scenes>
     <resources>

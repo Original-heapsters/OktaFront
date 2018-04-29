@@ -10,6 +10,10 @@
 		07069115596C88B315F5BB6E /* Pods_CachAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D31273189FDAF146086E41A1 /* Pods_CachAR.framework */; };
 		491434B62095B46A006E06A1 /* Geolocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491434B52095B46A006E06A1 /* Geolocation.swift */; };
 		491434BA2095BFE0006E06A1 /* MathHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491434B92095BFE0006E06A1 /* MathHelpers.swift */; };
+		491434BF2095DF27006E06A1 /* AssetMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491434BE2095DF27006E06A1 /* AssetMarker.swift */; };
+		491434C12095DF36006E06A1 /* AssetMarker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 491434C02095DF36006E06A1 /* AssetMarker.xib */; };
+		491434C72095EEF3006E06A1 /* MarkedAssetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491434C62095EEF3006E06A1 /* MarkedAssetTableViewCell.swift */; };
+		491434C9209600BE006E06A1 /* MarkedAssetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 491434C8209600BE006E06A1 /* MarkedAssetTableViewCell.xib */; };
 		49946FCE20952E5600F537EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49946FCD20952E5600F537EC /* Assets.xcassets */; };
 		49946FD12095311900F537EC /* ARState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49946FD02095311900F537EC /* ARState.swift */; };
 		499AACE12095104F00813882 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499AACE02095104F00813882 /* AppDelegate.swift */; };
@@ -50,6 +54,10 @@
 		123A309578CC170BE7EF6A0B /* Pods-CachAR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CachAR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CachAR/Pods-CachAR.debug.xcconfig"; sourceTree = "<group>"; };
 		491434B52095B46A006E06A1 /* Geolocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geolocation.swift; sourceTree = "<group>"; };
 		491434B92095BFE0006E06A1 /* MathHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathHelpers.swift; sourceTree = "<group>"; };
+		491434BE2095DF27006E06A1 /* AssetMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetMarker.swift; sourceTree = "<group>"; };
+		491434C02095DF36006E06A1 /* AssetMarker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AssetMarker.xib; sourceTree = "<group>"; };
+		491434C62095EEF3006E06A1 /* MarkedAssetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkedAssetTableViewCell.swift; sourceTree = "<group>"; };
+		491434C8209600BE006E06A1 /* MarkedAssetTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MarkedAssetTableViewCell.xib; sourceTree = "<group>"; };
 		49946FCD20952E5600F537EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49946FD02095311900F537EC /* ARState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARState.swift; sourceTree = "<group>"; };
 		499AACDD2095104F00813882 /* CachAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CachAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,6 +120,33 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		491434BB2095DEF4006E06A1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				491434BC2095DEFB006E06A1 /* Xibs */,
+				491434BD2095DF04006E06A1 /* Logic */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		491434BC2095DEFB006E06A1 /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				491434C8209600BE006E06A1 /* MarkedAssetTableViewCell.xib */,
+				491434C02095DF36006E06A1 /* AssetMarker.xib */,
+			);
+			path = Xibs;
+			sourceTree = "<group>";
+		};
+		491434BD2095DF04006E06A1 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				491434BE2095DF27006E06A1 /* AssetMarker.swift */,
+				491434C62095EEF3006E06A1 /* MarkedAssetTableViewCell.swift */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
 		49946FCF2095310800F537EC /* Enums */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +180,7 @@
 		499AACDF2095104F00813882 /* CachAR */ = {
 			isa = PBXGroup;
 			children = (
+				491434BB2095DEF4006E06A1 /* Views */,
 				7F14C460209557B700E16B62 /* BackendInterface */,
 				49946FCF2095310800F537EC /* Enums */,
 				499AAD1620952D8A00813882 /* ViewControllers */,
@@ -344,6 +380,8 @@
 				7F18BFFB209581FF00BC1A51 /* Okta.plist in Resources */,
 				7F14C45F209556FD00E16B62 /* backendSettings.plist in Resources */,
 				499AACED2095105000813882 /* LaunchScreen.storyboard in Resources */,
+				491434C9209600BE006E06A1 /* MarkedAssetTableViewCell.xib in Resources */,
+				491434C12095DF36006E06A1 /* AssetMarker.xib in Resources */,
 				49946FCE20952E5600F537EC /* Assets.xcassets in Resources */,
 				499AACE82095104F00813882 /* Main.storyboard in Resources */,
 			);
@@ -432,11 +470,13 @@
 			files = (
 				7F14C4672095591300E16B62 /* Asset.swift in Sources */,
 				499AACE52095104F00813882 /* ARVIewController.swift in Sources */,
+				491434BF2095DF27006E06A1 /* AssetMarker.swift in Sources */,
 				499AACE12095104F00813882 /* AppDelegate.swift in Sources */,
 				7F14C4622095587600E16B62 /* CacheBack.swift in Sources */,
 				7F14C4692095591A00E16B62 /* Mark.swift in Sources */,
 				49946FD12095311900F537EC /* ARState.swift in Sources */,
 				491434BA2095BFE0006E06A1 /* MathHelpers.swift in Sources */,
+				491434C72095EEF3006E06A1 /* MarkedAssetTableViewCell.swift in Sources */,
 				491434B62095B46A006E06A1 /* Geolocation.swift in Sources */,
 				7F14C4652095590600E16B62 /* User.swift in Sources */,
 				499AAD1220951B9400813882 /* VirtualPlane.swift in Sources */,
@@ -617,7 +657,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YHADA5TU9B;
 				INFOPLIST_FILE = CachAR/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kiwi.CachAR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -633,7 +676,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YHADA5TU9B;
 				INFOPLIST_FILE = CachAR/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kiwi.CachAR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -649,7 +695,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YHADA5TU9B;
 				INFOPLIST_FILE = CachARTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kiwi.CachARTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -666,7 +716,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YHADA5TU9B;
 				INFOPLIST_FILE = CachARTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kiwi.CachARTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -682,7 +736,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YHADA5TU9B;
 				INFOPLIST_FILE = CachARUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kiwi.CachARUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -698,7 +756,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YHADA5TU9B;
 				INFOPLIST_FILE = CachARUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kiwi.CachARUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

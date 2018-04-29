@@ -13,11 +13,12 @@ import OktaAuth
 import CoreLocation
 import SwiftyJSON
 
-class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDelegate, oktaDelegate {
+class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDelegate, oktaDelegate, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var sceneView: ARSCNView!
     @IBOutlet weak var textViewStatus: UILabel!
     @IBOutlet weak var buttonSignIn: UIButton!
+    @IBOutlet weak var assetMarker: AssetMarker!
 
     let locationManager = CLLocationManager()
     var userLocation: Geolocation = Geolocation(lat: 0, long: 0)
@@ -84,7 +85,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
     }
     @IBAction func markAsset(_ sender: Any) {
         self.cacheBack.checkLogin {
-            OktaAuth.userinfo() {
+            OktaAuth.userinfo {
                 response, error in
 
                 if error != nil { print("Error: \(error!)") }
@@ -208,6 +209,10 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             locationManager.startUpdatingLocation()
         }
+
+//        assetMarker.tableView.register(UINib(nibName: "MarkedAssetTableViewCell", bundle: nil), forCellReuseIdentifier: MarkedAssetTableViewCell.identifier)
+//        assetMarker.tableView.delegate = self
+//        assetMarker.tableView.dataSource = self
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -362,9 +367,12 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
     // MARK : User Events
 
     func objectClicked(object: SCNNode) {
-        
+        var customView = AssetMarker()
+//        customView.loadNib()
+        customView.frame = CGRect.init(x: 24, y: 60, width: UIScreen.main.bounds.width - 48, height: 360)
+        view.addSubview(customView)
     }
-    
+
     func objectPlaced() {
         currentARStatus = .objectPlaced
 
@@ -387,7 +395,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
 
         print("**** END OF GRABBING INITIAL COORDS ****")
 
-        placeObjectInWorld(objectLocation: objectGeolocation)
+//        placeObjectInWorld(objectLocation: objectGeolocation)
     }
 
     func placeObjectInWorld(objectLocation: Geolocation) {
@@ -410,5 +418,21 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
         let transform = pointOfView.transform
         let location = SCNVector3(transform.m41, transform.m42, transform.m43)
         return location
+    }
+
+    // MARK: Table view delegates
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: MarkedAssetTableViewCell.identifier, for: indexPath)
+
+        return cell
     }
 }
