@@ -95,18 +95,17 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
         mainObjectNode = mainObjectScene.rootNode.childNode(withName: "shipMesh", recursively: true)
         sceneView.scene.rootNode.addChildNode(mainObjectNode)
 
-        // Ask for Authorisation from the User.
-        self.locati        // Ask for Authorisation from the User.
-        self.locationManager.requestAlwaysAuthorization()
-
         // This will add an object to the camera node and will stick there
 //        sceneView.pointOfView?.addChildNode(mainObjectScene.rootNode)
 
         // This starts an infinite rotation animation on a node
-        let action = SCNAction.rotateBy(x: 0, y: CGFl
-oat(2 * Double.pi), z: 0, duration: 10)
+        let action = SCNAction.rotateBy(x: 0, y: CGFloat(2 * Double.pi), z: 0, duration: 10)
         let repAction = SCNAction.repeatForever(action)
         mainObjectNode?.runAction(repAction, forKey: "myrotate")
+
+        // Ask for Authorisation from the User.
+        self.locationManager.requestAlwaysAuthorization()
+
         // For use in foreground
         self.locationManager.requestWhenInUseAuthorization()
 
