@@ -22,6 +22,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
 
     let locationManager = CLLocationManager()
     var userLocation: Geolocation = Geolocation(lat: 0, long: 0)
+    var objectLocation: Geolocation = Geolocation(lat: 0, long: 0)
     let cacheBack = CacheBack()
 
     var selectedPlane: VirtualPlane?
@@ -80,7 +81,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
                     let lastName = fullNameArr[1]
                     let userId = firstName + "-" + lastName
                     let assetURL = URL.init(fileURLWithPath: Bundle.main.path(forResource: "companion_cube", ofType: "scn", inDirectory: "art.scnassets", forLocalization: nil)!)
-                    self.cacheBack.placeAsset(userId, assetURL, String(self.userLocation.latitude), String(self.userLocation.longitude), notify: { message in
+                    self.cacheBack.placeAsset(userId, assetURL, String(self.objectLocation.latitude), String(self.objectLocation.longitude), notify: { message in
                         let alert = UIAlertController(title: "response", message: message, preferredStyle: UIAlertControllerStyle.alert)
                         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
                         self.present(alert, animated: true, completion: nil)
@@ -186,6 +187,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
         }
     }
 
+    var objectPlacedInWorld: Bool = false
     var planes = [UUID: VirtualPlane]() {
         didSet {
             if planes.count > 0 {
@@ -224,8 +226,8 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
         // Show statistics such as fps and timing information
         sceneView.showsStatistics = true
         sceneView.debugOptions = [
-            ARSCNDebugOptions.showFeaturePoints,
-            ARSCNDebugOptions.showWorldOrigin
+            ARSCNDebugOptions.showFeaturePoints
+//            ARSCNDebugOptions.showWorldOrigin
 //            SCNDebugOptions.showConstraints
         ]
         sceneView.autoenablesDefaultLighting = true
@@ -264,6 +266,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
 //        assetMarker.tableView.register(UINib(nibName: "MarkedAssetTableViewCell", bundle: nil), forCellReuseIdentifier: MarkedAssetTableViewCell.identifier)
 //        assetMarker.tableView.delegate = self
 //        assetMarker.tableView.dataSource = self
+        assetMarker.isHidden = true
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -312,7 +315,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
     func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
         let hits = sceneView.hitTest(centerScreenPosition, types: ARHitTestResult.ResultType.estimatedHorizontalPlane)
         if hits.count > 0, let firstHit = hits.first {
-            if currentARStatus == .ready {
+            if !objectPlacedInWorld {
                 mainObjectNode.position = SCNVector3Make(
                     firstHit.worldTransform.columns.3.x,
                     firstHit.worldTransform.columns.3.y,
@@ -441,7 +444,10 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
         let objectGeolocation = Geolocation(geolocation: userLocation)
         objectGeolocation.applyOffset(x: xDifferenceMeters, y: zDifferenceMeters)
 
+        objectPlacedInWorld = true
         print("**** END OF GRABBING INITIAL COORDS ****")
+
+        self.placeAsset(0)
 
 //        placeObjectInWorld(objectLocation: objectGeolocation)
     }
