@@ -221,4 +221,18 @@ class CacheBack {
         }
 
     }
+
+    static func downloadAsset(_ link: String, completionHandler: @escaping (URL) -> Void) {
+        let destination: DownloadRequest.DownloadFileDestination = { _, _ in
+            var documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+            documentsURL.appendPathComponent("tmp.scn")
+            return (documentsURL, [.removePreviousFile])
+        }
+
+        Alamofire.download(link, to: destination).responseData { response in
+            if let destinationUrl = response.destinationURL {
+                completionHandler(destinationUrl)
+            }
+        }
+    }
 }
