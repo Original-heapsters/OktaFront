@@ -19,12 +19,12 @@
 		499AAD032095105000813882 /* CachARUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499AAD022095105000813882 /* CachARUITests.swift */; };
 		499AAD1220951B9400813882 /* VirtualPlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499AAD1120951B9400813882 /* VirtualPlane.swift */; };
 		499AAD15209526F600813882 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499AAD14209526F600813882 /* UIExtensions.swift */; };
-		499AAD1820952DC000813882 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499AAD1720952DC000813882 /* SignInViewController.swift */; };
 		7F14C45F209556FD00E16B62 /* backendSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7F14C45E209556FD00E16B62 /* backendSettings.plist */; };
 		7F14C4622095587600E16B62 /* CacheBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F14C4612095587600E16B62 /* CacheBack.swift */; };
 		7F14C4652095590600E16B62 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F14C4642095590600E16B62 /* User.swift */; };
 		7F14C4672095591300E16B62 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F14C4662095591300E16B62 /* Asset.swift */; };
 		7F14C4692095591A00E16B62 /* Mark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F14C4682095591A00E16B62 /* Mark.swift */; };
+		7F18BFFB209581FF00BC1A51 /* Okta.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7F18BFFA209581FF00BC1A51 /* Okta.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,13 +63,13 @@
 		499AAD042095105000813882 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		499AAD1120951B9400813882 /* VirtualPlane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualPlane.swift; sourceTree = "<group>"; };
 		499AAD14209526F600813882 /* UIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
-		499AAD1720952DC000813882 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		6D566343FFCBA62520BEF09D /* Pods-CachAR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CachAR.release.xcconfig"; path = "Pods/Target Support Files/Pods-CachAR/Pods-CachAR.release.xcconfig"; sourceTree = "<group>"; };
 		7F14C45E209556FD00E16B62 /* backendSettings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = backendSettings.plist; sourceTree = "<group>"; };
 		7F14C4612095587600E16B62 /* CacheBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheBack.swift; sourceTree = "<group>"; };
 		7F14C4642095590600E16B62 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7F14C4662095591300E16B62 /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
 		7F14C4682095591A00E16B62 /* Mark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mark.swift; sourceTree = "<group>"; };
+		7F18BFFA209581FF00BC1A51 /* Okta.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Okta.plist; sourceTree = "<group>"; };
 		D31273189FDAF146086E41A1 /* Pods_CachAR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CachAR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -152,6 +152,7 @@
 				499AACE22095104F00813882 /* art.scnassets */,
 				49946FCD20952E5600F537EC /* Assets.xcassets */,
 				499AACEE2095105000813882 /* Info.plist */,
+				7F18BFFA209581FF00BC1A51 /* Okta.plist */,
 				7F14C45E209556FD00E16B62 /* backendSettings.plist */,
 			);
 			path = CachAR;
@@ -195,7 +196,6 @@
 			isa = PBXGroup;
 			children = (
 				499AACE42095104F00813882 /* ARVIewController.swift */,
-				499AAD1720952DC000813882 /* SignInViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -335,6 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				499AACE32095104F00813882 /* art.scnassets in Resources */,
+				7F18BFFB209581FF00BC1A51 /* Okta.plist in Resources */,
 				7F14C45F209556FD00E16B62 /* backendSettings.plist in Resources */,
 				499AACED2095105000813882 /* LaunchScreen.storyboard in Resources */,
 				49946FCE20952E5600F537EC /* Assets.xcassets in Resources */,
@@ -367,11 +368,15 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CachAR/Pods-CachAR-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AppAuth/AppAuth.framework",
+				"${BUILT_PRODUCTS_DIR}/OktaAuth/OktaAuth.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppAuth.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OktaAuth.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,7 +430,6 @@
 				49946FD12095311900F537EC /* ARState.swift in Sources */,
 				7F14C4652095590600E16B62 /* User.swift in Sources */,
 				499AAD1220951B9400813882 /* VirtualPlane.swift in Sources */,
-				499AAD1820952DC000813882 /* SignInViewController.swift in Sources */,
 				499AAD15209526F600813882 /* UIExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
