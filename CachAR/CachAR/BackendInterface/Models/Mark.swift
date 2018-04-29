@@ -10,4 +10,11 @@ import Foundation
 
 class Mark {
 
+    var idMark: String!
+    var user: String!
+    var note: String!
+
+    init() {
+
+    }
 }
