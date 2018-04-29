@@ -71,14 +71,62 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XkG-kz-elR" userLabel="PlaceAsset">
-                                <rect key="frame" x="8" y="180" width="40" height="30"/>
+                                <rect key="frame" x="8" y="180" width="80" height="30"/>
                                 <color key="backgroundColor" name="whitish"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="r4I-i7-wfE"/>
                                 </constraints>
-                                <state key="normal" title="Place"/>
+                                <state key="normal" title="Place Asset"/>
                                 <connections>
                                     <action selector="placeAsset:" destination="BV1-FR-VrT" eventType="touchUpInside" id="XJd-qk-xDK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZlS-N3-P1t" userLabel="Nearby">
+                                <rect key="frame" x="8" y="218" width="100" height="30"/>
+                                <color key="backgroundColor" name="whitish"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="ZZz-2b-Jrm"/>
+                                </constraints>
+                                <state key="normal" title="Nearby Assets"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="getNearby:" destination="BV1-FR-VrT" eventType="touchUpInside" id="zMJ-Mj-sYu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQs-o6-C2U" userLabel="Found">
+                                <rect key="frame" x="8" y="256" width="86" height="30"/>
+                                <color key="backgroundColor" name="whitish"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="86O-71-eiV"/>
+                                </constraints>
+                                <state key="normal" title="Found Asset"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="foundAsset:" destination="BV1-FR-VrT" eventType="touchUpInside" id="gvN-mp-mdA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQx-c5-E7h" userLabel="Mark">
+                                <rect key="frame" x="8" y="294" width="77" height="30"/>
+                                <color key="backgroundColor" name="whitish"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="so5-Pu-h1l"/>
+                                </constraints>
+                                <state key="normal" title="Mark Asset"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="markAsset:" destination="BV1-FR-VrT" eventType="touchUpInside" id="Wd6-Mk-k81"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v0Z-Ui-ncX">
@@ -97,17 +145,23 @@
                             <constraint firstItem="987-Bf-Pjp" firstAttribute="bottom" secondItem="Vgb-rN-VTx" secondAttribute="bottom" constant="32" id="Ax2-hX-R2q"/>
                             <constraint firstItem="cWk-ZP-EDN" firstAttribute="leading" secondItem="987-Bf-Pjp" secondAttribute="leading" constant="8" id="BNV-AQ-kbn"/>
                             <constraint firstItem="Vgb-rN-VTx" firstAttribute="centerX" secondItem="v0Z-Ui-ncX" secondAttribute="centerX" id="Bnk-XK-0oK"/>
+                            <constraint firstItem="JQs-o6-C2U" firstAttribute="leading" secondItem="987-Bf-Pjp" secondAttribute="leading" constant="8" id="COB-Ss-uTu"/>
                             <constraint firstItem="v0Z-Ui-ncX" firstAttribute="top" secondItem="987-Bf-Pjp" secondAttribute="top" constant="16" id="Cqo-ih-j10"/>
+                            <constraint firstItem="ZlS-N3-P1t" firstAttribute="leading" secondItem="987-Bf-Pjp" secondAttribute="leading" constant="8" id="F0R-wC-69e"/>
                             <constraint firstItem="987-Bf-Pjp" firstAttribute="trailing" secondItem="ZdP-Cy-ODw" secondAttribute="trailing" id="FmZ-3Z-kIB"/>
                             <constraint firstItem="Po8-dL-edy" firstAttribute="leading" secondItem="987-Bf-Pjp" secondAttribute="leading" constant="8" id="JEY-J3-wxg"/>
+                            <constraint firstItem="FQx-c5-E7h" firstAttribute="top" secondItem="JQs-o6-C2U" secondAttribute="bottom" constant="8" id="MWd-V1-h55"/>
                             <constraint firstItem="987-Bf-Pjp" firstAttribute="bottom" secondItem="ZdP-Cy-ODw" secondAttribute="bottom" id="W9J-1v-q2a"/>
                             <constraint firstItem="Po8-dL-edy" firstAttribute="top" secondItem="cWk-ZP-EDN" secondAttribute="bottom" constant="8" id="XIh-hY-vRw"/>
                             <constraint firstItem="ZdP-Cy-ODw" firstAttribute="top" secondItem="987-Bf-Pjp" secondAttribute="top" id="Xp2-up-krD"/>
+                            <constraint firstItem="ZlS-N3-P1t" firstAttribute="top" secondItem="XkG-kz-elR" secondAttribute="bottom" constant="8" id="aIk-Db-yuV"/>
                             <constraint firstItem="v0Z-Ui-ncX" firstAttribute="leading" secondItem="987-Bf-Pjp" secondAttribute="leading" constant="8" id="aWn-gf-olK"/>
                             <constraint firstItem="987-Bf-Pjp" firstAttribute="trailing" secondItem="v0Z-Ui-ncX" secondAttribute="trailing" constant="8" id="cwh-pv-86X"/>
                             <constraint firstItem="cWk-ZP-EDN" firstAttribute="top" secondItem="v0Z-Ui-ncX" secondAttribute="bottom" constant="8" id="fbh-Cx-djT"/>
                             <constraint firstItem="ZdP-Cy-ODw" firstAttribute="leading" secondItem="987-Bf-Pjp" secondAttribute="leading" id="ge9-cS-ihN"/>
+                            <constraint firstItem="JQs-o6-C2U" firstAttribute="top" secondItem="ZlS-N3-P1t" secondAttribute="bottom" constant="8" id="mqz-5F-brB"/>
                             <constraint firstItem="XkG-kz-elR" firstAttribute="top" secondItem="Po8-dL-edy" secondAttribute="bottom" constant="8" id="xC2-aZ-cwa"/>
+                            <constraint firstItem="FQx-c5-E7h" firstAttribute="leading" secondItem="987-Bf-Pjp" secondAttribute="leading" constant="8" id="xaw-Mf-GcZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="987-Bf-Pjp"/>
                     </view>

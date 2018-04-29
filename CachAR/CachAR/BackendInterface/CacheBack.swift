@@ -159,15 +159,80 @@ class CacheBack {
 
     }
 
-    func getNearbyAssets() {
+    func getNearbyAssets(_ radius: String, _ latlong: String) {
+        guard self.settings != nil else {
+            return
+        }
+        let baseUrl = self.settings!["baseUrl"] as! String
+        let endPoint = self.settings!["nearbyEndpoint"] as! String
+        let requestString = baseUrl + endPoint + "/" + radius + "/" + latlong
+
+        Alamofire.request(requestString, method: .get, parameters: nil, encoding: URLEncoding(destination: .queryString)).responseJSON { response in
+            switch response.result {
+            case .success:
+                print("RESPONSE \(response.value)")
+
+            case .failure(let error):
+                print("RESPONSE \(error)")
+            }
+        }
+    }
+
+    func getAsset(_ assetId: String) {
+        guard self.settings != nil else {
+            return
+        }
+        let baseUrl = self.settings!["baseUrl"] as! String
+        let endPoint = self.settings!["foundEndpoint"] as! String
+        let requestString = baseUrl + endPoint + "/" + assetId
+        Alamofire.request(requestString, method: .get, parameters: nil, encoding: URLEncoding(destination: .queryString)).responseJSON { response in
+            switch response.result {
+            case .success:
+                print("RESPONSE \(response.value)")
+
+            case .failure(let error):
+                print("RESPONSE \(error)")
+            }
+        }
 
     }
 
-    func getAsset() {
+    func markAsset(_ assetId: String, _ userId: String, _ note: String="") {
+        guard self.settings != nil else {
+            return
+        }
+        let baseUrl = self.settings!["baseUrl"] as! String
+        let endPoint = self.settings!["markEndpoint"] as! String
+        let requestString = baseUrl + endPoint + "/" + assetId
+
+        let parameters = [
+            "userId": userId,
+            "note": note
+        ]
+
+        Alamofire.request(requestString, method: .post, parameters: parameters, encoding: URLEncoding(destination: .queryString)).responseJSON { response in
+            switch response.result {
+            case .success:
+                print("RESPONSE \(response.value)")
+
+            case .failure(let error):
+                print("RESPONSE \(error)")
+            }
+        }
 
     }
 
-    func markAsset() {
+    static func downloadAsset(_ link: String, completionHandler: @escaping (URL) -> Void) {
+        let destination: DownloadRequest.DownloadFileDestination = { _, _ in
+            var documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+            documentsURL.appendPathComponent("tmp.scn")
+            return (documentsURL, [.removePreviousFile])
+        }
 
+        Alamofire.download(link, to: destination).responseData { response in
+            if let destinationUrl = response.destinationURL {
+                completionHandler(destinationUrl)
+            }
+        }
     }
 }
