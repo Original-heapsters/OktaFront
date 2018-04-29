@@ -13,7 +13,7 @@ import OktaAuth
 import CoreLocation
 import SwiftyJSON
 
-class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDelegate, oktaDelegate {
+class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDelegate, oktaDelegate, backendDelegate {
 
     @IBOutlet weak var sceneView: ARSCNView!
     @IBOutlet weak var textViewStatus: UILabel!
@@ -27,6 +27,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
     var trackingState: ARCamera.TrackingState!
     var mainObjectScene: SCNScene!
     var mainObjectNode: SCNNode!
+    var currentUser: User?
 
     var centerScreenPosition: CGPoint!
 
@@ -100,6 +101,18 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
         }
     }
 
+    func nearbyListFetched(list: [Asset]) {
+        
+    }
+    
+    func currentUserUpdated(user: User) {
+        self.currentUser = user
+    }
+
+    func currentAssetUpdated(asset: Asset) {
+
+    }
+
     func triggerLogin() {
         OktaAuth
             .login()
@@ -111,6 +124,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
                     OktaAuth.tokens?.set(value: tokenResponse.accessToken!, forKey: "accessToken")
                     OktaAuth.tokens?.set(value: tokenResponse.idToken!, forKey: "idToken")
                     OktaAuth.tokens?.set(value: tokenResponse.refreshToken!, forKey: "refreshToken")
+                    self.buttonSignIn.isHidden = true
                 }
         }
     }
@@ -159,6 +173,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
     override func viewDidLoad() {
         super.viewDidLoad()
         self.cacheBack.setup()
+        self.cacheBack.backDelegate = self
         self.cacheBack.delegate = self
         textViewStatus.numberOfLines = 0
         currentARStatus = .initializing

@@ -8,6 +8,7 @@
 
 import Foundation
 import SwiftyJSON
+import Zip
 
 class Asset {
 
@@ -24,7 +25,13 @@ class Asset {
         self.owner = js["owner"].stringValue
         self.link = js["link"].stringValue
         if self.link != "" {
-            CacheBack.downloadAsset(self.link, completionHandler: { destUrl in
+            CacheBack.downloadAsset(self.id, self.link, completionHandler: { destUrl in
+                do {
+                    let unzipDirectory = try Zip.quickUnzipFile(destUrl)
+                    print(unzipDirectory)
+                } catch {
+
+                }
                 self.diskURL = destUrl
             })
         }
