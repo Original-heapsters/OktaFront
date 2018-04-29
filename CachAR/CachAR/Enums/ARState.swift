@@ -13,7 +13,7 @@ enum ARState: String, CustomStringConvertible {
     case ready = "ready"
     case temporarilyUnavailable = "temporarily unavailable"
     case failed = "failed"
-    
+
     var description: String {
         switch self {
         case .initialized:
