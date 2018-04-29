@@ -112,7 +112,7 @@ class CacheBack {
             return
         }
         let baseUrl = self.settings!["baseUrl"] as! String
-        let endPoint = self.settings!["userEndpoint"] as! String
+        let endPoint = self.settings!["placeEndpoint"] as! String
         let requestString = baseUrl + endPoint
 
         let parameters = [
@@ -147,7 +147,7 @@ class CacheBack {
                 upload.responseJSON { response in
                     print("Succesfully uploaded")
                     if let err = response.error {
-
+                        print("REPSONSE:\(response)")
                         return
                     }
                     print("REPSONSE:\(response.value)")
