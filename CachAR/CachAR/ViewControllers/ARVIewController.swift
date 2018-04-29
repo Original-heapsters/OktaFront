@@ -77,8 +77,29 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
         }
     }
     @IBAction func foundAsset(_ sender: Any) {
+        self.cacheBack.checkLogin {
+            let assetId = "asdgtrhgg3t54g4"
+            self.cacheBack.getAsset(assetId)
+        }
     }
-    
+    @IBAction func markAsset(_ sender: Any) {
+        self.cacheBack.checkLogin {
+            OktaAuth.userinfo() {
+                response, error in
+
+                if error != nil { print("Error: \(error!)") }
+
+                if let userinfo = response {
+                    let info = JSON(userinfo)
+                    let userId = info["email"].stringValue
+                    let assetId = "asdgtrhgg3t54g4"
+                    self.cacheBack.markAsset(assetId, userId)
+                }
+            }
+
+        }
+    }
+
     func triggerLogin() {
         OktaAuth
             .login()
