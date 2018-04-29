@@ -9,12 +9,28 @@
 import UIKit
 import SceneKit
 import ARKit
+import OktaAuth
 
 class ARViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet weak var sceneView: ARSCNView!
     @IBOutlet weak var textViewStatus: UILabel!
     @IBOutlet weak var buttonSignIn: UIButton!
+
+    @IBAction func startRedirect(_ sender: Any) {
+        OktaAuth
+            .login()
+            .start(self) { response, error in
+                if error != nil { print(error!) }
+
+                // Success
+                if let tokenResponse = response {
+                    // tokenResponse.accessToken
+                    // tokenResponse.idToken
+                    // tokenResponse.refreshToken
+                }
+        }
+    }
 
     var planes = [UUID: VirtualPlane]() {
         didSet {
