@@ -11,15 +11,56 @@ import SceneKit
 import ARKit
 import OktaAuth
 import CoreLocation
+import SwiftyJSON
 
-class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDelegate {
+class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDelegate, oktaDelegate {
 
     @IBOutlet weak var sceneView: ARSCNView!
     @IBOutlet weak var textViewStatus: UILabel!
     @IBOutlet weak var buttonSignIn: UIButton!
     let locationManager = CLLocationManager()
+    let cacheBack = CacheBack()
 
     @IBAction func startRedirect(_ sender: Any) {
+        triggerLogin()
+    }
+
+    @IBAction func getUser(_ sender: Any) {
+        self.cacheBack.checkLogin {
+
+            OktaAuth.userinfo() {
+                response, error in
+
+                if error != nil { print("Error: \(error!)") }
+
+                if let userinfo = response {
+                    let info = JSON(userinfo)
+                    let userId = info["email"].stringValue
+
+                    self.cacheBack.getUser(userId)
+                }
+            }
+        }
+    }
+
+    @IBAction func placeAsset(_ sender: Any) {
+        self.cacheBack.checkLogin {
+
+            OktaAuth.userinfo() {
+                response, error in
+
+                if error != nil { print("Error: \(error!)") }
+
+                if let userinfo = response {
+                    let info = JSON(userinfo)
+                    let userId = info["email"].stringValue
+                    let assetURL = URL.init(fileURLWithPath: Bundle.main.path(forResource: "ship", ofType: "scn", inDirectory: "art.scnassets", forLocalization: nil)!)
+                    self.cacheBack.placeAsset(userId, assetURL)
+                }
+            }
+        }
+    }
+    func triggerLogin() {
         OktaAuth
             .login()
             .start(self) { response, error in
@@ -27,11 +68,30 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
 
                 // Success
                 if let tokenResponse = response {
-                    // tokenResponse.accessToken
-                    // tokenResponse.idToken
-                    // tokenResponse.refreshToken
-                    print("HEYYYYYY thats pretty good")
+                    OktaAuth.tokens?.set(value: tokenResponse.accessToken!, forKey: "accessToken")
+                    OktaAuth.tokens?.set(value: tokenResponse.idToken!, forKey: "idToken")
+                    OktaAuth.tokens?.set(value: tokenResponse.refreshToken!, forKey: "refreshToken")
                 }
+        }
+    }
+    @IBAction func postUser(_ sender: Any) {
+        self.cacheBack.checkLogin {
+
+            OktaAuth.userinfo() {
+                response, error in
+
+                if error != nil { print("Error: \(error!)") }
+
+                if let userinfo = response {
+                    let info = JSON(userinfo)
+                    let userId = info["email"].stringValue
+                    let fullName = info["name"].stringValue
+                    var fullNameArr = fullName.components(separatedBy: " ")
+                    let firstName = fullNameArr[0]
+                    let lastName = fullNameArr[1]
+                    self.cacheBack.postUser(userId, firstName, lastName)
+                }
+            }
         }
     }
 
@@ -57,7 +117,8 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.cacheBack.setup()
+        self.cacheBack.delegate = self
         textViewStatus.numberOfLines = 0
 
         // Set the view's delegate
