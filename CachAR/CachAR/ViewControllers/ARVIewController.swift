@@ -18,7 +18,9 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
     @IBOutlet weak var sceneView: ARSCNView!
     @IBOutlet weak var textViewStatus: UILabel!
     @IBOutlet weak var buttonSignIn: UIButton!
+
     let locationManager = CLLocationManager()
+    var userLocation: Geolocation = Geolocation(lat: 0, long: 0)
     let cacheBack = CacheBack()
 
     var selectedPlane: VirtualPlane?
@@ -139,8 +141,8 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
         // Show statistics such as fps and timing information
         sceneView.showsStatistics = true
         sceneView.debugOptions = [
-            ARSCNDebugOptions.showFeaturePoints
-//            ARSCNDebugOptions.showWorldOrigin,
+            ARSCNDebugOptions.showFeaturePoints,
+            ARSCNDebugOptions.showWorldOrigin
 //            SCNDebugOptions.showConstraints
         ]
         sceneView.autoenablesDefaultLighting = true
@@ -184,6 +186,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
         let configuration = ARWorldTrackingConfiguration()
         configuration.planeDetection = [.horizontal]
         configuration.isLightEstimationEnabled = true
+        configuration.worldAlignment = .gravityAndHeading
 
         // Run the view's session
         sceneView.session.run(configuration)
@@ -203,12 +206,12 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
         // Release any cached data, images, etc that aren't in use.
     }
 
-    // MARK: - Location Delgate
+    // MARK: - Location Delegate
+
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
-        let verticalAcc = manager.location?.verticalAccuracy ?? 0.0
-        let horizontalAcc = manager.location?.horizontalAccuracy ?? 0.0
-        print("locations = \(locValue.latitude) \(locValue.longitude) accuracy: \(verticalAcc)m - \(horizontalAcc)m")
+        userLocation.latitude = locValue.latitude
+        userLocation.longitude = locValue.longitude
     }
 
     // MARK: - ARSCNViewDelegate
@@ -277,6 +280,8 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
         print("Session interupted ended!")
     }
 
+    // MARK : Touch
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else {
             print("Can't identify touch. Ignoring")
@@ -288,7 +293,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
             return
         }
 
-        self.placeObject()
+        self.objectPlaced()
 
         //This will place an object where you touch
         /*
@@ -303,14 +308,41 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
         */
     }
 
-    func placeObject() {
-        currentARStatus = .objectPlaced
-        print("Position of media: \(mainObjectNode.position)")
-    }
-
     func cleanupARSession() {
         sceneView.scene.rootNode.enumerateChildNodes { (node, _) -> Void in
             node.removeFromParentNode()
         }
+    }
+
+    // MARK : User Events
+
+    func objectPlaced() {
+        currentARStatus = .objectPlaced
+
+        let cameraPosition = getCameraPosition()
+        let objectPosition = mainObjectNode.position
+        print("Position of media:    \(String(describing: objectPosition))")
+        print("Position of camera:   \(String(describing: cameraPosition))")
+        print("Geolocation of user:  \(userLocation.description)")
+
+        let xDifferenceMeters = Double(objectPosition.x - cameraPosition.x)
+        let zDifferenceMeters = Double(objectPosition.z - cameraPosition.z)
+        let objectGeolocation = Geolocation(geolocation: userLocation)
+        objectGeolocation.applyOffset(x: xDifferenceMeters, y: zDifferenceMeters)
+
+        placeObjectInWorld(location: objectGeolocation)
+    }
+
+    func placeObjectInWorld(location: Geolocation) {
+        let cameraPosition = getCameraPosition()
+        let objectPosition = mainObjectNode.position
+
+    }
+
+    func getCameraPosition() -> SCNVector3 {
+        guard let pointOfView = sceneView.pointOfView else { return SCNVector3() }
+        let transform = pointOfView.transform
+        let location = SCNVector3(transform.m41, transform.m42, transform.m43)
+        return location
     }
 }

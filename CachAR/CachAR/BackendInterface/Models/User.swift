@@ -10,4 +10,12 @@ import Foundation
 
 class User {
 
+    var userId: String!
+    var firstName: String!
+    var lastName: String!
+    var radiusSettings: String!
+
+    init() {
+
+    }
 }
