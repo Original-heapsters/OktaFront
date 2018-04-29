@@ -8,6 +8,7 @@
 
 import Foundation
 import SwiftyJSON
+import Zip
 
 class Asset {
 
@@ -16,19 +17,34 @@ class Asset {
     var link: String!
     var type: String!
     var location: String!
+    var marks: [Mark] = [Mark]()
     var diskURL: URL?
 
     init(jsonRep: [String: Any]) {
         let js = JSON(jsonRep)
-        self.id = js["id"].stringValue
+        self.id = js["assetId"].stringValue
         self.owner = js["owner"].stringValue
         self.link = js["link"].stringValue
         if self.link != "" {
-            CacheBack.downloadAsset(self.link, completionHandler: { destUrl in
+            CacheBack.downloadAsset(self.id, self.link, completionHandler: { destUrl in
+                do {
+                    let unzipDirectory = try Zip.quickUnzipFile(destUrl)
+                    print(unzipDirectory)
+                } catch {
+
+                }
                 self.diskURL = destUrl
             })
         }
         self.type = js["type"].stringValue
         self.location = js["latlon"].stringValue
+        if let items = js["markedList"].array {
+            for mark in items {
+                var marker = Mark()
+                marker.note = mark["note"].stringValue
+                marker.user = mark["userId"].stringValue
+                self.marks.append(marker)
+            }
+        }
     }
 }

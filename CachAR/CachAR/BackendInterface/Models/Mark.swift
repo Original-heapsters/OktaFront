@@ -15,6 +15,10 @@ class Mark {
     var user: String!
     var note: String!
 
+    init() {
+
+    }
+
     init(jsonRep: [String: Any]) {
         let js = JSON(jsonRep)
         self.idMark = js["idMark"].stringValue
