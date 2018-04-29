@@ -23,7 +23,6 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     var mainObjectNode: SCNNode!
 
     var centerScreenPosition: CGPoint!
-    var userPlacedObject: Bool = false
 
     @IBAction func startRedirect(_ sender: Any) {
         OktaAuth
@@ -50,7 +49,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         }
     }
 
-    var currentARStatus = ARState.initializing {
+    var currentARStatus: ARState! {
         didSet {
             DispatchQueue.main.async {
                 self.textViewStatus.text = self.currentARStatus.description
@@ -65,6 +64,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         super.viewDidLoad()
 
         textViewStatus.numberOfLines = 0
+        currentARStatus = .initializing
 
         let screenSize = UIScreen.main.bounds.size
         centerScreenPosition = CGPoint(x: screenSize.width / 2, y: screenSize.height / 2)
@@ -111,7 +111,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
 
         // Run the view's session
         sceneView.session.run(configuration)
-        if planes.count > 0 { self.currentARStatus = .initialized }
+        if planes.count > 0 { self.currentARStatus = .ready }
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -138,8 +138,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
         let hits = sceneView.hitTest(centerScreenPosition, types: ARHitTestResult.ResultType.estimatedHorizontalPlane)
         if hits.count > 0, let firstHit = hits.first {
-            self.currentARStatus = .ready
-            if !userPlacedObject {
+            if currentARStatus == .ready {
                 mainObjectNode.position = SCNVector3Make(
                     firstHit.worldTransform.columns.3.x,
                     firstHit.worldTransform.columns.3.y,
@@ -221,7 +220,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     }
 
     func placeObject() {
-        userPlacedObject = true
+        currentARStatus = .objectPlaced
     }
 
     func cleanupARSession() {

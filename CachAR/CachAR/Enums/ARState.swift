@@ -12,6 +12,7 @@ enum ARState: String, CustomStringConvertible {
     case initializing = "initializing"
     case initialized = "initialized"
     case ready = "ready"
+    case objectPlaced = "object placed"
     case temporarilyUnavailable = "temporarily unavailable"
     case failed = "failed"
 
@@ -23,6 +24,8 @@ enum ARState: String, CustomStringConvertible {
             return "😍 AR ready!"
         case .ready:
             return "🔥 Media can be placed!"
+        case .objectPlaced:
+            return "🧠 Media placed!"
         case .temporarilyUnavailable:
             return "😱 Calibrating. Please wait"
         case .failed:
