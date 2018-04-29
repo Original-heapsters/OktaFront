@@ -63,7 +63,7 @@ class CacheBack {
         }
     }
 
-    func postUser(_ userId: String, _ firstName: String, _ lastName: String, _ radiusSettings: String="20", notify: @escaping(String)->Void) {
+    func postUser(_ userId: String, _ firstName: String, _ lastName: String, _ radiusSettings: String="20", notify: @escaping(String) -> Void) {
 
         guard self.settings != nil else {
             return
@@ -200,7 +200,7 @@ class CacheBack {
         }
     }
 
-    func getAsset(_ assetId: String, notify: @escaping (String)->Void) {
+    func getAsset(_ assetId: String, notify: @escaping (String) -> Void) {
         guard self.settings != nil else {
             return
         }

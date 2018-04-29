@@ -121,7 +121,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
                     let lastName = fullNameArr[1]
                     let userId = firstName + "-" + lastName
                     let assetId = self.currentAsset?.id ?? ""
-                    self.cacheBack.markAsset(assetId, userId, notify: { message in
+                    self.cacheBack.markAsset(assetId, userId, "", notify: { message in
                         let alert = UIAlertController(title: "response", message: message, preferredStyle: UIAlertControllerStyle.alert)
                         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
                         self.present(alert, animated: true, completion: nil)
