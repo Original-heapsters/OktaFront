@@ -63,7 +63,7 @@ class CacheBack {
         }
     }
 
-    func postUser(_ userId: String, _ firstName: String, _ lastName: String, _ radiusSettings: String="20") {
+    func postUser(_ userId: String, _ firstName: String, _ lastName: String, _ radiusSettings: String="20", notify: @escaping(String)->Void) {
 
         guard self.settings != nil else {
             return
@@ -88,7 +88,7 @@ class CacheBack {
                     let usr = User.init(jsonRep: data)
                     self.backDelegate?.currentUserUpdated(user: usr)
                 }
-                print(response.value)
+                notify(response.value.debugDescription)
 
             case .failure(let error):
                 print("RESPONSE \(error)")
@@ -96,7 +96,7 @@ class CacheBack {
         }
     }
 
-    func getUser(_ userId: String) {
+    func getUser(_ userId: String, notify: @escaping (String) -> Void) {
         guard self.settings != nil else {
             return
         }
@@ -116,7 +116,7 @@ class CacheBack {
                     let usr = User.init(jsonRep: data)
                     self.backDelegate?.currentUserUpdated(user: usr)
                 }
-                 print(response.value)
+                notify(response.value.debugDescription)
             case .failure(let error):
                 print("RESPONSE \(error)")
             }
@@ -124,7 +124,7 @@ class CacheBack {
 
     }
 
-    func placeAsset(_ userId: String, _ assetId: URL, _ lat: String, _ lon: String) {
+    func placeAsset(_ userId: String, _ assetId: URL, _ lat: String, _ lon: String, notify: @escaping (String) -> Void) {
         guard self.settings != nil else {
             return
         }
@@ -171,6 +171,7 @@ class CacheBack {
                         let initAsset = Asset.init(jsonRep: data)
                         self.backDelegate?.currentAssetUpdated(asset: initAsset)
                     }
+                    notify(response.value.debugDescription)
 
                 }
             case .failure(let encodingError):
@@ -199,7 +200,7 @@ class CacheBack {
         }
     }
 
-    func getAsset(_ assetId: String) {
+    func getAsset(_ assetId: String, notify: @escaping (String)->Void) {
         guard self.settings != nil else {
             return
         }
@@ -211,7 +212,7 @@ class CacheBack {
             case .success:
                 let jsonRep = JSON(response.value)
                 let asset = Asset.init(jsonRep: jsonRep["data"].dictionaryObject!)
-                print("RESPONSE \(response.value)")
+                notify(response.value.debugDescription)
 
             case .failure(let error):
                 print("RESPONSE \(error)")
@@ -220,7 +221,7 @@ class CacheBack {
 
     }
 
-    func markAsset(_ assetId: String, _ userId: String, _ note: String="") {
+    func markAsset(_ assetId: String, _ userId: String, _ note: String="", notify: @escaping (String) -> Void) {
         guard self.settings != nil else {
             return
         }
@@ -236,7 +237,7 @@ class CacheBack {
         Alamofire.request(requestString, method: .post, parameters: parameters, encoding: URLEncoding(destination: .queryString)).responseJSON { response in
             switch response.result {
             case .success:
-                print("RESPONSE \(response.value)")
+                notify(response.value.debugDescription)
 
             case .failure(let error):
                 print("RESPONSE \(error)")

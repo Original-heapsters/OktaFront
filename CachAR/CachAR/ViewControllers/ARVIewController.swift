@@ -52,7 +52,11 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
                     let firstName = fullNameArr[0]
                     let lastName = fullNameArr[1]
                     let userId = firstName + "-" + lastName
-                    self.cacheBack.getUser(userId)
+                    self.cacheBack.getUser(userId, notify: { message in
+                        let alert = UIAlertController(title: "response", message: message, preferredStyle: UIAlertControllerStyle.alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
+                    })
                 }
             }
         }
@@ -75,7 +79,11 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
                     let lastName = fullNameArr[1]
                     let userId = firstName + "-" + lastName
                     let assetURL = URL.init(fileURLWithPath: Bundle.main.path(forResource: "companion_cube", ofType: "scn", inDirectory: "art.scnassets", forLocalization: nil)!)
-                    self.cacheBack.placeAsset(userId, assetURL, String(self.userLocation.latitude), String(self.userLocation.longitude))
+                    self.cacheBack.placeAsset(userId, assetURL, String(self.userLocation.latitude), String(self.userLocation.longitude), notify: { message in
+                        let alert = UIAlertController(title: "response", message: message, preferredStyle: UIAlertControllerStyle.alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
+                    })
                 }
             }
         }
@@ -90,7 +98,11 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
     @IBAction func foundAsset(_ sender: Any) {
         self.cacheBack.checkLogin {
             let assetId = self.currentAsset?.id ?? ""
-            self.cacheBack.getAsset(assetId)
+            self.cacheBack.getAsset(assetId, notify: { message in
+                let alert = UIAlertController(title: "response", message: message, preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            })
         }
     }
     @IBAction func markAsset(_ sender: Any) {
@@ -109,7 +121,11 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
                     let lastName = fullNameArr[1]
                     let userId = firstName + "-" + lastName
                     let assetId = self.currentAsset?.id ?? ""
-                    self.cacheBack.markAsset(assetId, userId)
+                    self.cacheBack.markAsset(assetId, userId, notify: { message in
+                        let alert = UIAlertController(title: "response", message: message, preferredStyle: UIAlertControllerStyle.alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
+                    })
                 }
             }
 
@@ -159,7 +175,11 @@ class ARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDe
                     let firstName = fullNameArr[0]
                     let lastName = fullNameArr[1]
                     let userId = firstName + "-" + lastName
-                    self.cacheBack.postUser(userId, firstName, lastName)
+                    self.cacheBack.postUser(userId, firstName, lastName, notify: { message in
+                        let alert = UIAlertController(title: "response", message: message, preferredStyle: UIAlertControllerStyle.alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
+                    })
                 }
             }
         }
