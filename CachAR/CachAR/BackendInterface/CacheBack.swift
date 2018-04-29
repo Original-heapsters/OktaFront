@@ -159,15 +159,66 @@ class CacheBack {
 
     }
 
-    func getNearbyAssets() {
+    func getNearbyAssets(_ radius: String, _ latlong: String) {
+        guard self.settings != nil else {
+            return
+        }
+        let baseUrl = self.settings!["baseUrl"] as! String
+        let endPoint = self.settings!["nearbyEndpoint"] as! String
+        let requestString = baseUrl + endPoint + "/" + radius + "/" + latlong
+
+        Alamofire.request(requestString, method: .get, parameters: nil, encoding: URLEncoding(destination: .queryString)).responseJSON { response in
+            switch response.result {
+            case .success:
+                print("RESPONSE \(response.value)")
+
+            case .failure(let error):
+                print("RESPONSE \(error)")
+            }
+        }
+    }
+
+    func getAsset(_ assetId: String) {
+        guard self.settings != nil else {
+            return
+        }
+        let baseUrl = self.settings!["baseUrl"] as! String
+        let endPoint = self.settings!["foundEndpoint"] as! String
+        let requestString = baseUrl + endPoint + "/" + assetId
+        Alamofire.request(requestString, method: .get, parameters: nil, encoding: URLEncoding(destination: .queryString)).responseJSON { response in
+            switch response.result {
+            case .success:
+                print("RESPONSE \(response.value)")
+
+            case .failure(let error):
+                print("RESPONSE \(error)")
+            }
+        }
 
     }
 
-    func getAsset() {
+    func markAsset(_ assetId: String, _ userId: String, _ note: String="") {
+        guard self.settings != nil else {
+            return
+        }
+        let baseUrl = self.settings!["baseUrl"] as! String
+        let endPoint = self.settings!["markEndpoint"] as! String
+        let requestString = baseUrl + endPoint + "/" + assetId
 
-    }
+        let parameters = [
+            "userId": userId,
+            "note": note
+        ]
 
-    func markAsset() {
+        Alamofire.request(requestString, method: .post, parameters: parameters, encoding: URLEncoding(destination: .queryString)).responseJSON { response in
+            switch response.result {
+            case .success:
+                print("RESPONSE \(response.value)")
+
+            case .failure(let error):
+                print("RESPONSE \(error)")
+            }
+        }
 
     }
 }
