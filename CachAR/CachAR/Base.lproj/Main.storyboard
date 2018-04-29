@@ -94,26 +94,44 @@
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="253" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8h1-K2-hh2" userLabel="Post User">
                                 <rect key="frame" x="0.0" y="68" width="375" height="30"/>
                                 <state key="normal" title="Post User"/>
+                                <connections>
+                                    <action selector="postUserClicked:" destination="A3Z-eQ-Sey" eventType="touchUpInside" id="ROb-G7-UpO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qTE-SV-d0T" userLabel="Get User">
                                 <rect key="frame" x="0.0" y="106" width="375" height="30"/>
                                 <state key="normal" title="Get User"/>
+                                <connections>
+                                    <action selector="getUserClicked:" destination="A3Z-eQ-Sey" eventType="touchUpInside" id="JVz-3q-bnY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54a-f9-kfK" userLabel="Place Asset">
                                 <rect key="frame" x="-0.5" y="144" width="375" height="30"/>
                                 <state key="normal" title="Place Asset"/>
+                                <connections>
+                                    <action selector="placeClicked:" destination="A3Z-eQ-Sey" eventType="touchUpInside" id="R9z-iW-7mc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3UL-dF-ZLH" userLabel="Get Nearby">
                                 <rect key="frame" x="-0.5" y="182" width="375" height="30"/>
                                 <state key="normal" title="Get Nearby"/>
+                                <connections>
+                                    <action selector="getNearbyClicked:" destination="A3Z-eQ-Sey" eventType="touchUpInside" id="dKP-5l-gtG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="253" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TG6-42-eHO" userLabel="Find Asset">
                                 <rect key="frame" x="-0.5" y="220" width="375" height="30"/>
                                 <state key="normal" title="Find Asset"/>
+                                <connections>
+                                    <action selector="findClicked:" destination="A3Z-eQ-Sey" eventType="touchUpInside" id="Hd7-Ks-mle"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nNb-Xf-3ch" userLabel="Mark Asset">
                                 <rect key="frame" x="0.0" y="258" width="375" height="30"/>
                                 <state key="normal" title="Mark Asset"/>
+                                <connections>
+                                    <action selector="markClicked:" destination="A3Z-eQ-Sey" eventType="touchUpInside" id="HQS-op-8uq"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGK-Te-Un0">
                                 <rect key="frame" x="-0.5" y="296" width="375" height="21"/>
